@@ -1,17 +1,17 @@
 
-<<<<<<< HEAD
- <?php include (HTML_DIR.'overall/header.php'); ?> 
-<body>
-	<label for="">ADIOS:</label>
-	<input type="text">
-</body> 
-=======
+
 <?php include (HTML_DIR.'overall/header.php'); ?>
 
 <body>
 	<article class="panel">
-		<p>hola como</p>
+		<article class="pizquierda">
+			<i class="fa picono fa-bars fa-3x"></i><p class="ppanel">Panel Adimistrativo</p>
+		</article>
+
+		<article class="pderecha">
+			<button class="pboton">Cerrar Sesión</button>
+		</article>
 
 	</article>
 </body>
->>>>>>> dacf96c35d912b546d66cd5ab3c64cc351201251
+
