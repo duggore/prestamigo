@@ -5,7 +5,4 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="views/app/css/estilo.css">
 </head>
-<body>
-	
-</body>
 </html>

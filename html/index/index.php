@@ -3,4 +3,4 @@
 <body>
 	<label for="">NOMBRE:</label>
 	<input type="text">
-</body>
+</body> 
