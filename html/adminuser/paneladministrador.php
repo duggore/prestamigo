@@ -14,6 +14,19 @@
 		</article>
 
 	</article>
+
+
+	<section>
+
+		<article class="izquierdasection">hdhdhdhdhd</article>
+		<article class="derechasection">hdhdhdhd</article>
+		
+
+
+
+
+
+	</section>
 </body>
 
 =======

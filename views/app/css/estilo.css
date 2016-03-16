@@ -3,7 +3,7 @@
 	margin: 0;
 }
 
-/*------parte de la primera fila---------*/
+/*------parte de la primera fila del panel administrador---------*/
 .panel{
 	/*border: 2px red solid;*/
 	overflow: hidden;
@@ -49,4 +49,20 @@
 .pboton:hover{
 	background-color: #4f028c;
 	color: white;
+}
+
+/*--------parte de la divicion del panel de administrador-----*/
+
+section{
+	border: 2px red solid;
+}
+.izquierdasection, .derechasection{
+	outline: 2px black solid;
+	display: inline-block;
+}
+.izquierdasection{
+	width: 20%;
+}
+.derechasection{
+	width: 79%;
 }
