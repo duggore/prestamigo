@@ -1,4 +1,5 @@
 <?php  
+	require('core/core.php');
 	if(isset($_GET['view'])){
 		// strtolower convierte de mayuscula a minuscula
 	if(file_exists('core/controllers'. strtolower($_GET['view']).'Controller.php')){
