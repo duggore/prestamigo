@@ -1,6 +1,6 @@
 
-<?php include (HTML_DIR.'overall/header.php'); ?>
+ <?php include (HTML_DIR.'overall/header.php'); ?> 
 <body>
-	<label for="">CAMBIO:</label>
+	<label for="">ADIOS:</label>
 	<input type="text">
 </body> 
