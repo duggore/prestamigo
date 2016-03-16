@@ -15,7 +15,16 @@
 
 	<section>
 
-		<article class="izquierdasection">hdhdhdhdhd</article>
+		<article class="izquierdasection">
+
+				<article id="name">
+		            <figure id="imgEstudiante">
+		               <img src="views/app/images/Cliente.jpg" alt="">
+		            </figure>
+            		<a href="" class="bien">Bienvenido</a>
+         		</article>
+
+		</article>
 		<article class="derechasection">hdhdhdhd</article>
 		
 
