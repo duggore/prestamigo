@@ -63,10 +63,12 @@ section{
 .izquierdasection, .derechasection{
 	/*outline: 2px black solid;*/
 	display: inline-block;
+	height: 867px;
 }
 .izquierdasection{
 	width: 20%;
-	background-color: #343434;
+	/*background-color: #343434;*/
+	background-color: #2d2d2d;
 	color: white;
 }
 .derechasection{
@@ -97,4 +99,46 @@ section{
 	color: white;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-decoration: none;
+}
+#menu
+{
+	/*border: 2px solid green;*/
+	/*text-align: right;*/
+	/*float:left;*/
+	width: 100%;
+	margin-top: 5px;
+	/*padding:16px;*/
+	/*padding: 15px 0px 15px  0px;*/
+	/*padding-right: 25px;*/
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+	/*border-radius: 10px;*/
+	border-bottom: 1px solid #323232;
+	cursor: pointer;
+	-webkit-transition: opacity .2s;
+}
+
+ a 
+{
+	/*padding:16px;*/
+	padding-right: 25px;
+	/*border: 2px red solid;*/
+	text-decoration: none;
+	color: #f2ef9b;
+	float: right;
+	clear: both;
+	display: block;
+	/*width: 100%;*/
+}
+
+#menu:hover
+{
+	background: #f2ef9b;
+	transition: all 0.9s ease;
+}
+
+a #menu:hover
+{
+	
+	color: #000;
 }
