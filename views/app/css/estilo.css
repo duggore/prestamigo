@@ -1,6 +1,9 @@
 *{
 	padding: 0;
 	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /*------parte de la primera fila del panel administrador---------*/
@@ -43,7 +46,7 @@
 	display: inline-block;
 }
 .pizquierda{
-	border: 2px green solid;
+	/*border: 2px green solid;*/
 	width: 50%;
 	float: left;
 }
@@ -57,14 +60,7 @@
 	width: 100%;
 	margin-left: 1%;
 }
-.pderecha{
-	border: 2px green solid;
-	margin-top: .4%;
-	margin-right: 1%;
-	width: 20%;
-	float: right;
-	text-align: right;
-}
+
 /*.pboton{
 	color: black;
 	font-size: 16px;
@@ -76,6 +72,52 @@
 	background-color: #4f028c;
 	color: white;
 }*/
+/*----------------relog---------------*/
+.pderecha{
+	/*border: 2px black solid;*/
+	margin-top: .4%;
+	margin-right: 1%;
+	width: 20%;
+	float: right;
+	/*text-align: right;*/
+}
+.widget{
+	/*border: 2px red solid;*/
+	width: 100%;
+	color: white;
+	/*margin: 32px;*/
+}
+.widget p{
+	display: inline-block;
+	line-height: 1em;
+}
+.fecha{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	/*margin-bottom: 0.3125rem;*/
+	/*background: rgba(0,0,0,.5);*/
+	/*padding: 20px;*/
+	width: 100%;
+}
+.reloj{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 4em;
+	/*margin-bottom: 0.3125rem;*/
+	/*background: rgba(0,0,0,.5);*/
+	/*padding: 20px;*/
+	width: 100%;
+
+}
+.reloj .caja-segundos{
+	display: inline-block;
+}
+.reloj .segundos,
+.reloj .ampm{
+	font-size: 2rem;
+	display: block;
+}
 
 /*--------parte de la divicion del panel de administrador-----*/
 

@@ -35,7 +35,7 @@ function MostrarOcultar(capa,enlace)
 				<p id="dia" class="dia"></p>
 				<p>de</p>
 				<p id="mes" class="mes"></p>
-				<p>del</p>
+				<p>de</p>
 				<p id="year" class="year"></p>
 				</div>
 			 
@@ -153,5 +153,5 @@ function MostrarOcultar(capa,enlace)
 
 
 	</section>
-	<script src=""></script>
+	<script src="views/app/js/reloj.js"></script>
 </body>
