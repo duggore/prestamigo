@@ -80,7 +80,7 @@ section{
 }
 #imgEstudiante{
 	/*border:2px solid green;*/
-	width: 30%;
+	width: 40%;
 	margin: auto;
 	padding-top: 3%;
 }
@@ -129,7 +129,7 @@ p.menu{
 	position: relative;
 	padding:16px;
 	padding-right: 25px;
-	float:right;
+	float:left;
 	color:white;
 	opacity: .6;
 	font-size: 1.2em;
