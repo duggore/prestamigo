@@ -20,12 +20,38 @@ function MostrarOcultar(capa,enlace)
 <body>
 	<article class="panel">
 		<article class="pizquierda">
-			<i class="fa picono fa-bars fa-3x"></i><p class="ppanel">Panel Adimistrativo</p>
+			<figure class="contienelogo"><img class="logo" src="views/app/images/logo.png" alt=""></figure>
+			<article class="ppanel">
+				<p class="ppanel">PRESTAMIGUITO</p>
+			<p class="ppanel2">Sistema de Crédito</p>
+			</article>
+			
 		</article>
 
-		<!-- <article class="pderecha">
-			<button class="pboton">Cerrar Sesión</button>
-		</article> -->
+		<article class="pderecha">
+			<div class="widget">
+				<div class="fecha">
+				<p id="diaSemana" class="diaSemana"></p>
+				<p id="dia" class="dia"></p>
+				<p>de</p>
+				<p id="mes" class="mes"></p>
+				<p>del</p>
+				<p id="year" class="year"></p>
+				</div>
+			 
+				<div class="reloj">
+				<p id="horas" class="horas"></p>
+				<p>:</p>
+				<p id="minutos" class="minutos"></p>
+				<p>:</p>
+				<div class="caja-segundos">
+					<p id="ampm" class="ampm"></p>
+					<p id="segundos" class="segundos"></p>
+				</div>
+				</div>
+			</div>
+			<!-- <button class="pboton">Cerrar Sesión</button> -->
+		</article>
 
 	</article>
 
@@ -79,7 +105,7 @@ function MostrarOcultar(capa,enlace)
 			</li>
 			<li>
 				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-wrench"></i> &nbsp;Cerrar Sesiòn</p>
+				<p class="menu"><i class="fa fa-expeditedssl"></i> &nbsp;Cerrar Sesiòn</p>
 			</li>
 
 
@@ -127,4 +153,5 @@ function MostrarOcultar(capa,enlace)
 
 
 	</section>
+	<script src=""></script>
 </body>
