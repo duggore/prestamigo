@@ -41,7 +41,49 @@ function MostrarOcultar(capa,enlace)
             		<p class="bien">Bienvenido</p>
          		</article>
 
-         		<a href="#" ><p id="menu">HOLA</p></a>
+       <nav>
+		<ul>
+			
+			
+			<li>
+				<div class="barra"></div>
+				<p class="menu"> <i class="fa fa-home"></i> &nbsp; Inicio </p>
+			</li>
+			</a>
+
+
+			<li>
+				<div class="barra"></div>
+				<p class="menu"><i class="fa fa-credit-card-alt"></i> &nbsp;Operaciones</p>
+			</li>
+
+
+
+			<li>
+				<div class="barra"></div>
+				<p class="menu"> <i class="fa fa-users"></i> &nbsp;Mantenimiento</p>
+			</li>
+
+			<li>
+				<div class="barra"></div>
+				<p class="menu"><i class="fa fa-file-text"></i> &nbsp;Reportes</p>
+			</li>
+
+			<li>
+				<div class="barra"></div>
+				<p class="menu"><i class="fa fa-pencil-square-o"></i> &nbsp;Consultas</p>
+			</li>
+			<li>
+				<div class="barra"></div>
+				<p class="menu"><i class="fa fa-wrench"></i> &nbsp;Utilerias</p>
+			</li>
+
+
+
+		</ul>
+	</nav>
+
+         		<!-- <a href="#" ><p id="menu">HOLA</p></a>
         		<a  href="#"><p id="menu">HOLA</p></a>
         		<a href="javascript:MostrarOcultar('caja1');" ><p id="menu">BUEN DIA</p></a>
        
@@ -64,7 +106,7 @@ function MostrarOcultar(capa,enlace)
 			        <hr width=85% />
 		        </div>
         <a href="#"><p id="menu">Mensajes</p></a>
-        <a href="#"><p id="menu">Cerrar sesión</p></a>
+        <a href="#"><p id="menu">Cerrar sesión</p></a> -->
 
 		</article>
 
