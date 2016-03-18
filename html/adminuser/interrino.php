@@ -11,6 +11,7 @@
 					<h3>Formulario</h3>
 				</div>
 				<div class="container">
+					<h3><i class="fa fa-angle-right"></i>Registro de Cliente</h3>
 					<form>
 						<div class="form-group">
 							<label for="inputEmail">Nombre</label>
