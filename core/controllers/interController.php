@@ -1,3 +1,3 @@
 <?php  
-	include('html/adminuser/interino.php');
+	include('html/adminuser/interrino.php');
 ?>
