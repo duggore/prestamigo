@@ -1,7 +1,7 @@
 <?php include (HTML_DIR.'dise-prin/header.php'); ?>
 
 <!-- --------script para mostrar y ocultar los divs------ -->
-   <script languaje="Javascript">   
+<!--    <script languaje="Javascript">   
 document.write('<style type="text/css">div.cajamenu{display: none;}</style>');  
 function MostrarOcultar(capa,enlace)  
 {  
@@ -12,7 +12,7 @@ function MostrarOcultar(capa,enlace)
     }  
 }  
       
-</script>  
+</script>  --> 
 
 
 
@@ -23,9 +23,9 @@ function MostrarOcultar(capa,enlace)
 			<i class="fa picono fa-bars fa-3x"></i><p class="ppanel">Panel Adimistrativo</p>
 		</article>
 
-		<article class="pderecha">
+		<!-- <article class="pderecha">
 			<button class="pboton">Cerrar Sesión</button>
-		</article>
+		</article> -->
 
 	</article>
 
@@ -38,7 +38,7 @@ function MostrarOcultar(capa,enlace)
 		            <figure id="imgEstudiante">
 		               <img src="views/app/images/Cliente.jpg" alt="">
 		            </figure>
-            		<p class="bien">Bienvenido</p>
+            		<p class="bien">Bienvenid@</p>
          		</article>
 
        <nav>
@@ -76,6 +76,10 @@ function MostrarOcultar(capa,enlace)
 			<li>
 				<div class="barra"></div>
 				<p class="menu"><i class="fa fa-wrench"></i> &nbsp;Utilerias</p>
+			</li>
+			<li>
+				<div class="barra"></div>
+				<p class="menu"><i class="fa fa-wrench"></i> &nbsp;Cerrar Sesiòn</p>
 			</li>
 
 
