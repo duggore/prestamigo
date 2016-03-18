@@ -15,15 +15,35 @@
 					<form>
 						<div class="form-group">
 							<label for="inputEmail">Nombre</label>
-							<input type="email" class="form-control"  placeholder="Email">
+							<input type="email" class="form-control"  placeholder="Nombre">
 						</div>
 						<div class="form-group">
-							<label for="inputPassword">Dirección</label>
-							<input type="password" class="form-control" placeholder="Contraseña">
+							<label for="inputDirD">Dirección Domicilio</label>
+							<input type="password" class="form-control" placeholder="Dirección Domicilio">
 						</div>
 						<div class="form-group">
-							<label for="inputNum">Número Teléfono</label>
-							<input type="password" class="form-control" placeholder="Contraseña">
+							<label for="inputDirN">Dirección Negocio</label>
+							<input type="password" class="form-control" placeholder="Dirección Negocio">
+						</div>
+						<div class="form-group">
+							<label for="inputCD">Ciudad/Estado</label>
+							<input type="password" class="form-control" placeholder="Ciudad y Estado">
+						</div>
+						<div class="form-group">
+							<label for="inputGN">Giro del Negocio</label>
+							<input type="password" class="form-control" placeholder="Giro del Negocio">
+						</div>
+						<div class="form-group">
+							<label for="inputTel">Número Teléfono</label>
+							<input type="password" class="form-control" placeholder="Número Teléfono">
+						</div>
+						<div class="form-group">
+							<label for="inputAg">Agente de Cobro</label>
+							<input type="password" class="form-control" placeholder="Agente de Cobro">
+						</div>
+						<div class="form-group">
+							<label for="inputAg">Agente de Cobro</label>
+							<input type="password" class="form-control" placeholder="Agente de Cobro">
 						</div>
 						<button type="submit" class="btn btn-primary">Entrar</button>
 					</form>
