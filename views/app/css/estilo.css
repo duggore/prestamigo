@@ -9,17 +9,19 @@
 	overflow: hidden;
 	/*background-color: #990066;*/
 	background-color: #4f028C;
+	height: 80px;
 }
 .picono{
 	/*border: 2px black solid;*/
 	margin-left: 1%;
 	color: gray;
+	margin-top: 1%;
 }
 .ppanel{
 	/*border: 2px red solid;*/
 	vertical-align: top;
 	margin-left: 1.5%;
-	margin-top: .8%;
+	margin-top: 2%;
 	font-size: 25px;
 	color: white;
 	font-weight: bold;
@@ -46,6 +48,7 @@
 	font-size: 16px;
 	border-radius: 5px;
 	padding: 5px 10px;
+	margin-top: 4%;
 }
 .pboton:hover{
 	background-color: #4f028c;
@@ -70,10 +73,12 @@ section{
 	width: 79%;
 	vertical-align: top;
 }
-
+#name{
+	/*border: 2px red solid;*/
+}
 #imgEstudiante{
 	/*border:2px solid green;*/
-	width: 50%;
+	width: 30%;
 	margin: auto;
 	padding-top: 3%;
 }
@@ -81,13 +86,14 @@ section{
 #imgEstudiante img {
 	width: 100%;
 	border-radius: 50%;
+	/*border: 2px red solid;*/
 }
 
 .bien{
 	/*border: 2px red solid;*/
 	margin-top: 1%;
-	margin-left: 35%;
-	font-size: 25px;
+	margin-left: 38%;
+	font-size: 20px;
 	color: white;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-decoration: none;
