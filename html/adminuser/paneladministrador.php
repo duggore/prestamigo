@@ -1,22 +1,5 @@
 <?php include (HTML_DIR.'dise-prin/header.php'); ?>
 
-<!-- --------script para mostrar y ocultar los divs------ -->
-<!--    <script languaje="Javascript">   
-document.write('<style type="text/css">div.cajamenu{display: none;}</style>');  
-function MostrarOcultar(capa,enlace)  
-{  
-    if (document.getElementById)  
-    {  
-        var aux = document.getElementById(capa).style;  
-        aux.display = aux.display? "":"block";  
-    }  
-}  
-      
-</script>  --> 
-
-
-
-
 <body>
 	<article class="panel">
 		<article class="pizquierda">
@@ -50,7 +33,6 @@ function MostrarOcultar(capa,enlace)
 				</div>
 				</div>
 			</div>
-			<!-- <button class="pboton">Cerrar Sesión</button> -->
 		</article>
 
 	</article>
@@ -67,76 +49,59 @@ function MostrarOcultar(capa,enlace)
             		<p class="bien">Bienvenid@</p>
          		</article>
 
-       <nav>
-		<ul>
-			
-			
-			<li>
-				<div class="barra"></div>
-				<p class="menu"> <i class="fa fa-home"></i> &nbsp; Inicio </p>
-			</li>
-			</a>
+         		<ul id="accordion" class="accordion">
+						<li>
+							<div class="link"><i class="fa fa-home"></i>Inicio</div>
+						</li>
+						<li>
+							<div class="link"><i class="icono izquierda fa fa-credit-card-alt"></i>Operaciones<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li><a href="https://www.google.com">Créditos</a></li>
+         						<li><a href="#">Pagos</a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="link"><i class="icono izquierda fa fa-users"></i>Mantenimiento<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li><a href="#">Clientes</a></li>
+		         				<li><a href="#">Agentes</a></li>
+		         				<li><a href="#">Zonas</a></li>
+		         				<li><a href="#">Usuarios</a></li>
+							</ul>
+						</li>
+						<li><div class="link"><i class="icono izquierda fa fa-file-text"></i>Reportes<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li><a href="#">Catálogos</a></li>
+		         				<li><a href="#">Documentos</a></li>
+		         				<li><a href="#">Ventas</a></li>
+		         				<li><a href="#">Pagos</a></li>
+		         				<li><a href="#">Clientes</a></li>
+							</ul>
+						</li>
+						<li><div class="link"><i class="icono izquierda fa fa-pencil-square-o"></i>Consultas<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li><a href="#">Clientes</a></li>
+		         				<li><a href="#">Agentes</a></li>
+		         				<li><a href="#">Zonas</a></li>
+		         				<li><a href="#">Ventas</a></li>
+		         				<li><a href="#">Pagos</a></li>
+							</ul>
+						</li>
+						<li><div class="link"><i class="icono izquierda fa fa-wrench"></i>Utilerias<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li><a href="#">Respaldos</a></li>
+		         				<li><a href="#">Reindexar</a></li>
+		         				<li><a href="#">Cambio de fecha</a></li>
+		         				<li><a href="#">Cierre mensual</a></li>
+		         				<li><a href="#">Cierre anual</a></li>
+							</ul>
+						</li>
+							<li><div class="link"><i class="icono izquierda fa fa-expeditedssl"></i>Cerrar Sesión</div>
+						</li>
+						
+					</ul>
 
-
-			<li>
-				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-credit-card-alt"></i> &nbsp;Operaciones</p>
-			</li>
-
-
-
-			<li>
-				<div class="barra"></div>
-				<p class="menu"> <i class="fa fa-users"></i> &nbsp;Mantenimiento</p>
-			</li>
-
-			<li>
-				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-file-text"></i> &nbsp;Reportes</p>
-			</li>
-
-			<li>
-				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-pencil-square-o"></i> &nbsp;Consultas</p>
-			</li>
-			<li>
-				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-wrench"></i> &nbsp;Utilerias</p>
-			</li>
-			<li>
-				<div class="barra"></div>
-				<p class="menu"><i class="fa fa-expeditedssl"></i> &nbsp;Cerrar Sesiòn</p>
-			</li>
-
-
-
-		</ul>
-	</nav>
-
-         		<!-- <a href="#" ><p id="menu">HOLA</p></a>
-        		<a  href="#"><p id="menu">HOLA</p></a>
-        		<a href="javascript:MostrarOcultar('caja1');" ><p id="menu">BUEN DIA</p></a>
-       
-       		 	<div class="cajamenu" id="caja1">
-           			<hr  width=85% />
-
-		        	<a href="#" ><p id="menu">BUENDIA 2</p></a>
-			        <a href="#" ><p id="menu">BUENDIA 2</p></a>
-			        <a href="#" ><p id="menu">BUENDIA 2</p></a>
-			        <hr width=85% />
-		        </div>
-        
-        <a href="javascript:MostrarOcultar('caja2');"><p id="menu">BUENAS TARDES</p></a>
-        	<div class="cajamenu" id="caja2">
-           			<hr  width=85% />
-
-		        	<a href="#" ><p id="menu">HOLA</p></a>
-			        <a href="#" ><p id="menu">HOLA</p></a>
-			        <a href="#" ><p id="menu">HOLA</p></a>
-			        <hr width=85% />
-		        </div>
-        <a href="#"><p id="menu">Mensajes</p></a>
-        <a href="#"><p id="menu">Cerrar sesión</p></a> -->
+     			
 
 		</article>
 
@@ -154,4 +119,5 @@ function MostrarOcultar(capa,enlace)
 
 	</section>
 	<script src="views/app/js/reloj.js"></script>
+	<script src="views/app/js/main.js"></script>
 </body>
