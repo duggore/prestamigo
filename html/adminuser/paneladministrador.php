@@ -52,6 +52,8 @@
          		<ul id="accordion" class="accordion">
 						<li>
 							<div class="link"><i class="fa fa-home"></i>Inicio</div>
+							<ul class="submenu">
+							</ul>
 						</li>
 						<li>
 							<div class="link"><i class="icono izquierda fa fa-credit-card-alt"></i>Operaciones<i class="fa fa-chevron-down"></i></div>
