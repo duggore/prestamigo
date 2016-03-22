@@ -253,10 +253,143 @@ a {
  }
 
 
- /*panel de inicio de sesion*/
+ /*-----------------------------------panel de inicio de sesion-----------------------------*/
 
+.body{
+	/*border: 2px red solid;*/
+	/*background-color: red;*/
+	background-image: url("../images/login.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
 .iniciosesion{
-	border: 2px red solid;
-	height: 100%;
+	/*border: 2px red solid;*/
+	width: 100%;
+	/*height: 100px;*/
+}
+
+
+/*-----------------LOGIN CONFIGURACCION-------------------*/
+
+/*.logosesion{
+	
+	text-align: center;
+}*/
+
+#inicios {
+	/*border: 2px black solid;*/
+	width: 20%;
+	margin: 160px auto;
+	background: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/*margin: auto;*/
+	
+
+}
+#conten {
+	/*border: 1px #D9D9D9 solid;*/
+	background: #fff;
+	margin: 5% auto;
+	/*border-radius: 10px 10px 0 0;*/
 	width: 100%;
 }
+
+
+
+#c1 {
+	/*border: 2px red solid;*/
+	width: 100%;
+	height: 60px;
+	background: #67DFF0;
+	text-align: center;
+	color: white;
+	font-family: arial;
+	font-weight: bold;
+	padding-top: 6%;
+	font-size: 20px;
+	border-radius: 10px 10px 0 0;
+
+}
+#c2 {
+	/*border: 2px solid red;*/
+	text-align: center;
+	width: 100%;
+	/*margin: auto;	*/
+	padding: 5%;
+}
+hr{
+	margin: 0 auto;
+}
+#nom, #pas 
+{
+	height: 40px;
+	font-size: 18px;
+}
+
+#c3 {
+	/*border: 2px pink solid;*/
+	margin: auto;
+	width: 60%;
+	
+	
+}
+.boton {
+	width: 100%;
+	border-radius: 5px;
+	border: 0px;
+	padding: 5%;
+	color: black;
+	font-size: 17px;
+	background: #67DEF0;
+	color: white;
+	font-weight: bold;
+
+}
+.registration {
+	text-align: center;
+	/*margin-bottom: 5%;*/
+}
+.emai:focus
+{
+	border: 2px solid #2DE1CE;
+	outline: 0px;
+	-webkit-box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
+	box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
+}
+
+
+.emai {
+	
+	height: 30px;
+	border-radius: 5px;
+	/*border: .5px solid #504C4C;*/
+	margin-top: 1%;
+	border: 1px solid #ccc;
+	width: 100%;
+	-webkit-box-shadow:  inset 0 2px 2px 2px rgba(0,0,0,.075);
+	-moz-box-shadow:  inset 0 2px 2px 2px rgba(0,0,0,.075);
+	box-shadow: inset 0 2px 2px 2px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+input::-webkit-input-placeholder {
+  color: #747474;
+  padding-left:  5px;
+  /*text-align: center;*/
+}
+input:-moz-placeholder {
+  color: #747474; 
+  padding-left:  5px;
+  /*margin-left: 15px;*/
+}
+input:-ms-input-placeholder { 
+  color: #747474; 
+  padding-left:  5px;
+  /*margin-left: 15px;*/
+}
+
