@@ -1,4 +1,4 @@
 <?php  
-	include('html/public/goReg.html');
+	include('html/public/goReg.php');
 
 ?>
