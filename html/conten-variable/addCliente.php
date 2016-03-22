@@ -14,7 +14,7 @@
 	</article>
 
 	<section>
-
+ 
 		<article class="izquierdasection">
 				<article id="name">
 		            <figure id="imgEstudiante">
@@ -27,33 +27,33 @@
 
 
 		<article id="dere" class="derechasection">
-			<h1>REGISTRO DE CLIENTE</h1>
-			<form>
-				<label for="inputEmail">Nombre</label>
-				<input type="email" class="form-control"  placeholder="Nombre">
+			<p class="titulosec">> REGISTRO DE CLIENTE</p>
+			<form class="for">
+				<label class="ema">Nombre (s):</label><br>
+				<input type="email" class="emai"  placeholder="Nombre"><br><br>
 			
-				<label for="inputDirD">Dirección Domicilio</label>
-				<input type="password" class="form-control" placeholder="Dirección Domicilio">
+				<label class="ema">Dirección Domicilio:</label><br>
+				<input type="password" class="emai" placeholder="Dirección Domicilio"><br><br>
 			
-				<label for="inputDirN">Dirección Negocio</label>
-				<input type="password" class="form-control" placeholder="Dirección Negocio">
+				<label class="ema">Dirección Negocio:</label><br>
+				<input type="password" class="emai" placeholder="Dirección Negocio"><br><br>
 			
-				<label for="inputCD">Ciudad/Estado</label>
-				<input type="password" class="form-control" placeholder="Ciudad y Estado">
+				<label class="ema">Ciudad/Estado:</label><br>
+				<input type="password" class="emai" placeholder="Ciudad y Estado"><br><br>
 			
-				<label for="inputGN">Giro del Negocio</label>
-				<input type="password" class="form-control" placeholder="Giro del Negocio">
+				<label class="ema">Giro del Negocio:</label><br>
+				<input type="password" class="emai" placeholder="Giro del Negocio"><br><br>
 			
-				<label for="inputTel">Número Teléfono</label>
-				<input type="password" class="form-control" placeholder="Número Teléfono">
+				<label class="ema">Número Teléfono:</label><br>
+				<input type="password" class="emai" placeholder="Número Teléfono"><br><br>
 			
-				<label for="inputAg">Agente de Cobro</label>
-				<input type="password" class="form-control" placeholder="Agente de Cobro">
+				<label class="ema">Agente de Cobro:</label><br>
+				<input type="password" class="emai" placeholder="Agente de Cobro"><br><br>
 			
-				<label for="inputAg">Agente de Cobro</label>
-				<input type="password" class="form-control" placeholder="Agente de Cobro">
+				<label class="ema">Agente de Cobro:</label><br>
+				<input type="password" class="emai" placeholder="Agente de Cobro"><br><br>
 			
-				<button type="submit" class="btn btn-primary">Registrar</button>
+				<button type="submit" class="button yellow medium radius">Registrar</button>
 			</form>
 		</article>
 
