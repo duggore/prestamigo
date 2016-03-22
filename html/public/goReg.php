@@ -4,8 +4,6 @@
 <body class="body">
 	<section class="iniciosesion">
 
-	<!-- <figure class="logosesion"><img class="logos" src="views/app/images/logo.png" alt=""></figure> -->
-
 		
 			   <form id="inicios" action="" method="POST">
 			   		<div id="c1">INICIAR SESIÓN</div>
