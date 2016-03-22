@@ -8,14 +8,11 @@
 
 /*------parte de la primera fila del panel administrador---------*/
 .panel{ 
-	/*border: 2px red solid;*/
 	overflow: hidden;
-	/*background-color: #990066;*/
 	background-color: #4f028C;
 	height: 130px;
 } 
 .ppanel{
-	/*border: 2px red solid;*/
 	vertical-align: top;
 	margin-left: 1%;
 	margin-top: 2%;
@@ -25,9 +22,7 @@
 	font-family: 'Roboto Condensed', sans-serif;
 }
 .ppanel2{
-	/*border: 2px red solid;*/
 	width: 100%;
-	/*vertical-align: top;*/
 	margin-left: 1%;
 	margin-top: 2%;
 	font-size: 23px;
@@ -40,35 +35,28 @@
 	display: inline-block;
 }
 .pizquierda{
-	/*border: 2px green solid;*/
 	width: 50%;
 	float: left;
 }
 .contienelogo{
-	/*border: 2px red solid;*/
 	width: 20%;
 	margin-top: 1%;
 }
 .logo{
-	/*border: 2px red solid;*/
 	width: 100%;
 	margin-left: 1%;
 }
 
 /*----------------relog---------------*/
 .pderecha{
-	/*border: 2px black solid;*/
 	margin-top: .4%;
 	margin-right: 1%;
 	width: 20%;
 	float: right;
-	/*text-align: right;*/
 }
 .widget{
-	/*border: 2px red solid;*/
 	width: 100%;
 	color: white;
-	/*margin: 32px;*/
 }
 .widget p{
 	display: inline-block;
@@ -78,18 +66,12 @@
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	font-size: 1.5em;
-	/*margin-bottom: 0.3125rem;*/
-	/*background: rgba(0,0,0,.5);*/
-	/*padding: 20px;*/
 	width: 100%;
 }
 .reloj{
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	font-size: 4em;
-	/*margin-bottom: 0.3125rem;*/
-	/*background: rgba(0,0,0,.5);*/
-	/*padding: 20px;*/
 	width: 100%;
 
 }
@@ -106,17 +88,13 @@
 
 section{
 	/*border: 2px red solid;*/
-	/*vertical-align: top;*/
-	/*overflow: hidden;*/
 }
 .izquierdasection, .derechasection{
-	/*outline: 2px black solid;*/
 	display: inline-block;
 	height: 867px;
 }
 .izquierdasection{
 	width: 15%;
-	/*background-color: #343434;*/
 	background-color: #2d2d2d;
 	color: white;
 }
@@ -128,7 +106,6 @@ section{
 	/*border: 2px red solid;*/
 }
 #imgEstudiante{
-	/*border:2px solid green;*/
 	width: 40%;
 	margin: auto;
 	padding-top: 3%;
@@ -137,7 +114,6 @@ section{
 #imgEstudiante img {
 	width: 100%;
 	border-radius: 50%;
-	/*border: 2px red solid;*/
 }
 
 .bien{
@@ -170,7 +146,6 @@ a {
 	cursor: pointer;
 	display: block;
 	padding: 15px 15px 15px 42px;
-	/*color: #4D4D4D;*/
 	font-family: 'Roboto', sans-serif;
 	color: white;
 	font-size: 16px;
@@ -195,7 +170,6 @@ a {
 	top: 16px;
 	left: 12px;
 	font-size: 18px;
-	/*color: #595959;*/
 	color: white;
 	-webkit-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
@@ -256,8 +230,6 @@ a {
  /*-----------------------------------panel de inicio de sesion-----------------------------*/
 
 .body{
-	/*border: 2px red solid;*/
-	/*background-color: red;*/
 	background-image: url("../images/login.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -266,42 +238,31 @@ a {
 
 }
 .iniciosesion{
-	/*border: 2px red solid;*/
 	width: 100%;
-	/*height: 100px;*/
 }
 
 
 /*-----------------LOGIN CONFIGURACCION-------------------*/
 
-/*.logosesion{
-	
-	text-align: center;
-}*/
 
 #inicios {
-	/*border: 2px black solid;*/
 	width: 20%;
 	margin: 160px auto;
 	background: #fff;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
-	/*margin: auto;*/
 	
 
 }
 #conten {
-	/*border: 1px #D9D9D9 solid;*/
 	background: #fff;
 	margin: 5% auto;
-	/*border-radius: 10px 10px 0 0;*/
 	width: 100%;
 }
 
 
 
 #c1 {
-	/*border: 2px red solid;*/
 	width: 100%;
 	height: 60px;
 	background: #67DFF0;
@@ -315,10 +276,8 @@ a {
 
 }
 #c2 {
-	/*border: 2px solid red;*/
 	text-align: center;
 	width: 100%;
-	/*margin: auto;	*/
 	padding: 5%;
 }
 hr{
@@ -331,7 +290,6 @@ hr{
 }
 
 #c3 {
-	/*border: 2px pink solid;*/
 	margin: auto;
 	width: 60%;
 	
@@ -351,23 +309,17 @@ hr{
 }
 .registration {
 	text-align: center;
-	/*margin-bottom: 5%;*/
 }
-.emai:focus
-{
+.emai:focus{
 	border: 2px solid #2DE1CE;
 	outline: 0px;
 	-webkit-box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
 	box-shadow: -1px 2px 26px -4px rgba(0,0,0,0.75);
 }
-
-
 .emai {
-	
 	height: 30px;
 	border-radius: 5px;
-	/*border: .5px solid #504C4C;*/
 	margin-top: 1%;
 	border: 1px solid #ccc;
 	width: 100%;
@@ -380,23 +332,19 @@ hr{
 input::-webkit-input-placeholder {
   color: #747474;
   padding-left:  5px;
-  /*text-align: center;*/
 }
 input:-moz-placeholder {
   color: #747474; 
   padding-left:  5px;
-  /*margin-left: 15px;*/
 }
 input:-ms-input-placeholder { 
   color: #747474; 
   padding-left:  5px;
-  /*margin-left: 15px;*/
 }
 
 /*---------------registro de cliente-------------*/
 
 .titulosec{
-	/*border: 2px red solid;*/
 	font-family: 'Oswald', sans-serif;
 	color: #505050;
 	font-size: 36px;
@@ -406,19 +354,12 @@ input:-ms-input-placeholder {
 
 }
 .for {
-	/*border: 2px black solid;*/
 	width: 50%;
 	margin-left: 3%;
-	/*display: flex;
-	flex-flow:row wrap;*/
 	padding-top: 2%;
-	/*background: #fff;*/
-	/*height: 500px;*/
-	
 }
 
 .ema{
-	/*border: 2px yellow solid;*/
 	font-size: 16px;
 	font-family: helvetica;
 	font-weight: bold;
