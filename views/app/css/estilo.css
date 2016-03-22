@@ -251,3 +251,10 @@ a {
  	background: #b63b4d;
  	color: #FFF;
  }
+
+
+ /*panel de inicio de sesion*/
+
+.iniciosesion{
+	border: 2px red solid;
+}
