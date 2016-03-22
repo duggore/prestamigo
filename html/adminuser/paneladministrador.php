@@ -1,4 +1,4 @@
-<?php include (HTML_DIR.'dise-prin/header.php'); ?>
+<?php include (HTML_DIR.'dise-secu/header.php'); ?>
 
 <body>
 	<article class="panel">
@@ -11,7 +11,7 @@
 			
 		</article>
 	
-	<?php include (HTML_DIR.'dise-prin/relog.php'); ?>
+	<?php include (HTML_DIR.'dise-secu/relog.php'); ?>
 		
 
 	</article>
@@ -26,12 +26,12 @@
 		            </figure>
             		<p class="bien">Bienvenid@</p>
          		</article>			
-		<?php include (HTML_DIR.'dise-prin/menu.php'); ?>
+		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
 		</article>
 
 
 		<article class="derechasection">hdhdhdhd
-		
+
 		</article>
 		
 
