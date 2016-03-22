@@ -257,4 +257,6 @@ a {
 
 .iniciosesion{
 	border: 2px red solid;
+	height: 100%;
+	width: 100%;
 }
