@@ -30,14 +30,9 @@
 		</article>
 
 
-		<article class="derechasection">hdhdhdhd
+		<article id="dere" class="derechasection">hdhdhdhd
 
 		</article>
-		
-
-
-
-
 
 	</section>
 	<script src="views/app/js/reloj.js"></script>

@@ -1,6 +1,8 @@
 					<ul id="accordion" class="accordion">
 						<li>
-							<div class="link"><i class="fa fa-home"></i>Inicio</div>
+							<a href="?view=admin"><div class="link"><i class="fa fa-home"></i>Inicio</div></a>
+							<!-- <li >Inicio</li> -->
+
 							<ul class="submenu">
 							</ul>
 						</li>
@@ -14,7 +16,7 @@
 						<li>
 							<div class="link"><i class="icono izquierda fa fa-users"></i>Mantenimiento<i class="fa fa-chevron-down"></i></div>
 							<ul class="submenu">
-								<li><a href="#">Clientes</a></li>
+								<li><a href="?view=add">Clientes</a></li>
 		         				<li><a href="#">Agentes</a></li>
 		         				<li><a href="#">Zonas</a></li>
 		         				<li><a href="#">Usuarios</a></li>
