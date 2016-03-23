@@ -1,3 +1,4 @@
 <?php  
-	include('html/public/goReg.php');
+	include('html/public/goLogin.php');
+	// echo 1;
 ?>
