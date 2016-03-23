@@ -3,3 +3,4 @@
 <body>
 	ADIOS MUERTO adios
 </body> 
+<?php include (HTML_DIR.'dise-prin/footer.php'); ?> 
