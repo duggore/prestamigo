@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
+<?php 
+	require('core/core.php');
+
+	if($_POST){
+		
+		switch (isset($_GET['mode']) ? $_GET['mode'] : null) {
+			case 'login':
+					require('core/bin/ajax/goSesion.php');
+				break;
+			
+			default:
+					include('core/controllers/sesionController.php');
+				break;
+		}
+	}
+
+	else{
+		
+		if(!isset($_GET['view'])){
+				include('core/controllers/sesionController.php');
+		}
+	}
+?>
