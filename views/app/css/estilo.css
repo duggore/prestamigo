@@ -285,7 +285,7 @@ a {
 hr{
 	margin: 0 auto;
 }
-#nom, #pas 
+.nom, .pas 
 {
 	height: 40px;
 	font-size: 18px;
