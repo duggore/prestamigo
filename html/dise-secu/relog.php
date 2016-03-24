@@ -1,4 +1,4 @@
-		<article class="pderecha">
+		<article class="pderecha"> 
 			<div class="widget">
 				<div class="fecha">
 				<p id="diaSemana" class="diaSemana"></p>
