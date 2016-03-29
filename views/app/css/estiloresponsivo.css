@@ -27,9 +27,25 @@
 } 
 /* Para 1366px */  
 @media only screen and (max-width: 1366px) and (min-width: 1200px) {  
+
+		.alert {
+		/*border: 2px red solid;*/
+		  padding: 15px;
+		  margin-bottom: 20px;
+		  border: 1px solid transparent;
+		  border-radius: 4px;
+		  margin-bottom: 0;
+        }
+        .alert-dismissable .close,
+		.alert-dismissible .close {
+		  position: relative;
+		  top: -2px;
+		  right: -290px;
+		  color: inherit;
+		}
 		#inicios {
 			/*border: 2px red solid;*/
 			width: 24%;
-		}
+		} 
   
 }

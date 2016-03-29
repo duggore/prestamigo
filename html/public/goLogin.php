@@ -4,7 +4,7 @@
 <body class="body">
 	<section class="iniciosesion">
 		<div role="form" id="inicios" onkeypress="return runScriptLogin(event)">
-			<div id="_AJAX_LOGIN_"></div>
+			<div class= "" id="_AJAX_LOGIN_"></div>
 
 			<div id="c1">INICIAR SESIÓN</div>
 			<div role="form" id="conten">

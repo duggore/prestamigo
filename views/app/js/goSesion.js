@@ -23,7 +23,7 @@ function goLogin(){
 			result = '<div class="alert alert-dismissible alert-warning">';
             result +='<button type="button" class="close" data-dismiss="alert">&times;</button>';
             result +='<h4>Procesando...</h4>';
-            result +='<p><strong>Estamos intentando logearte...</strong></p>';
+            result +='<p><strong>Estamos intentando logearte...</strong></p>'; 
         	result +='</div>';
         	__('_AJAX_LOGIN_').innerHTML = result;
 		}
