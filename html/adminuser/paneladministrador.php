@@ -1,7 +1,13 @@
 
 <?php 
-	if (isset($_SESSION['app_id'])){
-	include (HTML_DIR.'dise-secu/header.php'); ?>
+	if (!isset($_SESSION['app_id'])){
+		include('core/controllers/sesionController.php');
+	}
+
+	else
+	{
+		include (HTML_DIR.'dise-secu/header.php'); 
+?>
 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?>
@@ -15,11 +21,7 @@
 	</section>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
-</body>
-	<?php } 
-	else
-	{
-		include('core/controllers/sesionController.php');
-	}
-	?>
+</body>	
 </html>
+<?php  } ?>	
+
