@@ -15,9 +15,6 @@
 	}
 
 	else{
-		
-		if(!isset($_GET['view'])){
-				include('core/controllers/sesionController.php');
-		}
+			include('core/controllers/sesionController.php');
 	}
 ?>

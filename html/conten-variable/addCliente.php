@@ -1,60 +1,41 @@
 <?php include(HTML_DIR.'dise-secu/header.php'); ?>
 <body>
-	<article class="panel">
-		<article class="pizquierda">
-			<figure class="contienelogo">
-				<img class="logo" src="views/app/images/logo.png" alt="">
-			</figure>
-			<article class="ppanel">
-				<p class="ppanel">PRESTAMIGUITO</p>
-				<p class="ppanel2">Sistema de Crédito</p>
-			</article>
-		</article>
-		<?php include (HTML_DIR.'dise-secu/relog.php'); ?>
-	</article>
-
+	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?>
 	<section>
- 
-		<article class="izquierdasection">
-				<article id="name">
-		            <figure id="imgEstudiante">
-		               <img src="views/app/images/Cliente.jpg" alt="">
-		            </figure>
-            		<p class="bien">Bienvenid@</p>
-         		</article>			
+ 		<article class="izquierdasection">		
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
 		</article>
 
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> REGISTRO DE CLIENTE</p>
-			<form class="for">
+			<div class="for" role="form" onkeypress="return runScriptReg(event)">
 				<label class="ema">Nombre (s):</label><br>
-				<input type="email" class="emai"  placeholder="Nombre"><br><br>
+				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
 			
 				<label class="ema">Dirección Domicilio:</label><br>
-				<input type="password" class="emai" placeholder="Dirección Domicilio"><br><br>
+				<input id="user_dir" type="password" class="emai" placeholder="Dirección Domicilio"><br><br>
 			
 				<label class="ema">Dirección Negocio:</label><br>
-				<input type="password" class="emai" placeholder="Dirección Negocio"><br><br>
+				<input id="user_dirNeg" type="password" class="emai" placeholder="Dirección Negocio"><br><br>
 			
 				<label class="ema">Ciudad/Estado:</label><br>
-				<input type="password" class="emai" placeholder="Ciudad y Estado"><br><br>
+				<input id="user_dirCiu" type="password" class="emai" placeholder="Ciudad y Estado"><br><br>
 			
 				<label class="ema">Giro del Negocio:</label><br>
-				<input type="password" class="emai" placeholder="Giro del Negocio"><br><br>
+				<input id="user_giro"type="password" class="emai" placeholder="Giro del Negocio"><br><br>
 			
 				<label class="ema">Número Teléfono:</label><br>
-				<input type="password" class="emai" placeholder="Número Teléfono"><br><br>
+				<input id="user_tel" type="password" class="emai" placeholder="Número Teléfono"><br><br>
 			
 				<label class="ema">Agente de Cobro:</label><br>
-				<input type="password" class="emai" placeholder="Agente de Cobro"><br><br>
+				<input id="user_agente" type="password" class="emai" placeholder="Agente de Cobro"><br><br>
 			
-				<label class="ema">Agente de Cobro:</label><br>
-				<input type="password" class="emai" placeholder="Agente de Cobro"><br><br>
-			
-				<button type="submit" class="button yellow medium radius">Registrar</button>
-			</form>
+				<!-- <label class="ema">Agente de Cobro:</label><br>
+				<input id="user_login" type="password" class="emai" placeholder="Agente de Cobro"><br><br> -->
+
+				<button class="button yellow medium radius" onclick="goReg()">INICIAR SESIÓN</button>
+			</div>
 		</article>
 
 	</section>
@@ -63,6 +44,7 @@
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
 </body>
+</html>
 
 
 

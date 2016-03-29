@@ -1,4 +1,4 @@
-function goLogin(){
+function goReg(){
 	var connect, form, responde, result, user, pass;
 	user = __('user_login').value;
 	pass = __('pass_login').value;
@@ -34,8 +34,8 @@ function goLogin(){
 	connect.send(form);
 }
 
-function runScriptLogin(e){
+function runScriptReg(e){
 	if(e.keyCode == 13){
-		goLogin();
+		goReg();
 	}
 }

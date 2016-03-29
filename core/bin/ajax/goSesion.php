@@ -2,12 +2,17 @@
 	
 	if(!empty($_POST['user']) and !empty($_POST['pass'])){
 		$db = new Conexion();
-		$user = $db->real_escape_string($_POST['user']);
+		$data = $db->real_escape_string($_POST['user']);
 		$pass = Encrypt($_POST['pass']);
 		$sql = $db->query("SELECT id FROM users WHERE (users ='$data' or email='$data') AND pass = '$pass' LIMIT 1;");
 			if($db->rows($sql) > 0)
 			{
-				
+				// if ($_POST['sesion']){
+				// ini_set('session.cookie_lifetime', time() + (60*60*24));
+				// }
+				$_SESSION['app_id']= $db->runs($sql)[0];
+				// include('core/controllers/adminController.php');
+				echo 1;
 			}
 
 			else{
@@ -16,7 +21,7 @@
 	               	<strong>Error</strong> Las credenciales son incorrectas.
 	             	</div>';
 			}
-
+		$db->liberar($sql);
 		$db->close();
 	}
 

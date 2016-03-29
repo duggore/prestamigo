@@ -1,5 +1,7 @@
 <?php  
 	// Nucleo de la Aplicacion
+	
+	session_start();
 
 	#CONTANSTES DE CONEXION
 	define('DB_HOST', 'localhost');
@@ -17,4 +19,7 @@
 	require('vendor/autoload.php');
 	require('core/models/class.Conexion.php');
 	require('core/bin/functions/Encrypt.php');
+	require('core/bin/functions/users.php');
+
+	$users = users();
 ?>
