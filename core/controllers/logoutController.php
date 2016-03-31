@@ -1,4 +1,5 @@
 <?php  
+	session_destroy();
 	unset($_SESSION['app_id']);
-	header('location: ?view=sesion');
+	header('location: ?view=admin');
 ?>

@@ -1,20 +1,27 @@
 <?php 
-	require('core/core.php');
+	
 
 	if($_POST){
-		
+		require('core/core.php');	
 		switch (isset($_GET['mode']) ? $_GET['mode'] : null) {
 			case 'login':
 					require('core/bin/ajax/goSesion.php');
 				break;
+
+			case 'registro':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goRegistro.php');
+				break;
 			
 			default:
-					include('core/controllers/sesionController.php');
+					header('location: ?view=admin');
+				// include('core/controllers/sesionController.php');
 				break;
 		}
 	}
 
 	else{
-			include('core/controllers/sesionController.php');
+			header('location: ?view=admin');
+			// include('core/controllers/sesionController.php');
 	}
 ?>

@@ -14,22 +14,22 @@
 				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
 			
 				<label class="ema">Dirección Domicilio:</label><br>
-				<input id="user_dir" type="password" class="emai" placeholder="Dirección Domicilio"><br><br>
+				<input id="user_dir" type="text" class="emai" placeholder="Dirección Domicilio"><br><br>
 			
 				<label class="ema">Dirección Negocio:</label><br>
-				<input id="user_dirNeg" type="password" class="emai" placeholder="Dirección Negocio"><br><br>
+				<input id="user_dirNeg" type="text" class="emai" placeholder="Dirección Negocio"><br><br>
 			
 				<label class="ema">Ciudad/Estado:</label><br>
-				<input id="user_dirCiu" type="password" class="emai" placeholder="Ciudad y Estado"><br><br>
+				<input id="user_dirCiu" type="text" class="emai" placeholder="Ciudad y Estado"><br><br>
 			
 				<label class="ema">Giro del Negocio:</label><br>
-				<input id="user_giro"type="password" class="emai" placeholder="Giro del Negocio"><br><br>
+				<input id="user_giro"type="text" class="emai" placeholder="Giro del Negocio"><br><br>
 			
 				<label class="ema">Número Teléfono:</label><br>
-				<input id="user_tel" type="password" class="emai" placeholder="Número Teléfono"><br><br>
+				<input id="user_tel" type="text" class="emai" placeholder="Número Teléfono"><br><br>
 			
 				<label class="ema">Agente de Cobro:</label><br>
-				<input id="user_agente" type="password" class="emai" placeholder="Agente de Cobro"><br><br>
+				<input id="user_agente" type="text" class="emai" placeholder="Agente de Cobro"><br><br>
 			
 				<!-- <label class="ema">Agente de Cobro:</label><br>
 				<input id="user_login" type="password" class="emai" placeholder="Agente de Cobro"><br><br> -->
