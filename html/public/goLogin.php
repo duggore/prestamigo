@@ -18,12 +18,12 @@
 				<hr width="90%">
 			</div>
 
-			<div class="registration">
+		<!-- 	<div class="registration">
 				¿Aún no tiene una cuenta?<br/>
 				<a class="" href="#">
 				Aquí puede crear una
 				</a>
-			</div>	
+			</div> -->	
 			<br>
 		</div>
 	</section>
