@@ -11,7 +11,6 @@
 				// ini_set('session.cookie_lifetime', time() + (60*60*24));
 				// }
 				$_SESSION['app_id']= $db->runs($sql)[0];
-				// include('core/controllers/adminController.php');
 				echo 1;
 			}
 
