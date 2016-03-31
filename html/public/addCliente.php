@@ -1,18 +1,25 @@
-<?php include(HTML_DIR.'dise-secu/header.php'); ?>
+  <?php 
+  	if (!isset($_SESSION['app_id'])){
+		include(HTML_DIR.'public/goLogin.php');
+		// header('location: ?view=sesion');
+	}
+
+	else
+	{
+		include(HTML_DIR.'/dise-secu/header.php'); ?> 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
  		<article class="izquierdasection">		
-		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
+		<?php include (HTML_DIR.'dise-secu/menu.php'); ?> 
 		</article>
 
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> REGISTRO DE CLIENTE</p>
 			<div class="for" role="form" onkeypress="return runScriptReg(event)">
-
-				<div class= "" id="_AJAX_REG_"></div><br><br>
-
+				<div class= "" id="_AJAX_LOGIN_"></div>
+				
 				<label class="ema">Nombre (s):</label><br>
 				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
 			
@@ -47,6 +54,7 @@
 	<script src="views/app/js/main.js"></script>
 </body>
 </html>
+<?php } ?>
 
 
 

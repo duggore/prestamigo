@@ -17,7 +17,7 @@
 							<p class="rcliente">Registro Cliente</p>
 						</article>
 					</article>
-					<a href="<?php HTML_DIR.'conten-variable/addCliente.php';?>"><article class="accionesdentro2">
+					<a href="?view=insert"><article class="accionesdentro2">
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>

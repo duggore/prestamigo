@@ -13,7 +13,7 @@
 
 	define('HTML_DIR', 'html/');
 	define('APP_TITLE', 'Prestamigo');
-	define('APP_URL', 'http://localhost/Github/prestamigo');
+	// define('APP_URL', 'http://localhost/Github/prestamigo');
 
 	#ESTRUCTURA
 	require('vendor/autoload.php');
