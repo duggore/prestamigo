@@ -14,14 +14,14 @@ function goLogin(){
 				__('_AJAX_LOGIN_').innerHTML = connect.responseText;
 			}
 		}
-		else if (connect.readyState !=4){
-			result = '<div class="alert alert-dismissible alert-warning">';
-            result +='<button type="button" class="close" data-dismiss="alert">&times;</button>';
-            result +='<h4>Procesando...</h4>';
-            result +='<p><strong>Estamos intentando logearte...</strong></p>';
-        	result +='</div>';
-        	__('_AJAX_LOGIN_').innerHTML = result;
-		}
+		// else if (connect.readyState !=4){
+		// 	result = '<div class="alert alert-dismissible alert-warning">';
+  //           result +='<button type="button" class="close" data-dismiss="alert">&times;</button>';
+  //           result +='<h4>Procesando...</h4>';
+  //           result +='<p><strong>Estamos intentando logearte...</strong></p>';
+  //       	result +='</div>';
+  //       	__('_AJAX_LOGIN_').innerHTML = result;
+		// }
 	}
 
 	connect.open('POST','ajax.php?mode=login',true);
