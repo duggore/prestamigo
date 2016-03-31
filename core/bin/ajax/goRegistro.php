@@ -7,9 +7,6 @@
 		$sql = $db->query("SELECT id FROM users WHERE (users ='$data' or email='$data') AND pass = '$pass' LIMIT 1;");
 			if($db->rows($sql) > 0)
 			{
-				// if ($_POST['sesion']){
-				// ini_set('session.cookie_lifetime', time() + (60*60*24));
-				// }
 				$_SESSION['app_id']= $db->runs($sql)[0];
 				echo 1;
 			}

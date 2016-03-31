@@ -1,9 +1,15 @@
 function goReg(){
-	var connect, form, responde, result, user, pass;
-	user = __('user_login').value;
-	pass = __('pass_login').value;
+	var connect, form, result, user, pass, dir_domic, dir_negoc, dir_ciu, giro_negoc,tel, agen_cobro;
+	user = __('user_name').value;
+	dir_domic = __('user_dir').value;
+	dir_negoc = __('user_dirNeg').value;
+	dir_ciu = __('user_dirCiu').value;
+	giro_negoc = __('user_giro').value;
+	tel = __('user_tel').value;
+	agen_cobro = __('user_agente').value;
 	// sesion = __('session_login').checked ? true : false;
-	form = 'user=' +user+ '&pass=' +pass;
+	form = 'user=' + user + '&dir_dom=' + dir_dom + '&dir_negoc=' + dir_negoc +'&dir_ciu=' +dir_ciu 
+	+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro;
 	connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 	connect.onreadystatechange = function(){
 		if(connect.readyState == 4 && connect.status == 200){
@@ -29,7 +35,7 @@ function goReg(){
 		}
 	}
 
-	connect.open('POST','ajax.php?mode=login',true);
+	connect.open('POST','ajax.php?mode=registro',true);
 	connect.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	connect.send(form);
 }

@@ -8,12 +8,7 @@ function goLogin(){
 	connect.onreadystatechange = function(){
 		if(connect.readyState == 4 && connect.status == 200){
 			if (connect.responseText == 1){
-				result = '<div class="alert alert-dismissible alert-success">';
-            	result +='<h4>Conectado!</h4>';
-            	result +='<p><strong>Estamos redireccionandote...</strong></p>';
-        		result +='</div>';	
-        		__('_AJAX_LOGIN_').innerHTML = result;
-        		location.reload();
+				location.reload();
 			}
 			else{
 				__('_AJAX_LOGIN_').innerHTML = connect.responseText;

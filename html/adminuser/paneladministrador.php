@@ -1,7 +1,8 @@
 
 <?php 
 	if (!isset($_SESSION['app_id'])){
-		include('core/controllers/sesionController.php');
+		include(HTML_DIR.'public/goLogin.php');
+		// header('location: ?view=sesion');
 	}
 
 	else

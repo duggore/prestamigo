@@ -1,7 +1,7 @@
 <?php  
 	require('core/core.php');
 	// echo Encrypt('123456');
-	// echo $_SESSION['app_id'];
+	// $_SESSION['app_id'];
 
 	if(isset($_GET['view'])){
 		// strtolower convierte de mayuscula a minuscula
