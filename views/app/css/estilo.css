@@ -457,3 +457,77 @@ input:-ms-input-placeholder {
 	padding-top:7px;
 	background: #4f028C;
 }
+
+
+/*-------------opCliente------*/
+.conteopciones
+{
+	/*border: 2px red solid;*/
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+.acciones{
+	/*border: 2px black solid;*/
+	display: inline-block;
+	width: 34%;
+	margin-left: 5%;
+	vertical-align: top;
+	border-radius:10px 10px 10px 10px;
+	border:2px #428bca solid;
+	/*border-radius: 10px;*/
+	/*border:2px #428bca solid;*/
+}
+.accionesdentro1{
+	/*outline: 2px red solid;*/
+	width: 100%;
+	height: 100px;
+	padding: 9px 0px 5px 0px;
+	background-color: #428bca;
+	/*border-radius: 10px;*/
+  	/*border-color: #428bca;*/
+}
+.accionesdentro11{
+	background-color: #428bca;
+	width: 100%;
+	height: 80px;
+	/*margin: 0 auto;*/
+}
+.accionesdentro2{
+	/*outline: 2px red solid;*/
+	/*border-radius:0px 0px 10px 10px;
+	border:2px #428bca solid;*/
+	width: 100%;
+	height: 50px;
+}
+.users{
+	float: left;
+	margin-left: 2%;
+	color: white;
+	/*outline: 2px red solid;
+	height: 80px;
+	width: 18%;*/
+}
+.rcliente{
+	float: right;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 5%;
+	margin-right: 2%;
+	font-family: 'Oswald', sans-serif;
+}
+.iniciaraccion{
+	/*outline: 2px red solid;*/
+	float: left;
+	margin-top: 4%;
+	color: #428bca;
+	margin-left: 2%;
+}
+.right {
+	float: right;
+	margin-right: 2%;
+	margin-top: 4%;
+	color: #428bca;
+}

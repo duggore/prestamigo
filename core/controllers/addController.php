@@ -1,3 +1,3 @@
 <?php  
-	include('html/conten-variable/addCliente.php');
+	include('html/conten-variable/opCliente.php');
 ?>

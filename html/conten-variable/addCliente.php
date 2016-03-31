@@ -1,6 +1,6 @@
 <?php include(HTML_DIR.'dise-secu/header.php'); ?>
 <body>
-	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?>
+	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
  		<article class="izquierdasection">		
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
