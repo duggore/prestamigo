@@ -94,6 +94,7 @@ section{
 .izquierdasection, .derechasection{
 	display: inline-block;
 	height: 867px;
+	/*border: 2px solid red;*/
 }
 .izquierdasection{
 	width: 15%;
@@ -433,6 +434,7 @@ input:-ms-input-placeholder {
 	width: 50%;
 	margin-left: 3%;
 	padding-top: 2%;
+	/*border: 2px solid red;*/
 }
 
 .ema{

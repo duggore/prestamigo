@@ -10,6 +10,9 @@
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> REGISTRO DE CLIENTE</p>
 			<div class="for" role="form" onkeypress="return runScriptReg(event)">
+
+				<div class= "" id="_AJAX_REG_"></div><br><br>
+
 				<label class="ema">Nombre (s):</label><br>
 				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
 			
@@ -39,8 +42,7 @@
 		</article>
 
 	</section>
-	<script src="view/app/boostrap/js/jquery.js"></script>
-	<script src="view/app/boostrap/js/boostrap.min.js"></script>
+	<script src="views/app/js/goReg.js"></script>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
 </body>

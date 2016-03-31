@@ -1,6 +1,5 @@
 <?php 
-	
-	if(!empty($_POST['user']) and !empty($_POST['pass'])){
+	if(!empty($_POST['dir_dom']) and !empty($_POST['dir_negoc']) and !empty($_POST['dir_ciu']) and !empty($_POST['giro_negoc']) and !empty($_POST['tel']) and !empty($_POST['agen_cobro'])){
 		$db = new Conexion();
 		$data = $db->real_escape_string($_POST['user']);
 		$pass = Encrypt($_POST['pass']);
