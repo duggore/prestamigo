@@ -425,7 +425,7 @@ input:-ms-input-placeholder {
 	font-family: 'Oswald', sans-serif;
 	color: #505050;
 	font-size: 36px;
-	width: 40%;
+	width: 60%;
 	margin-top: 2%;
 	margin-left: 2%;
 
@@ -469,6 +469,15 @@ input:-ms-input-placeholder {
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 5%;
+}
+.aqui{
+	/*outline: 2px red solid;*/
+	margin-top:3%;
+	font-family: 'Roboto', sans-serif;
+	width: 30%;
+	color: #505050;
+	/*font-size: 36px;*/
+	margin-left: 2%;
 }
 .acciones{
 	/*border: 2px black solid;*/

@@ -9,12 +9,13 @@
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec"> Mantenimiento&nbsp;>>&nbsp;Clientes</p>
+			<p class="aqui">Aquí puede realizar las siguientes acciones:</p>
 			<article class="conteopciones">
 				<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
 							<i class="users fa fa-users fa-5x"></i>
-							<p class="rcliente">Registro Cliente</p>
+							<p class="rcliente">Registrar Cliente</p>
 						</article>
 					</article>
 					<a href="?view=insert"><article class="accionesdentro2">
