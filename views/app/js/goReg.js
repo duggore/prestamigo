@@ -10,31 +10,21 @@ function goReg(){
 	// sesion = __('session_login').checked ? true : false;
 
 	if (user != '' && dir_domic != '' && dir_negoc !='' && dir_ciu !='' && giro_negoc !='' && tel !='' && agen_cobro !=''){
-		form = 'user=' + user + '&dir_dom=' + dir_dom + '&dir_negoc=' + dir_negoc +'&dir_ciu=' +dir_ciu 
+		form = 'user=' + user + '&dir_dom=' + dir_domic + '&dir_negoc=' + dir_negoc +'&dir_ciu=' +dir_ciu 
 		+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
 			if(connect.readyState == 4 && connect.status == 200){
 				if (connect.responseText == 1){
-					result = '<div class="alert alert-dismissible alert-success">';
-	            	result +='<h4>Conectado!</h4>';
-	            	result +='<p><strong>Estamos redireccionandote...</strong></p>';
-	        		result +='</div>';	
-	        		__('_AJAX_REG_').innerHTML = result;
-	        		location.reload();
+		        	location.reload();
 				}
 				else{
 					__('_AJAX_REG_').innerHTML = connect.responseText;
 				}
 			}
-			// else if (connect.readyState !=4){
-			// 	result = '<div class="alert alert-dismissible alert-warning">';
-	  //           result +='<button type="button" class="close" data-dismiss="alert">&times;</button>';
-	  //           result +='<h4>Procesando...</h4>';
-	  //           result +='<p><strong>Estamos intentando logearte...</strong></p>';
-	  //       	result +='</div>';
-	  //       	__('_AJAX_REG_').innerHTML = result;
-			// }
+			else if (connect.readyState != 4){
+				LimpiarCampos();
+			}
 	}
 
 	connect.open('POST','ajax.php?mode=registro',true);
@@ -56,4 +46,15 @@ function runScriptReg(e){
 	if(e.keyCode == 13){
 		goReg();
 	}
+}
+
+function LimpiarCampos()
+{
+	__('user_name').value = "";
+	__('user_dir').value = "";
+	__('user_dirNeg').value = "";
+	__('user_dirCiu').value = "";
+	__('user_giro').value = "";
+	__('user_tel').value = "";
+	__('user_agente').value = "";
 }

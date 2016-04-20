@@ -12,6 +12,17 @@
 					// header('location: ?view=sesion');
 					require('core/bin/ajax/goRegistro.php');
 				break;
+
+			case 'prestamo':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goPrestamo.php');
+				break;
+
+			case 'pago':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goPago.php');
+				break;
+
 			
 			default:
 					header('location: ?view=admin');

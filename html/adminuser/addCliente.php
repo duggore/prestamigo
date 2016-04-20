@@ -1,12 +1,4 @@
-  <?php 
-  	if (!isset($_SESSION['app_id'])){
-		include(HTML_DIR.'public/goLogin.php');
-		// header('location: ?view=sesion');
-	}
-
-	else
-	{
-		include(HTML_DIR.'/dise-secu/header.php'); ?> 
+ <?php include(HTML_DIR.'/dise-secu/header.php'); ?> 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
@@ -18,7 +10,7 @@
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> REGISTRO DE CLIENTE</p>
 			<div class="for" role="form" onkeypress="return runScriptReg(event)">
-				<div class= "" id="_AJAX_LOGIN_"></div>
+				<div id="_AJAX_REG_"></div><br><br>
 				
 				<label class="ema">Nombre (s):</label><br>
 				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
@@ -44,7 +36,7 @@
 				<!-- <label class="ema">Agente de Cobro:</label><br>
 				<input id="user_login" type="password" class="emai" placeholder="Agente de Cobro"><br><br> -->
 
-				<button class="button yellow medium radius" onclick="goReg()">INICIAR SESIÓN</button>
+				<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
 			</div>
 		</article>
 
@@ -52,9 +44,10 @@
 	<script src="views/app/js/goReg.js"></script>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
+	<script src="views/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
-<?php } ?>
+
 
 
 
