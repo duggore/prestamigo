@@ -22,4 +22,5 @@
 	require('core/bin/functions/users.php');
 
 	$users = users();
+	$clientes = clientes();
 ?>

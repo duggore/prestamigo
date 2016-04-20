@@ -13,8 +13,8 @@
 	<li>
 		<div class="link"><i class="icono izquierda fa fa-credit-card-alt"></i>Operaciones<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
-			<li><a href="https://www.google.com">Créditos</a></li>
-			<li><a href="#">Pagos</a></li>
+			<li><a href="?view=adprestamo">Créditos</a></li>
+			<li><a href="?view=pago">Pagos</a></li>
 		</ul>
 	</li>
 	<li>
@@ -39,7 +39,7 @@
 	<li>
 		<div class="link"><i class="icono izquierda fa fa-pencil-square-o"></i>Consultas<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
-			<li><a href="#">Clientes</a></li>
+			<li><a href="?view=consulta">Clientes</a></li>
 			<li><a href="#">Agentes</a></li>
 			<li><a href="#">Zonas</a></li>
 			<li><a href="#">Ventas</a></li>

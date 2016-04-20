@@ -1,14 +1,5 @@
 
-<?php 
-	if (!isset($_SESSION['app_id'])){
-		include(HTML_DIR.'public/goLogin.php');
-		// header('location: ?view=sesion');
-	}
-
-	else
-	{
-		include (HTML_DIR.'dise-secu/header.php'); 
-?>
+<?php include (HTML_DIR.'dise-secu/header.php'); ?>
 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?>
@@ -24,5 +15,5 @@
 	<script src="views/app/js/main.js"></script>
 </body>	
 </html>
-<?php  } ?>	
+
 
