@@ -8,3 +8,10 @@ function Cancela(contenido,url){
 		window.location = url;
 	}
 }
+
+function Cancela(url){
+	var action = contenido;
+	if (action) {
+		window.location = url;
+	}
+}

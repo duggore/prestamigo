@@ -18,24 +18,19 @@
 		}
 
 		public function imprimir(){
-			// $this->id = $_GET['id']);
-			$id2 = $_POST['val'];
+			$this->id = intval($_GET['id']);
 			// $num = '2';
 			// $q = "UPDATE movpag SET CLA_USR ='$num' WHERE NUM_PAG = '$this->id';";
 			// $this->db->query($q);
 			// header('location: ?view=adprestamo');
 
-			if ($id2 == 45) 
-			// {
+			if ($this->id == 45) 
+			{
 				$html= "Objeto lozalizado";
-			// }
+			}
+			echo $html;
 
-
-			$re = array(
-		  	"men"  =>  $html
-		  	);	
-
-		  echo json_encode($re); 
+			
 	
 		}
 

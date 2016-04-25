@@ -22,7 +22,7 @@
 
 		break;
 		case 'imprimir':
-			
+			$opciones->cancela();
 		break;
 		default:
 			header('location: ?view=admin');
