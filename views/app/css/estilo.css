@@ -16,7 +16,7 @@
 	vertical-align: top;
 	margin-left: 1%;
 	margin-top: 2%;
-	font-size: 25px;
+	font-size: 25px; 
 	color: white;
 	font-weight: bold;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -102,7 +102,8 @@ section{
 	color: white;
 }
 .derechasection{
-	width: 79%;
+	/*border: 2px red solid;*/
+	width: 84.5%;
 	vertical-align: top;
 }
 #name{
@@ -422,16 +423,18 @@ input:-ms-input-placeholder {
 /*---------------registro de cliente-------------*/
 
 .titulosec{
+	/*border: 2px red solid;*/
 	font-family: 'Oswald', sans-serif;
 	color: #505050;
 	font-size: 36px;
-	width: 60%;
+	width: 100%;
 	margin-top: 2%;
-	margin-left: 2%;
+	/*margin-left: 2%;*/
 
 }
 .for {
 	width: 50%;
+	float: left;
 	margin-left: 3%;
 	padding-top: 2%;
 	/*border: 2px solid red;*/
@@ -443,6 +446,8 @@ input:-ms-input-placeholder {
 	font-weight: bold;
 }
 .button {
+	float: right;
+	vertical-align: top;
 	background:#7f8c8d;
 	color:#fff;
 	font-size:1.25em;

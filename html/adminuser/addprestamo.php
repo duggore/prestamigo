@@ -62,18 +62,27 @@
 				
 				<label class="ema">Fecha</label><br>
 				<input id="user_fec" type="date" class="emai" >
-				
+
+				<div id="dialog" title="Información General" style='display:none;' >
+					
+					<button>Adios</button>
+				</div>
+
 							
-				<button type="button" class="button yellow medium radius" onclick="goPrestamo()">PRESTAMO</button>
-
-				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
-
-				<button id="cancelar" style='display:none;' class="button yellow medium radius" onkeypress="Folio_cancel($('#user_id').val())">CANCELAR</button>
+				
 
 				
 			<!-- 	<input type="button" class="button yellow medium radius"  value="PRESTAMO" onclick="form.submit()"> -->
 				
 			</form>
+			<button type="button" class="button yellow medium radius" onclick="goPrestamo()">PRESTAMO</button>
+
+				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
+
+				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
+
+				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
+
 		</article>
 
 	</section>

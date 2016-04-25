@@ -36,8 +36,9 @@
 				<!-- <label class="ema">Agente de Cobro:</label><br>
 				<input id="user_login" type="password" class="emai" placeholder="Agente de Cobro"><br><br> -->
 
-				<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
+				
 			</div>
+			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
 		</article>
 
 	</section>

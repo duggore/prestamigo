@@ -8,7 +8,7 @@
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
 		</article>
 		<article id="dere" class="derechasection">
-			algo
+			algo 
 		</article>
 	</section>
 	<script src="views/app/js/reloj.js"></script>
