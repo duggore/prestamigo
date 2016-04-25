@@ -124,7 +124,7 @@ function Buscar(val){
 }
 
 function Id(id){
-		// var connect;
+		
 
         var par = {
               "val" : id
@@ -144,34 +144,11 @@ function Id(id){
 	                        __('user_tip').value = res.tipo;
 	                        __('user_fec').value = res.fec;
 	                        __('cancelar').style.display = 'inline-block';	
+	                        __('imprimir').style.display = 'inline-block';
                     }
         });
       
 }
 
 
-function Folio_cancel(id){
-		// var connect;
 
-        var par = {
-              "val" : id
-        };
-
-        $.ajax({
-                data:  par,
-                url:   '?view=cancela',
-                type:  'POST',
-                dataType:  'json',
-                success:  function (res) {	
-                		    __('user_name').innerHTML = res.nom;
-                		    __('user_cli').innerHTML = res.num;
-                		    __('id_pres').innerHTML = res.pag;
-	                        __('user_pres').innerHTML = res.pres;
-	                        __('user_pres').innerHTML = res.pres;
-	                        __('user_tip').value = res.tipo;
-	                        __('user_fec').value = res.fec;
-	                        __('cancelar').style.display = 'inline-block';	
-                    }
-        });
-      
-}

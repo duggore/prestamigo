@@ -1,7 +1,9 @@
 <?php  
 	$db = new Conexion();
 	$id = $_POST['val'];
-	$consulta = $db->query("SELECT PAG.NUM_CLI,PAG.TIP_PAG, PAG.NUM_PAG, PAG.IMP_PAG, PAG.FEC_PAG, CLI.NOM_CLI FROM movpag as PAG, catacli as CLI WHERE PAG.NUM_CLI = '$id' AND CLI.NUM_CLI = '$id'  LIMIT 1;");
+	$consulta = $db->query("SELECT PAG.NUM_CLI, PAG.TIP_PAG, PAG.NUM_PAG, PAG.IMP_PAG, PAG.FEC_PAG FROM movpag as PAG WHERE PAG.NUM_PAG = '$id' LIMIT 1;");
+
+	
 
 	$row = $db->runs($consulta);
 
@@ -67,10 +69,13 @@
 			$cli = $row['NUM_CLI'];
 			$num_cli= $cli;	
 		}
+	$id2 = $row['NUM_CLI'];
+	$con = $db->query("SELECT * FROM catacli WHERE NUM_CLI = '$id2';");
+	$row2 = $db->runs($con);
 
 
 	     $re = array(
-		  	"nom"  =>  $row['NOM_CLI'],
+		  	"nom"  =>  $row2['NOM_CLI'],
 		  	"num"  =>  $num_cli,
 		  	"pag"  =>  $clientes,
 		  	"pres"  =>  $row['IMP_PAG'],
@@ -82,7 +87,8 @@
 
 		
 		echo json_encode($re);
-		$db->liberar($consulta);
+		// $db->liberar($consulta);
+		// $db->liberar($con);
 		$db->close();
 		
 ?>
