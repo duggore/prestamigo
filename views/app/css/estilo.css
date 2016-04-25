@@ -30,7 +30,7 @@
 	font-weight: bold;
 	font-style: italic;
 	font-family: 'Roboto Condensed', sans-serif;
-}
+} 
 .contienelogo, .ppanel{
 	display: inline-block;
 }
@@ -93,7 +93,7 @@ section{
 }
 .izquierdasection, .derechasection{
 	display: inline-block;
-	height: 867px;
+	height: 727px;
 	/*border: 2px solid red;*/
 }
 .izquierdasection{
@@ -408,15 +408,18 @@ hr{
 }
 
 input::-webkit-input-placeholder {
-  color: #747474;
+  /*color: #747474;*/
+  color: black;
   padding-left:  5px;
 }
 input:-moz-placeholder {
-  color: #747474; 
+  /*color: #747474; */
+  color: black;
   padding-left:  5px;
 }
 input:-ms-input-placeholder { 
-  color: #747474; 
+  /*color: #747474; */
+  color: black;
   padding-left:  5px;
 }
 
@@ -436,18 +439,18 @@ input:-ms-input-placeholder {
 	width: 50%;
 	float: left;
 	margin-left: 3%;
-	padding-top: 2%;
+	/*padding-top: 2%;*/
 	/*border: 2px solid red;*/
 }
 
 .ema{
-	font-size: 16px;
-	font-family: helvetica;
+	font-size: 18px;
+	font-family: arial;
 	font-weight: bold;
 }
 .button {
-	float: right;
-	vertical-align: top;
+	/*float: right;
+	vertical-align: top;*/
 	background:#7f8c8d;
 	color:#fff;
 	font-size:1.25em;
@@ -463,6 +466,12 @@ input:-ms-input-placeholder {
 	box-shadow:0px 0px 0px;
 	padding-top:7px;
 	background: #4f028C;
+}
+#button {
+	float: right;
+	vertical-align: top;
+	/*border: 2px red solid;*/
+	width: 40%;
 }
 
 
@@ -546,4 +555,32 @@ input:-ms-input-placeholder {
 	margin-right: 2%;
 	margin-top: 4%;
 	color: #428bca;
+}
+
+
+/*------addprestamo------*/
+.contefoliofech{
+	/*border: 2px red solid;*/
+	overflow: hidden;
+}
+.uno{
+	/*display: inline-block;*/
+	float: left;
+	/*border: 2px black solid;*/
+	/*vertical-align: top;*/
+	width:40%;
+	/*margin-right: 9.6%;*/
+}
+.dos{
+	float: right;
+	width:30%;
+	/*clear: both;*/
+
+}
+.tres{
+	/*border: 2px green solid;*/
+	display: inline-block;
+	vertical-align: top;
+	width: 32%;
+	margin-right: 6.7px;
 }

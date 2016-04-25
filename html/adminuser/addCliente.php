@@ -5,7 +5,7 @@
  		<article class="izquierdasection">		
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?> 
 		</article>
-
+ 
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec">Mantenimiento&nbsp;>>&nbsp;Clientes&nbsp;>>&nbsp;Registro de Cliente</p>
@@ -38,7 +38,10 @@
 
 				
 			</div>
+
+			<div id="button">
 			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
+			</div>
 		</article>
 
 	</section>

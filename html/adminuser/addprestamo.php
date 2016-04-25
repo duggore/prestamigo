@@ -10,7 +10,7 @@
 		<article id="dere" class="derechasection">
 			<p class="titulosec">PRESTAMO CLIENTE</p>
 			<form class="for" onsubmit="return false;">
-				<div id="_AJAX_PRE_"></div><br><br>
+				<div id="_AJAX_PRE_"></div><br>
 				
 				<label class="ema">Nombre Cliente</label><br>
 				<input type="text" id="user" list="users_busca" class="emai" placeholder="Nombre Cliente" onkeypress="Buscar($('#user').val())"><br><br>
@@ -31,8 +31,14 @@
 				
 				
 				<!-- <option value=""></option> -->
+				<div class="contefoliofech">
+				<div class="uno">
 				<label class="ema">Ult. Folio</label><br>
-				<input id="user_id" type="text" class="emai" onkeydown="Id($('#user_id').val())" value="" placeholder="<?=$clientes['id'];?>"><br><br><br>
+				<input id="user_id" type="text" class="emai" onkeydown="Id($('#user_id').val())" value="" placeholder="<?=$clientes['id'];?>"> <br></div>
+				<div class="dos">
+				<label class="ema">Fecha</label><br>
+				<input id="user_fec" type="date" class="emai" >
+				</div></div><br>
 
 				<label class="ema">Nombre Cliente</label><br>
 				<div id="user_name" class="emai"></div><br>
@@ -43,15 +49,21 @@
 				<label class="ema">Número Prestamo</label><br>
 				<div id="id_pres" class="emai"></div><br>
 
-				<label class="ema" id="lbl_imp">Importe:</label><br>
-				<input id="user_imp" type="text" class="emai" onkeyup="Calcula($('#user_imp').val())"><br><br>
+				<div class="contefoliofech">
+				<div class="tres">
 
-							
-				<label class="ema">Interes</label><br>
+				<label class="ema" id="lbl_imp">Importe ($)</label><br>
+				<input id="user_imp" type="text" class="emai" onkeyup="Calcula($('#user_imp').val())"><br><br></div>
+
+				<div class="tres">			
+				<label class="ema">Interes (%)</label><br>
 				<div id="user_int" class="emai"></div><br>
-
+				</div>
+				<div class="tres">
 				<label class="ema">Prestamo</label><br>
 				<div id="user_pres" class="emai"></div><br><br>
+				</div>
+				</div>
 			
 				<label class="ema">Tipo de Prestamo</label><br>
 				<select  id="user_tip" class="emai" >
@@ -60,8 +72,7 @@
 					<option value="D">D</option>
 				</select><br><br>
 				
-				<label class="ema">Fecha</label><br>
-				<input id="user_fec" type="date" class="emai" >
+				
 
 				<div id="dialog" title="Información General" style='display:none;' >
 					
@@ -75,13 +86,15 @@
 			<!-- 	<input type="button" class="button yellow medium radius"  value="PRESTAMO" onclick="form.submit()"> -->
 				
 			</form>
+
+			<div id="button">
 			<button type="button" class="button yellow medium radius" onclick="goPrestamo()">PRESTAMO</button>
 
 				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
 
 				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
 
-				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Cancela('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
+				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Cancela('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button> </div>
 
 		</article>
 
