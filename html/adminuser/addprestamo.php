@@ -15,7 +15,7 @@
 				<div id="_AJAX_PRE_"></div><br>
 				
 				<label class="ema">Nombre Cliente</label><br>
-				<input type="text" id="user" list="users_busca" class="emai" placeholder="Nombre Cliente" onkeypress="Buscar($('#user').val())"><br><br>
+				<input type="text" id="user" list="users_busca" class="emai" placeholder="Nombre Cliente" onkeypress="Buscar($('#user').val())"><br><br><br>
 
 				
 				<?php 
