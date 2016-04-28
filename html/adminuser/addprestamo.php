@@ -10,7 +10,7 @@
 		<article id="dere" class="derechasection">
 			<p class="titulosec">PRESTAMO CLIENTE</p>
 			<form class="for" onsubmit="return false;" autocomplete="off">
-				<div id="_AJAX_PRE_"></div><br><br>
+				<div id="_AJAX_PRE_"></div>
 			<form class="for" onsubmit="return false;">
 				<div id="_AJAX_PRE_"></div><br>
 				
@@ -36,12 +36,12 @@
 				<div class="contefoliofech">
 				<div class="uno">
 				<label class="ema">Ult. Folio</label><br>
-				<input id="user_id" type="text" class="emai" onkeypress="Id($('#user_id').val())" onkeydown="" value="" placeholder="<?=$clientes['id'];?>"><br><br><br>
-				
+				<input id="user_id" type="text" class="emai" onkeypress="Id($('#user_id').val())" onkeydown="" value="" placeholder="<?=$clientes['id'];?>">
+				</div>
 				<div class="dos">
 				<label class="ema">Fecha</label><br>
 				<input id="user_fec" type="date" class="emai" >
-				</div></div><br><br>
+				</div></div><br>
 
 				<label class="ema">Nombre Cliente</label><br>
 				<div id="user_name" class="emai" autocomplete="off"></div><br>
@@ -54,7 +54,6 @@
 
 				<div class="contefoliofech">
 				<div class="tres">
-
 				<label class="ema" id="lbl_imp">Importe ($)</label><br>
 				<input id="user_imp" type="text" class="emai" onkeyup="Calcula($('#user_imp').val())"><br><br></div>
 
