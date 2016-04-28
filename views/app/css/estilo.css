@@ -1,6 +1,6 @@
 *{
 	padding: 0;
-	margin: 0;
+	margin: 0; 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -111,7 +111,7 @@ section{
 	color: white;
 }
 .derechasection{
-	/*border: 2px red solid;*/
+	border: 2px red solid;
 	width: 84.5%;
 	vertical-align: top;
 }
@@ -455,7 +455,7 @@ input:-ms-input-placeholder {
 	float: left;
 	margin-left: 3%;
 	/*padding-top: 2%;*/
-	/*border: 2px solid red;*/
+	border: 2px solid red;
 }
 
 .ema{
@@ -485,7 +485,7 @@ input:-ms-input-placeholder {
 #button {
 	float: right;
 	vertical-align: top;
-	/*border: 2px red solid;*/
+	border: 2px red solid;
 	width: 40%;
 }
 
