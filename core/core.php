@@ -17,7 +17,7 @@
 
 	#ESTRUCTURA
 	require('vendor/autoload.php');
-	require('vendor/mpdf/mpdf.php');
+	require('vendor/fpdf/fpdf.php');
 	require('core/models/class.Conexion.php');
 	require('core/bin/functions/Encrypt.php');
 	require('core/bin/functions/users.php');

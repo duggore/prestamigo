@@ -9,9 +9,6 @@ function Cancela(contenido,url){
 	}
 }
 
-function Cancela(url){
-	var action = contenido;
-	if (action) {
-		window.location = url;
+function Imprimir(url){
+			window.location = url;
 	}
-}

@@ -16,7 +16,7 @@
 				<input id="user_busca" type="text" class="emai" onkeyup="Buscar($('#user_busca').val())" placeholder="Número Cliente o Nombre"><br><br><br>
 					
 				<label class="ema">Cliente:</label><br>
-				<div id="user_name" class="emai"></div><br>
+				<div id="user_name" class="emai"></div><br> 
 
 				<label class="ema">Credito:</label><br>
 				<div id="user_cre" class="emai"></div><br>
@@ -34,10 +34,13 @@
 				<div id="user_est" class="emai"></div><br><br> -->
 				
 				
+			</div>
+
+				<div id="button">
 				<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS</button>
 				<button class="button yellow medium radius" onclick="goPago()">PAGAR</button>
+				</div>
 				
-			</div>
 		</article>
 
 	</section>
