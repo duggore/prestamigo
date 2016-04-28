@@ -30,6 +30,7 @@
 	font-weight: bold;
 	font-style: italic;
 	font-family: 'Roboto Condensed', sans-serif;
+	
 }
 .contienelogo, .ppanel{
 	display: inline-block;
@@ -547,3 +548,18 @@ input:-ms-input-placeholder {
 	margin-top: 4%;
 	color: #428bca;
 }
+
+
+/************Inicia Diseño de PAGOS*/
+#contenedor-principal
+{
+	border: 2px solid blue;
+}
+
+.content{
+	border: 2px solid green;
+	width: 50%;
+	float: left;
+	margin-left: 20px;
+}
+/************************************/

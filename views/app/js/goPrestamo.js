@@ -42,9 +42,9 @@ function goPrestamo(){
 	}
 }
 
-function runScriptPrestamo(e){
+function runScriptpres(e){
 	if(e.keyCode == 13){
-		goPrestamo();
+		Id();
 	}
 }
 
@@ -63,6 +63,7 @@ function LimpiarCampos()
 	__('id_pres').innerHTML = "";
 	// __('user_id').value = "";
 	__('cancelar').style.display = 'none';
+	__('imprimir').style.display = 'none';
 }
 
 function Calcula(valor){
