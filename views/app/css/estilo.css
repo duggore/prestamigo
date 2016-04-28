@@ -30,12 +30,7 @@
 	font-weight: bold;
 	font-style: italic;
 	font-family: 'Roboto Condensed', sans-serif;
-<<<<<<< HEAD
-	
-}
-=======
 } 
->>>>>>> origin/master
 .contienelogo, .ppanel{
 	display: inline-block;
 }
@@ -569,21 +564,6 @@ input:-ms-input-placeholder {
 }
 
 
-<<<<<<< HEAD
-/************Inicia Diseño de PAGOS*/
-#contenedor-principal
-{
-	border: 2px solid blue;
-}
-
-.content{
-	border: 2px solid green;
-	width: 50%;
-	float: left;
-	margin-left: 20px;
-}
-/************************************/
-=======
 /*------addprestamo------*/
 .contefoliofech{
 	/*border: 2px red solid;*/
@@ -610,4 +590,3 @@ input:-ms-input-placeholder {
 	width: 32%;
 	margin-right: 6.7px;
 }
->>>>>>> origin/master
