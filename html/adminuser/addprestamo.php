@@ -41,7 +41,7 @@
 				<div class="dos">
 				<label class="ema">Fecha</label><br>
 				<input id="user_fec" type="date" class="emai" >
-				</div></div><br>
+				</div></div><br><br>
 
 				<label class="ema">Nombre Cliente</label><br>
 				<div id="user_name" class="emai" autocomplete="off"></div><br>
