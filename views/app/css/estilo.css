@@ -30,7 +30,16 @@
 	font-weight: bold;
 	font-style: italic;
 	font-family: 'Roboto Condensed', sans-serif;
+<<<<<<< HEAD
 } 
+=======
+
+	
+}
+
+ 
+
+>>>>>>> santiago
 .contienelogo, .ppanel{
 	display: inline-block;
 }
@@ -564,6 +573,24 @@ input:-ms-input-placeholder {
 }
 
 
+<<<<<<< HEAD
+=======
+
+/************Inicia Diseño de PAGOS*/
+#contenedor-principal
+{
+	border: 2px solid blue;
+}
+
+.content{
+	border: 2px solid green;
+	width: 50%;
+	float: left;
+	margin-left: 20px;
+}
+/************************************/
+
+>>>>>>> santiago
 /*------addprestamo------*/
 .contefoliofech{
 	/*border: 2px red solid;*/
@@ -572,7 +599,7 @@ input:-ms-input-placeholder {
 .uno{
 	/*display: inline-block;*/
 	float: left;
-	/*border: 2px black solid;*/
+	border: 2px black solid;
 	/*vertical-align: top;*/
 	width:40%;
 	/*margin-right: 9.6%;*/
@@ -589,4 +616,9 @@ input:-ms-input-placeholder {
 	vertical-align: top;
 	width: 32%;
 	margin-right: 6.7px;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> santiago
