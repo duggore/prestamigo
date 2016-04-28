@@ -9,13 +9,10 @@
 		
 		<article id="dere" class="derechasection">
 			<p class="titulosec">PRESTAMO CLIENTE</p>
-<<<<<<< HEAD
 			<form class="for" onsubmit="return false;" autocomplete="off">
 				<div id="_AJAX_PRE_"></div><br><br>
-=======
 			<form class="for" onsubmit="return false;">
 				<div id="_AJAX_PRE_"></div><br>
->>>>>>> origin/master
 				
 				<label class="ema">Nombre Cliente</label><br>
 				<input type="text" id="user" list="users_busca" class="emai" placeholder="Nombre Cliente" onkeypress="Buscar($('#user').val())"><br><br>
@@ -39,15 +36,12 @@
 				<div class="contefoliofech">
 				<div class="uno">
 				<label class="ema">Ult. Folio</label><br>
-<<<<<<< HEAD
 				<input id="user_id" type="text" class="emai" onkeypress="Id($('#user_id').val())" onkeydown="" value="" placeholder="<?=$clientes['id'];?>"><br><br><br>
-=======
-				<input id="user_id" type="text" class="emai" onkeydown="Id($('#user_id').val())" value="" placeholder="<?=$clientes['id'];?>"> <br></div>
+				
 				<div class="dos">
 				<label class="ema">Fecha</label><br>
 				<input id="user_fec" type="date" class="emai" >
 				</div></div><br>
->>>>>>> origin/master
 
 				<label class="ema">Nombre Cliente</label><br>
 				<div id="user_name" class="emai" autocomplete="off"></div><br>
@@ -103,12 +97,8 @@
 
 				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
 
-<<<<<<< HEAD
 				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Imprimir('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
-=======
 				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Cancela('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button> </div>
->>>>>>> origin/master
-
 		</article>
 
 	</section>
