@@ -28,6 +28,49 @@
 
 	function clientes(){
 		$db = new Conexion();
+		$sql = $db->query("SELECT MAX(NUM_FAC) AS NUM_FAC FROM totfac;");
+		$d= $db->runs($sql);
+
+		if ($d['NUM_FAC'] < 10)
+		{
+			$new = $d['NUM_FAC'] +1;
+			$clientes= array('id' => '0000'.$new);	
+		}
+
+		if ($d['NUM_FAC'] >= 10)
+		{
+			$new = $d['NUM_FAC'] + 1;
+			$clientes= array('id' => '000'.$new);	
+		}
+		
+
+		if ($d['NUM_FAC'] >= 100)
+		{
+			$new = $d['NUM_FAC'] +1;
+			$clientes= array('id' => '00'.$new);	
+		}
+
+		if ($d['NUM_FAC'] >= 1000)
+		{
+			$new = $d['NUM_FAC'] +1;
+			$clientes= array('id' => '0'.$new);	
+		}
+
+		if ($d['NUM_FAC'] >= 10000)
+		{
+			$new = $d['NUM_FAC'] +1;
+			$clientes= array('id' => $new);	
+		}
+
+		return $clientes;
+
+		$db->liberar($sql);
+		$db->close();
+	}
+
+
+	function pagos(){
+		$db = new Conexion();
 		$sql = $db->query("SELECT MAX(NUM_PAG) AS NUM_PAG FROM movpag;");
 		$d= $db->runs($sql);
 

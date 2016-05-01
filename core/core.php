@@ -24,4 +24,5 @@
 
 	$users = users();
 	$clientes = clientes();
+	$pagos = pagos();
 ?>

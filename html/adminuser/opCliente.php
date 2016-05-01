@@ -47,6 +47,3 @@
 	<script src="views/app/js/main.js"></script>
 </body>
 </html>
-
-
-

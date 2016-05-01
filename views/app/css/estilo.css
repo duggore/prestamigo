@@ -106,7 +106,7 @@ section{
 	color: white;
 }
 .derechasection{
-	border: 2px red solid;
+	/*border: 2px red solid;*/
 	width: 84.5%;
 	vertical-align: top;
 }
@@ -411,6 +411,29 @@ hr{
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+.busname
+{
+	/*border: 2px solid red;*/
+	width: 70%;
+}
+
+.btn-name
+{
+	/*border: 2px solid green;*/
+	border-radius: 5px;
+	background: #4f028C;
+	padding: 10px;
+	color: #fff;
+	/*width: 29%;*/
+	cursor: pointer;
+}
+.name
+{
+	margin-top: 22px;
+	margin-left: 2px;
+	padding:8px 10px 8px 10px;
+}
+
 input::-webkit-input-placeholder {
   /*color: #747474;*/
   font-size: 15px;
@@ -450,7 +473,7 @@ input:-ms-input-placeholder {
 	float: left;
 	margin-left: 3%;
 	/*padding-top: 2%;*/
-	border: 2px solid red;
+	/*border: 2px solid red;*/
 }
 
 .ema{
@@ -480,7 +503,7 @@ input:-ms-input-placeholder {
 #button {
 	float: right;
 	vertical-align: top;
-	border: 2px red solid;
+	/*border: 2px red solid;*/
 	width: 40%;
 }
 

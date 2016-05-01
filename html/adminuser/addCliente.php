@@ -31,12 +31,18 @@
 				<input id="user_tel" type="text" class="emai" placeholder="Número Teléfono"><br><br>
 			
 				<label class="ema">Agente de Cobro:</label><br>
-				<input id="user_agente" type="text" class="emai" placeholder="Agente de Cobro"><br><br>
-			
-				<!-- <label class="ema">Agente de Cobro:</label><br>
-				<input id="user_login" type="password" class="emai" placeholder="Agente de Cobro"><br><br> -->
-
-				
+				<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>			
 			</div>
 
 			<div id="button">

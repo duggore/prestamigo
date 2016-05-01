@@ -5,7 +5,7 @@
 
 	else
 	{
-		include('html/conten-variable/opCliente.php');
+		include('html/adminuser/opCliente.php');
 	}
 	
 ?>

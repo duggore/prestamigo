@@ -10,8 +10,8 @@
 		$agente = $_POST['agen_cobro'];
 
 		
-		$sql = $db->query("INSERT INTO catacli(NUM_CLI,NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU, SUC_URS, TEL_CLI, NUM_AGE)
-			VALUES ('$id','$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '$tel', '$agente')");
+		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU, SUC_URS, TEL_CLI, NUM_AGE)
+			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '$tel', '$agente')");
 
 		if ($sql)
 		{

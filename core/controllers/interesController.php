@@ -6,12 +6,12 @@
 	else
 	{
 		
-		$r1 = $_POST['valor'] * (.200);	
+		// $r1 = $_POST['valor'] * (.200);	
 		$r2 = $_POST['valor'] + $_POST['valor'] * (.20);
 
 		
 		 $r=array( 
-			  	"m1"  =>  $r1 ,  
+			  	"m1"  =>  '20',  
 		        "m2"  =>  $r2
 	        );
 

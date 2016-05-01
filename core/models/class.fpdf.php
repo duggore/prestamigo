@@ -2,9 +2,10 @@
 	// require('core/core.php');
 	$db = new Conexion();
 	$id = intval($_GET['id']);
-	$sql = $db->query("SELECT * FROM movpag WHERE NUM_PAG='$id'");
+	$sql = $db->query("SELECT * FROM totfac WHERE NUM_FAC='$id'");
 	$row = $db->runs($sql);
 	$id_cliente = $row['NUM_CLI'];
+	$fec_cli = $row['FEC_PAG'];
 
 	$sql2 = $db->query("SELECT * FROM catacli WHERE NUM_ClI='$id_cliente'");
 	$row2 = $db->runs($sql2);
@@ -23,7 +24,7 @@
 	$pdf->Cell(25,8,'Firma',1,1,'C');
 	$pdf->Ln(2);
 	
-	$date = date("22-12-2015"); 
+	$date = date($fec_cli); 
 	$i = 1;
 	$day = 1;
 	while ($i <= 15) {
@@ -84,7 +85,7 @@
 	$pdf->Cell(25,8,'Firma',1,1,'C');
 	$pdf->Ln(2);
 	
-	$date = date("22-12-2015"); 
+	$date = date($fec_cli); 
 	$i = 1;
 	$day = 1;
 	while ($i <= 15) {

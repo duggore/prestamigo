@@ -10,13 +10,15 @@
 		<article id="dere" class="derechasection">
 			<p class="titulosec">PRESTAMO CLIENTE</p>
 			<form class="for" onsubmit="return false;" autocomplete="off">
-				<div id="_AJAX_PRE_"></div>
-			<form class="for" onsubmit="return false;">
-				<div id="_AJAX_PRE_"></div><br>
+				<div id="_AJAX_PRE_"></div><br><br>
+			<!-- <form class="for" onsubmit="return false;">
+				<div id="_AJAX_"></div><br> -->
 				
 				<label class="ema">Nombre Cliente</label><br>
-				<input type="text" id="user" list="users_busca" class="emai" placeholder="Nombre Cliente" onkeypress="Buscar($('#user').val())"><br><br><br>
-
+				<div class="buscaname">
+					<input type="text" id="user" list="users_busca" class="emai busname" placeholder="Nombre Cliente">
+					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
+				</div><br>
 				
 				<?php 
 					$db = new Conexion();
@@ -36,21 +38,23 @@
 				<div class="contefoliofech">
 				<div class="uno">
 				<label class="ema">Ult. Folio</label><br>
-				<input id="user_id" type="text" class="emai" onkeypress="Id($('#user_id').val())" onkeydown="" value="" placeholder="<?=$clientes['id'];?>">
+				<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$clientes['id'];?>">
 				</div>
 				<div class="dos">
 				<label class="ema">Fecha</label><br>
 				<input id="user_fec" type="date" class="emai" >
-				</div></div><br>
+				</div>
+				<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
+				</div><br>
 
 				<label class="ema">Nombre Cliente</label><br>
-				<div id="user_name" class="emai" autocomplete="off"></div><br>
+				<div id="user_name" class="emai"></div><br>
 
 				<label class="ema">Número Cliente</label><br>
-				<div id="user_cli" class="emai" autocomplete="off"></div><br>
+				<div id="user_cli" class="emai"></div><br>
 
-				<label class="ema">Número Prestamo</label><br>
-				<div id="id_pres" class="emai" autocomplete="off"></div><br>
+				<!-- <label class="ema">Número Prestamo</label><br> -->
+				<!-- <div id="id_pres" class="emai"></div><br> -->
 
 				<div class="contefoliofech">
 				<div class="tres">
@@ -74,6 +78,19 @@
 					<option value="D">D</option>
 				</select><br><br>
 				
+				<label class="ema">Agente de Cobro:</label><br>
+				<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>
 				
 
 				<div id="dialog" title="Información General" style='display:none;' >
@@ -94,10 +111,10 @@
 
 				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
 
+				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Imprimir('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
+
 				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
 
-				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Imprimir('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
-				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Cancela('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button> </div>
 		</article>
 
 	</section>

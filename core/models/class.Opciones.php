@@ -13,8 +13,8 @@
 
 		public function cancela(){
 			$this->id = intval($_GET['id']);
-			$num = '2';
-			$q = "UPDATE movpag SET CLA_USR ='$num' WHERE NUM_PAG = '$this->id';";
+			$num = 'C';
+			$q = "UPDATE totfac SET STA_TUS ='$num' WHERE NUM_FAC = '$this->id';";
 			$this->db->query($q);
 			header('location: ?view=adprestamo');
 		}
