@@ -637,7 +637,28 @@ input:-ms-input-placeholder {
 	margin-right: 6.7px;
 
 }
+/*-----------pago------*/
 
+.contenfoliocre{
+	/*border: 2px red solid;*/
+	overflow: hidden;
 
+}
+.fp{
+	/*border: 2px black solid;*/
+	float: left;
+	width: 40%;
+}
+.cre{
+	/*border: 2px black solid;*/
+	float: right;
+	width: 45%;
+}
+.unoo{
+	
+	float: left;
+	/*border: 2px green solid;*/
+	width:76.3%;
+}
 
 
