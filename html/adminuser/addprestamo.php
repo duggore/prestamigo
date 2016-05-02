@@ -12,7 +12,7 @@
 			<form class="for" onsubmit="return false;" autocomplete="off">
 				<div id="_AJAX_PRE_"></div><br><br>
 			<!-- <form class="for" onsubmit="return false;">
-				<div id="_AJAX_"></div><br> -->
+				<div id="_AJAX_"></div><br> --> 
 				
 				<label class="ema">Nombre Cliente</label><br>
 				<div class="buscaname">
@@ -36,22 +36,29 @@
 				
 				<!-- <option value=""></option> -->
 				<div class="contefoliofech">
-				<div class="uno">
-				<label class="ema">Ult. Folio</label><br>
-				<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$clientes['id'];?>">
-				</div>
-				<div class="dos">
-				<label class="ema">Fecha</label><br>
-				<input id="user_fec" type="date" class="emai" >
-				</div>
-				<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
+					<div class="uno">
+						<label class="ema">Ult. Folio</label><br>
+						<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$clientes['id'];?>">
+					</div>
+					<div class="dos">
+						<label class="ema">Fecha</label><br>
+						<input id="user_fec" type="date" class="emai" >
+					</div>
+					<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
 				</div><br>
 
-				<label class="ema">Nombre Cliente</label><br>
-				<div id="user_name" class="emai"></div><br>
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Nombre Cliente</label><br>
+				    <div id="user_name" class="emai"></div><br>
+				  </div>
 
-				<label class="ema">Número Cliente</label><br>
-				<div id="user_cli" class="emai"></div><br>
+				  <div class="cre">
+					<label class="ema">Número Cliente</label><br>
+				    <div id="user_cli" class="emai"></div><br>
+				  </div>
+				</div><br>
+				
 
 				<!-- <label class="ema">Número Prestamo</label><br> -->
 				<!-- <div id="id_pres" class="emai"></div><br> -->
@@ -70,36 +77,49 @@
 				<div id="user_pres" class="emai"></div><br><br>
 				</div>
 				</div>
-			
-				<label class="ema">Tipo de Prestamo</label><br>
-				<select  id="user_tip" class="emai" >
-					<option value="0">--</option>
-					<option value="E">E</option>
-					<option value="D">D</option>
-				</select><br><br>
-				
-				<label class="ema">Agente de Cobro:</label><br>
-				<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
-					<option value="">Selecciona Agente</option>
-					<?php  
-						$bd = new Conexion();
-						$sql = $bd->query("SELECT * FROM cataage");
-						while($row = $bd->runs($sql))
-						{
-							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
-						}
-						
-					?>
-				</select>
-				
 
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Pago Diario</label><br>
+				    <div id="user_pres" class="emai"></div>
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Tipo de Pago</label><br>
+						<select  id="user_tip" class="emai" >
+							<option value="0">--</option>
+							<option value="E">E</option>
+							<option value="D">D</option>
+						</select>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+						<label class="ema">Agente de Cobro</label><br>
+						<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
+							<option value="">Selecciona Agente</option>
+							<?php  
+								$bd = new Conexion();
+								$sql = $bd->query("SELECT * FROM cataage");
+								while($row = $bd->runs($sql))
+								{
+									echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+								}
+								
+							?>
+						</select>
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Saldo Prestamo</label><br>
+				    <div id="user_pres" class="emai"></div>
+				  </div>
+				</div><br>
 				<div id="dialog" title="Información General" style='display:none;' >
 					
 					<button>Adios</button>
-				</div>
-
-							
-				
+				</div>				
 
 				
 			<!-- 	<input type="button" class="button yellow medium radius"  value="PRESTAMO" onclick="form.submit()"> -->
