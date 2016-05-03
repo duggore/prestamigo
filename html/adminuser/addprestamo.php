@@ -42,7 +42,7 @@
 				</div>
 				<div class="dos">
 				<label class="ema">Fecha</label><br>
-				<input id="user_fec" type="date" class="emai" >
+				<input id="user_fec" type="date" class="emai" value="<?=date("Y-m-d");?>">
 				</div>
 				<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
 				</div><br>

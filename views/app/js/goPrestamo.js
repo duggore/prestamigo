@@ -62,9 +62,8 @@ function LimpiarCampos()
 	__('user_int').innerHTML= "";
 	__('user_pres').innerHTML= "";
 	__('user_tip').value = "";
-	__('user_fec').value = "";
+	// __('user_fec').value = "";
 	__('user_agente').value = "";
-	// __('id_pres').innerHTML = "";
 	__('user_id').value = "";
 	__('cancelar').style.display = 'none';
 	__('imprimir').style.display = 'none';
