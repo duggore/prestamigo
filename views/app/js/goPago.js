@@ -26,7 +26,7 @@ function goPago(){
 				}
 			}
 			else if (connect.readyState != 4){
-				
+				LimpiarCampos();
 			}
 	}
 
@@ -38,8 +38,9 @@ function goPago(){
 	else
 	{
 		result = '<div class="alert alert-dismissible alert-danger">';
+				result +='<button type="button" class="close" data-dismiss="alert">&times;</button>';
             	result +='<h4>Error!</h4>';
-            	result +='<p><strong> Todos los campos deben estar llenos regalados</strong></p>';
+            	result +='<p><strong> Todos los campos deben estar llenos</strong></p>';
         		result +='</div>';	
         		__('_AJAX_PRE_').innerHTML = result;
 	}
@@ -56,7 +57,7 @@ function runScriptPago(e){
 function LimpiarCampos()
 {
 	__('fol_cre').value = "";
-	__('fec_pag').value= "";
+	// __('fec_pag').value= "";
 	__('tot_apli').value= "";
 	__('tot_cre').innerHTML = "";
 	__('tot_pag').innerHTML= "";
@@ -76,46 +77,11 @@ function Id(id){
                 type:  'POST',
                 dataType:  'json',
                 success:  function (res) {	
-                		   // if(res.id =='1')
-                		// {	
-                			// __('_AJAX_PRE_').innerHTML = res.mensaje;
-                			// __('fec_pag').innerHTML = res.fec;
                 		    __('tot_cre').innerHTML = res.tot_pag;
-                		    // __('for_pag').innerHTML = res.num;
-                		    // __('ref_pag').innerHTML = res.pag;
 	                        __('tot_pag').innerHTML = res.pag;
 	                        __('sal_cre').innerHTML = res.sal_fin;
 	                        __('sta_tus').innerHTML = res.sta_tus;
-	                        // __('user_agente').value = res.age;
-	                        // __('cancelar').style.display = "block";
-	                        // __('imprimir').style.display = "block";
-	                        // __('user').value = "";
-                		// }
-                		// if(res.id == '2')
-                		// {	
-                		// 	__('_AJAX_PRE_').innerHTML = res.mensaje;
-                		//     __('user_name').innerHTML = res.nom;
-                		//     __('user_cli').innerHTML = res.num;
-	                 //        __('user').value = "";
-                		// }
-
-                		// if(res.id == '3')
-                		// {	
-                		// 	__('_AJAX_PRE_').innerHTML = res.mensaje;
-                		//     __('user_name').innerHTML = res.nom;
-                		//     __('user_cli').innerHTML = res.num;
-	                 //        __('user').value = "";
-                		// }
-
-                		// if(res.id =='4')
-                		// {
-
-	                 //        // __('user_name').innerHTML = res.nom;
-	                 //        __('user_name').innerHTML = res.nom;
-                		//     __('user_cli').innerHTML = res.num;
-                		//     // __('user').value = "";
-	                 //     	// __('user').value = "";
-                  //       }
+	    
 
                     }
         });

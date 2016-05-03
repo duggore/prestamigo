@@ -39,6 +39,12 @@
 				  </div>
 				</div><br>
 
+<<<<<<< HEAD
+=======
+				<label class="ema">Fecha Pago:</label><br>
+				<input id="fec_pag" type="date" class="emai" value="<?=date("Y-m-d");?>"><br><br>
+				<!-- <div id="fec_pag" class="emai"></div><br>  -->
+>>>>>>> santiago
 
 				<div class="contenfoliocre">
 				  <div class="fp">
