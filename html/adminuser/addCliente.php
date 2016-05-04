@@ -12,6 +12,12 @@
 			<div class="for" role="form" onkeypress="return runScriptReg(event)">
 				<div id="_AJAX_REG_"></div><br><br>
 				
+				<label class="ema">Id</label><br>
+				<div class="buscaname">
+					<input type="text" id="user" list="users_busca" class="emai busname" placeholder="Nombre Cliente">
+					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
+				</div><br>
+
 				<label class="ema">Nombre (s):</label><br>
 				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
 			

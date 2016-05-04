@@ -7,12 +7,13 @@
 	{
 		
 		// $r1 = $_POST['valor'] * (.200);	
-		$r2 = $_POST['valor'] + $_POST['valor'] * (.20);
-
+		$r2 = $_POST['valor'] * (1.20);
+		$pag_diario = ($_POST['valor'] * 1.20) / 30;
 		
 		 $r=array( 
 			  	"m1"  =>  '20',  
-		        "m2"  =>  $r2
+		        "m2"  =>  $r2,
+		        "m3"  =>  $pag_diario
 	        );
 
 		 echo json_encode($r);

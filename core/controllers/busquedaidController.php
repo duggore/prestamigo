@@ -59,7 +59,8 @@
 					  	"fec"  =>  $row2['FEC_PAG'],
 					  	"tipo"  =>  $row2['TIP_PAG'],
 					  	"int"  =>  $row2['POR_INT'],
-					  	"age"  =>  $row2['NUM_AGE']
+					  	"age"  =>  $row2['NUM_AGE'],
+					  	"saldof"  =>  $row2['SAL_DOF']
 			        );	
           		}
           		else if($row2['STA_TUS'] == 'C')

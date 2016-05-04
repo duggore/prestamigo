@@ -30,7 +30,7 @@
 				<div class="contenfoliocre">
 				  <div class="fp">
 					<label class="ema">Fecha Pago:</label><br>
-					<input id="fec_pag" type="date" class="emai">
+					<input id="fec_pag" type="date" class="emai" value="<?=date("Y-m-d");?>">
 				  </div>
 
 				  <div class="cre">
@@ -38,13 +38,6 @@
 					<div id="tot_cre" class="emai"></div>
 				  </div>
 				</div><br>
-
-<<<<<<< HEAD
-=======
-				<label class="ema">Fecha Pago:</label><br>
-				<input id="fec_pag" type="date" class="emai" value="<?=date("Y-m-d");?>"><br><br>
-				<!-- <div id="fec_pag" class="emai"></div><br>  -->
->>>>>>> santiago
 
 				<div class="contenfoliocre">
 				  <div class="fp">
