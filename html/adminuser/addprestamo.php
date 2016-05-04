@@ -36,27 +36,16 @@
 				
 				<!-- <option value=""></option> -->
 				<div class="contefoliofech">
-<<<<<<< HEAD
+
 					<div class="uno">
 						<label class="ema">Ult. Folio</label><br>
 						<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$clientes['id'];?>">
 					</div>
 					<div class="dos">
 						<label class="ema">Fecha</label><br>
-						<input id="user_fec" type="date" class="emai" >
+						<input id="user_fec" type="date" class="emai" value="<?=date("Y-m-d");?>">
 					</div>
 					<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
-=======
-				<div class="uno">
-				<label class="ema">Ult. Folio</label><br>
-				<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$clientes['id'];?>">
-				</div>
-				<div class="dos">
-				<label class="ema">Fecha</label><br>
-				<input id="user_fec" type="date" class="emai" value="<?=date("Y-m-d");?>">
-				</div>
-				<button type="button" class="yellow medium radius btn-name name" onclick="Id($('#user_id').val())">BUSCAR</button>
->>>>>>> santiago
 				</div><br>
 
 				<div class="contenfoliocre">
@@ -93,7 +82,7 @@
 				<div class="contenfoliocre">
 				  <div class="fp">
 					<label class="ema">Pago Diario</label><br>
-				    <div id="user_pres" class="emai"></div>
+				    <div id="user_pagD" class="emai"></div>
 				  </div>
 
 				  <div class="cre">
@@ -125,7 +114,7 @@
 
 				  <div class="cre">
 					<label class="ema">Saldo Prestamo</label><br>
-				    <div id="user_pres" class="emai"></div>
+				    <div id="sal_final" class="emai"></div>
 				  </div>
 				</div><br>
 				<div id="dialog" title="Información General" style='display:none;' >

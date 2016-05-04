@@ -20,7 +20,7 @@
 	<li>
 		<div class="link"><i class="icono izquierda fa fa-users"></i>Mantenimiento<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
-			<li><a href="?view=add">Clientes</a></li> <!-- Cambiar el nombre del controlador add a op -->
+			<li><a href="?view=insert">Clientes</a></li> <!-- Cambiar el nombre del controlador add a op -->
 			<li><a href="#">Agentes</a></li>
 			<li><a href="#">Zonas</a></li>
 			<li><a href="#">Usuarios</a></li>

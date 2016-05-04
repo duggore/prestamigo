@@ -62,6 +62,7 @@ function LimpiarCampos()
 	__('user_int').innerHTML= "";
 	__('user_pres').innerHTML= "";
 	__('user_tip').value = "";
+    __('user_pagD').innerHTML = "";
 	// __('user_fec').value = "";
 	__('user_agente').value = "";
 	__('user_id').value = "";
@@ -82,6 +83,7 @@ function Calcula(valor){
                 success:  function (response) {
                         $("#user_int").html(response.m1);
                         $("#user_pres").html(response.m2);
+                        $("#user_pagD").html(response.m3);
                     }
         });
 }
@@ -111,6 +113,7 @@ function Buscar(val){
 	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
 	                        __('user_agente').value = res.age;
+                            // __('sal_final').value = res.saldof;  pendiente
 	                        __('cancelar').style.display = "block";
 	                        __('imprimir').style.display = "block";
 	                        __('user').value = "";
@@ -156,6 +159,7 @@ function Id(id){
 	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
 	                        __('user_agente').value = res.age;
+                            __('sal_final').innerHTML = res.saldof;  
 	                        __('cancelar').style.display = "block";
 	                        __('imprimir').style.display = "block";
 	                        __('user').value = "";
