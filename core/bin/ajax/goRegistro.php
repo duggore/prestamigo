@@ -8,10 +8,11 @@
 		$giro_negoc=$_POST['giro_negoc'];
 		$tel = $_POST['tel'];
 		$agente = $_POST['agen_cobro'];
+		$fecha_alta = date('Y-m-d');
 
 		
-		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU, SUC_URS, TEL_CLI, NUM_AGE)
-			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '$tel', '$agente')");
+		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU,SUC_URS,NUM_FAC,IMP_PRE,IMP_PAGD,DES_CLI, TEL_CLI, NUM_AGE,FEC_ALT,SAL_CLI)
+			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '0','0','0','0','$tel', '$agente','$fecha_alta','0')");
 
 		if ($sql)
 		{

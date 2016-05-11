@@ -8,6 +8,7 @@
 	$fecha = strtotime($row['FEC_PAG']);
 	$fec_cli = date("d-m-Y", $fecha);
 	$agente = $row['NUM_AGE'];
+	setlocale(LC_TIME, "spanish");
 
 	$sql2 = $db->query("SELECT * FROM catacli WHERE NUM_ClI='$id_cliente'");
 	$row2 = $db->runs($sql2);
@@ -16,6 +17,7 @@
 	$dir_col= $row2['DIR_COL'];
 	$dir_ciu= $row2['DIR_CIU'];
 	$tel_cli= $row2['TEL_CLI'];
+	$pagodiario= $row2['IMP_PAGD'];
 
 
 	if ($id_cliente < 10)
@@ -116,7 +118,7 @@
 	$pdf->setX(58);
 	$pdf->Cell(15,10,'Credito # : '.$id_credito,0,1);
 	$pdf->setXY(58,15);
-	$pdf->Cell(15,10,'Pago Diario $ : '.$id_credito,0,1);
+	$pdf->Cell(15,10,'Pago Diario $ : '.$pagodiario,0,1);
 	$pdf->setXY(58,20);
 	$pdf->Cell(15,10,'Fecha Prestamo: '.$fec_cli,0,0);
 	$pdf->setY(25);
@@ -133,12 +135,19 @@
 	$pdf->Ln(3);
 	
 	$date = date($fec_cli); 
+	
 	$i = 1;
 	$day = 1;
 	while ($i <= 15) {
 
-		$date_timestam = strtotime($date."+".$day." day");
-		$date_current = date("d-m-Y", $date_timestam);
+		// setlocale (LC_TIME, "es_ES");
+		// date_default_timezone_set("America/Lima");
+		
+		$date_timestam =strtotime($date."+".$day." day");
+		// date_default_timezone_set ('America/Monterrey');
+		$date_current = strftime("%d-%b-%Y", $date_timestam);
+
+		
 		
 		$num_day = date("N", $date_timestam);
 		
@@ -169,7 +178,7 @@
 	while ($i <= 30) {
 
 		$date_timestam = strtotime($date."+".$day." day");
-		$date_current = date("d-m-Y", $date_timestam);
+		$date_current = strftime("%d-%b-%Y", $date_timestam);
 		
 		$num_day = date("N", $date_timestam);
 		
@@ -199,7 +208,7 @@
 	while ($i <= 15) {
 
 		$date_timestam = strtotime($date."+".$day." day");
-		$date_current = date("d-m-Y", $date_timestam);
+		$date_current = strftime("%d-%b-%Y", $date_timestam);
 		
 		$num_day = date("N", $date_timestam);
 		
@@ -231,7 +240,7 @@
 	while ($i <= 30) {
 
 		$date_timestam = strtotime($date."+".$day." day");
-		$date_current = date("d-m-Y", $date_timestam);
+		$date_current = strftime("%d-%b-%Y", $date_timestam);
 		
 		$num_day = date("N", $date_timestam);
 		

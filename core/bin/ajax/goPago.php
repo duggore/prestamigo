@@ -14,7 +14,11 @@
 			$NUM_CLI = $row['NUM_CLI'];
 			$NUM_FAC = $row['NUM_FAC'];
 			$ESTATUS = $row['STA_TUS'];
-			$hora = time();
+			$TOT_FAC = $row['SAL_DOF'];
+			$TIP_PAG = $row['TIP_PAG'];
+			// America/Lima
+			date_default_timezone_set("America/Lima");
+			$hora = date('H:i:s');
 
 				if($ESTATUS == 'C' OR $ESTATUS == 'P')
 				{
@@ -36,26 +40,31 @@
 					$pago = $row2['FACI'] + 1;
 
 					// $sql= $db->query("SELECT * FROM movpag;");
-
-					$sql4= $db->query("SELECT *,MAX(NUM_PAG) AS PAG FROM movpag;");
+					
+					$sql4= $db->query("SELECT MAX(FEC_PAG) AS FECHA ,MAX(NUM_PAG) AS PAG FROM movpag WHERE NUM_FAC='$NUM_FAC';");
 					$row3 = $db->runs($sql4);
 					$NUM_PAG = $row3['PAG'];
-					$fecha = date('d-m-Y');
+					$FECHA = $row3['FECHA'];
+					$fecha = date('Y-m-d');
 					$anio = date('Y');
 					// Sentencia que inserta a la tabla fecope 
 					$sql5 = $db->query("INSERT INTO fecope(FE_CHA,PERI_ODO,NUM_FAC,NUM_PAG,NUM_FACI,NUM_REP,ANI_O,POR_INT)
 					VALUES ('$fecha','0','$NUM_FAC','$NUM_PAG','$pago','0','$anio','0');");
 
+				    $sal_cli = $TOT_FAC - $tot_apli;
+				    // $NUMERO_PAG =  
+					$sql6 = $db->query("UPDATE catacli SET SAL_CLI ='$sal_cli',ULT_PAG ='$FECHA',DES_CLI= DES_CLI-1 WHERE NUM_CLI='$NUM_CLI'");
+					
 					// Consulta que sirve para actualizar los datos de la tabla totfac
 					$sf = $row['SAL_DOF'];
 					$sal_fin = $sf - $tot_apli;
 					if($sf == $tot_apli)
 					{
-						$sql6 = $db->query("UPDATE totfac SET STA_TUS='P',SAL_DOF='0' WHERE NUM_FAC='$NUM_FAC'");
+						$sql6 .= $db->query("UPDATE totfac SET STA_TUS='P',SAL_DOF='0' WHERE NUM_FAC='$NUM_FAC'");
 					}
 					else
 					{
-						$sql6 = $db->query("UPDATE totfac SET SAL_DOF='$sal_fin' WHERE NUM_FAC='$NUM_FAC'");
+						$sql6 .= $db->query("UPDATE totfac SET SAL_DOF='$sal_fin' WHERE NUM_FAC='$NUM_FAC'");
 					}
 								
 

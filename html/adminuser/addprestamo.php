@@ -28,7 +28,7 @@
 						echo '<option value="'.$row['NOM_CLI'].'">'.$row['NUM_CLI'].'</option>';
 					}
 					echo '</datalist>';
-					$db->liberar($sql);
+					// $db->liberar($sql);
 					$db->close();
 					
 				?>
@@ -95,22 +95,8 @@
 				  </div>
 				</div><br>
 
-				<div class="contenfoliocre">
-				  <div class="fp">
-						<label class="ema">Agente de Cobro</label><br>
-						<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
-							<option value="">Selecciona Agente</option>
-							<?php  
-								$bd = new Conexion();
-								$sql = $bd->query("SELECT * FROM cataage");
-								while($row = $bd->runs($sql))
-								{
-									echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
-								}
-								
-							?>
-						</select>
-				  </div>
+				<!-- <div class="contenfoliocre">
+				  </div> -->
 
 				  <div class="cre">
 					<label class="ema">Saldo Prestamo</label><br>

@@ -11,22 +11,31 @@
 			<p class="titulosec">> CONSULTA DE CLIENTE</p>
 			<?php  
 				$db = new Conexion();
-				
-				echo '<table>
+				$sql = $db->query("SELECT * FROM catacli;");
+				echo "<table>
 					    <tr>
+					      <th>Clave</th>
 					      <th>Nombre</th>
+					      <th>Agente</th>
+					      <th>Credito</th>
 					      <th>Importe</th>
-					      <th>Fecha</th>
-					    </tr>';
-				$sql = $db->query("SELECT CLI.NOM_CLI, PAG.IMP_PAG, PAG.FEC_PAG  FROM catacli as CLI, movpag AS PAG WHERE CLI.NUM_CLI = PAG.NUM_CLI;");
-				while($row =$db->runs($sql))
+					      <th>Saldo</th>
+					      <th>Faltan</th>
+					      <th>Pago Diario</th>
+					    </tr>";
+				while($row = $db->runs($sql))
 				{
 
-				  echo '<tr>
-                  <td>' . $row['NOM_CLI'] . '</td>
-                  <td>' . $row['IMP_PAG'] . '</td>
-                  <td>'. $row['FEC_PAG'] . '</td>
-                  </tr>';
+				  echo "<tr>
+				  <td>" . $row['NUM_CLI'] . "</td>
+                  <td>" . $row['NOM_CLI'] . "</td>
+                  <td>" . $row['NUM_AGE'] . "</td>
+                  <td>" . $row['NUM_FAC'] . "</td>
+                  <td>" . $row['IMP_PRE'] . "</td>
+                  <td>" . $row['SAL_CLI'] . "</td>
+                  <td>" . $row['DES_CLI'] . "</td>
+                  <td>" . $row['IMP_PAGD'] . "</td>";
+
 				} 
 				echo "</table>";
 			?>

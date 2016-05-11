@@ -9,6 +9,13 @@ function Cancela(contenido,url){
 	}
 }
 
+function Elimina(contenido,url){
+	var action = window.confirm(contenido);
+	if (action) {
+		window.location = url;		
+	}
+}
+
 function Imprimir(url){
 			window.location = url;
 	}

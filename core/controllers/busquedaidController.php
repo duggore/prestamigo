@@ -2,7 +2,7 @@
 	$db = new Conexion();
 	$id = $_POST['val'];
 
-	$consulta = $db->query("SELECT * FROM totfac as FAC, catacli as CLI WHERE FAC.NUM_FAC = '$id'   LIMIT 1;");
+	$consulta = $db->query("SELECT FAC.TOT_PAG,FAC.TOT_FAC,FAC.STA_TUS,FAC.SAL_DOF,FAC.FEC_FAC,FAC.TIP_PAG,FAC.POR_INT,CLI.NUM_CLI,CLI.IMP_PAGD,CLI.NUM_AGE,CLI.NOM_CLI FROM totfac as FAC, catacli as CLI WHERE FAC.NUM_FAC = '$id' AND CLI.NUM_FAC = '$id' LIMIT 1;");
 
 		if($db->rows($consulta) > 0 )
 		{
@@ -39,7 +39,8 @@
 				$cli = $row2['NUM_CLI'];
 				$num_cli= $cli;	
 			}
-
+				// $consulta2 = $db->query("SELECT * FROM catacli WHERE NUM_FAC = '$id' LIMIT 1;");
+				// $row2 = $db->runs($consulta2);
 
 			if($row2['STA_TUS'] == 'A')
           		{
@@ -55,12 +56,13 @@
 					  	"nom"  =>  $row2['NOM_CLI'],
 					  	"num"  =>  $num_cli,
 					  	"pag"  =>  $row2['TOT_PAG'],
-					  	"pres"  =>  $row2['SAL_DOF'],
-					  	"fec"  =>  $row2['FEC_PAG'],
+					  	"pres"  =>  $row2['TOT_FAC'],
+					  	"fec"  =>  $row2['FEC_FAC'],
 					  	"tipo"  =>  $row2['TIP_PAG'],
 					  	"int"  =>  $row2['POR_INT'],
 					  	"age"  =>  $row2['NUM_AGE'],
-					  	"saldof"  =>  $row2['SAL_DOF']
+					  	"saldof"  =>  $row2['SAL_DOF'],
+					  	"pagdiario"  =>  $row2['IMP_PAGD']
 			        );	
           		}
           		else if($row2['STA_TUS'] == 'C')

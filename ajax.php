@@ -23,6 +23,11 @@
 					require('core/bin/ajax/goPago.php');
 				break;
 
+			case 'modifica':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goModifica.php');
+				break;
+
 			
 			default:
 					header('location: ?view=admin');

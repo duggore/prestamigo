@@ -18,6 +18,7 @@ function goPago(){
 			if(connect.readyState == 4 && connect.status == 200){
 				if (connect.responseText == 1){
 				  	location.reload();
+
 				}
 				
 				else{
@@ -27,6 +28,7 @@ function goPago(){
 			}
 			else if (connect.readyState != 4){
 				LimpiarCampos();
+				 window.location.reload();
 			}
 	}
 
@@ -81,9 +83,8 @@ function Id(id){
 	                        __('tot_pag').innerHTML = res.pag;
 	                        __('sal_cre').innerHTML = res.sal_fin;
 	                        __('sta_tus').innerHTML = res.sta_tus;
-	    
-
                     }
+
         });
       
 }

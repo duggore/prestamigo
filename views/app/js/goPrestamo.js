@@ -7,12 +7,12 @@ function goPrestamo(){
 	prestamo = $('#user_pres').html();
 	fecha = __('user_fec').value;
 	// usr_id = __('user_id').value;
-	agente = __('user_agente').value;
+	// agente = __('user_agente').value;
 	
 	// sesion = __('session_login').checked ? true : false;
 
-	if (user != ''  && importe != '' && tipo != '' && interes != ''  && prestamo != '' && fecha != '' && agente != ''){
-		form = 'user=' + user + '&imp=' + importe + '&int=' + interes +'&tipo=' + tipo +'&prestamo=' + prestamo +'&fecha=' + fecha +'&agente=' + agente ;
+	if (user != ''  && importe != '' && tipo != '' && interes != ''  && prestamo != '' && fecha != ''){
+		form = 'user=' + user + '&imp=' + importe + '&int=' + interes +'&tipo=' + tipo +'&prestamo=' + prestamo +'&fecha=' + fecha;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
 			if(connect.readyState == 4 && connect.status == 200){
@@ -25,7 +25,7 @@ function goPrestamo(){
 				}
 			}
 			else if (connect.readyState != 4){
-				
+				// window.location.reload();
 			}
 	}
 
@@ -64,7 +64,8 @@ function LimpiarCampos()
 	__('user_tip').value = "";
     __('user_pagD').innerHTML = "";
 	// __('user_fec').value = "";
-	__('user_agente').value = "";
+    __("sal_final").innerHTML = "";
+	// __('user_agente').value = "";
 	__('user_id').value = "";
 	__('cancelar').style.display = 'none';
 	__('imprimir').style.display = 'none';
@@ -84,6 +85,7 @@ function Calcula(valor){
                         $("#user_int").html(response.m1);
                         $("#user_pres").html(response.m2);
                         $("#user_pagD").html(response.m3);
+                        $("#sal_final").html(response.m4);
                     }
         });
 }
@@ -112,10 +114,12 @@ function Buscar(val){
 	                        __('user_int').innerHTML = res.int;
 	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
-	                        __('user_agente').value = res.age;
+                            // __('user_pagD').html = res.pagdiario;
+                            // __('sal_final').html = res.saldo;
+	                        // __('user_agente').value = res.age;
                             // __('sal_final').value = res.saldof;  pendiente
-	                        __('cancelar').style.display = "block";
-	                        __('imprimir').style.display = "block";
+	                        // __('cancelar').style.display = "block";
+	                        // __('imprimir').style.display = "block";
 	                        __('user').value = "";
                 		}
                 		if(res.id == '2')
@@ -158,8 +162,9 @@ function Id(id){
 	                        __('user_int').innerHTML = res.int;
 	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
-	                        __('user_agente').value = res.age;
-                            __('sal_final').innerHTML = res.saldof;  
+	                        // __('user_agente').value = res.age;
+                            __('sal_final').innerHTML = res.saldof; 
+                            __('user_pagD').innerHTML = res.pagdiario; 
 	                        __('cancelar').style.display = "block";
 	                        __('imprimir').style.display = "block";
 	                        __('user').value = "";

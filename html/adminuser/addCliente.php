@@ -12,14 +12,14 @@
 			<div class="for" role="form" onkeypress="return runScriptReg(event)">
 				<div id="_AJAX_REG_"></div><br><br>
 				
-				<label class="ema">Id</label><br>
+				<label class="ema">Id Cliente</label><br>
 				<div class="buscaname">
-					<input type="text" id="user" list="users_busca" class="emai busname" placeholder="Nombre Cliente">
+					<input type="text" id="user" class="emai busname" placeholder="Número Cliente">
 					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
 				</div><br>
 
 				<label class="ema">Nombre (s):</label><br>
-				<input id="user_name" type="email" class="emai" placeholder="Nombre"><br><br>
+				<input id="user_name" type="text" class="emai" placeholder="Nombre"><br><br>
 			
 				<label class="ema">Dirección Domicilio:</label><br>
 				<input id="user_dir" type="text" class="emai" placeholder="Dirección Domicilio"><br><br>
@@ -53,7 +53,11 @@
 
 			<div id="button">
 			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
+			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
+			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">Modificar</button>
+			<button id="elimina" style='display:none;' class="button yellow medium radius" onclick="Elimina('¿Está seguro que desea Eliminar?','?view=cancela&mode=eliminar&id='+$('#user').val()+'')">Eliminar</button>
 			</div>
+			
 		</article>
 
 	</section>

@@ -6,7 +6,7 @@
 	{
 		$sql = $db->query("SELECT * FROM catacli WHERE NOM_CLI ='$val';");
 		$row = $db->runs($sql);
-
+		// $pagdiario = $row['IMP_PAGD'];
 
 		$id = $row['NUM_CLI'];
 		$consulta = $db->query("SELECT * FROM totfac as FAC, catacli as CLI WHERE FAC.NUM_CLI = '$id' AND CLI.NUM_CLI = '$id' AND FAC.STA_TUS= 'A' LIMIT 1;");
@@ -64,11 +64,10 @@
 					  	"nom"  =>  $row2['NOM_CLI'],
 					  	"num"  =>  $num_cli,
 					  	"pag"  =>  $row2['TOT_PAG'],
-					  	"pres"  =>  $row2['SAL_DOF'],
-					  	"fec"  =>  $row2['FEC_PAG'],
+					  	"pres"  =>  $row2['TOT_FAC'],
+					  	"fec"  =>  $row2['FEC_FAC'],
 					  	"tipo"  =>  $row2['TIP_PAG'],
-					  	"int"  =>  $row2['POR_INT'],
-					  	"age"  =>  $row2['NUM_AGE']
+					  	"int"  =>  $row2['POR_INT']					  	
 			        );	
           		}
 		}

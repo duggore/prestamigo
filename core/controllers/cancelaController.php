@@ -23,6 +23,14 @@
 
 		break;
 
+		case 'cancelar':
+				$opciones->modificar();
+		break;
+
+		case 'eliminar':
+				$opciones->eliminar();
+		break;
+
 		case 'imprimir':
 				require('core/models/class.fpdf.php');
 				// require('core/models/class.dompdf.php');

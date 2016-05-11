@@ -13,7 +13,8 @@
 		 $r=array( 
 			  	"m1"  =>  '20',  
 		        "m2"  =>  $r2,
-		        "m3"  =>  $pag_diario
+		        "m3"  =>  $pag_diario,
+		        "m4"  =>  $r2
 	        );
 
 		 echo json_encode($r);
