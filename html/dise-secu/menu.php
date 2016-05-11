@@ -21,9 +21,9 @@
 		<div class="link"><i class="icono izquierda fa fa-users"></i>Mantenimiento<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
 			<li><a href="?view=insert">Clientes</a></li> <!-- Cambiar el nombre del controlador add a op -->
-			<li><a href="#">Agentes</a></li>
-			<li><a href="#">Zonas</a></li>
-			<li><a href="#">Usuarios</a></li>
+			<li><a href="?view=age">Agentes</a></li>
+			<li><a href="?view=zon">Zonas</a></li>
+			<li><a href="?view=usua">Usuarios</a></li>
 		</ul>
 	</li>
 	<li>
@@ -40,10 +40,10 @@
 		<div class="link"><i class="icono izquierda fa fa-pencil-square-o"></i>Consultas<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
 			<li><a href="?view=consulta">Clientes</a></li>
-			<li><a href="#">Agentes</a></li>
-			<li><a href="#">Zonas</a></li>
-			<li><a href="#">Ventas</a></li>
-			<li><a href="#">Pagos</a></li>
+			<li><a href="?view=consultaAge">Agentes</a></li>
+			<li><a href="?view=consultaZon">Zonas</a></li>
+			<li><a href="?view=consultaVent">Ventas</a></li>
+			<li><a href="?view=consultaPag">Pagos</a></li>
 		</ul>
 	</li>
 	<li>

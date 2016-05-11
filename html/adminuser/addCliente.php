@@ -35,9 +35,11 @@
 			
 				<label class="ema">Número Teléfono:</label><br>
 				<input id="user_tel" type="text" class="emai" placeholder="Número Teléfono"><br><br>
-			
-				<label class="ema">Agente de Cobro:</label><br>
-				<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Agente de Cobro:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
 					<option value="">Selecciona Agente</option>
 					<?php  
 						$bd = new Conexion();
@@ -48,7 +50,130 @@
 						}
 						
 					?>
-				</select>			
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema"># de prestamos:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Zona:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Importe de prestamo:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Saldo:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Pago diario:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Ultimo prestamo:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Pagos restantes:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Ultimo pago:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Folio de prestamo:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+
+				<div class="contenfoliocre">
+				  <div class="fp">
+					<label class="ema">Fecha de alta:</label><br>
+					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					<option value="">Selecciona Agente</option>
+					<?php  
+						$bd = new Conexion();
+						$sql = $bd->query("SELECT * FROM cataage");
+						while($row = $bd->runs($sql))
+						{
+							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+						}
+						
+					?>
+				</select>	
+				  </div>
+
+				  <div class="cre">
+					<label class="ema">Bloqueo:</label><br>
+					<div id="tot_cre" class="emai"></div>
+				  </div>
+				</div><br>
+			
 			</div>
 
 			<div id="button">

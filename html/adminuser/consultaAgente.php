@@ -8,7 +8,7 @@
 
 		
 		<article id="dere" class="derechasection">
-			<p class="titulosec">> CONSULTA DE CLIENTE</p>
+			<p class="titulosec">> CONSULTA DE AGENTES</p>
 			<?php  
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM catacli;");
