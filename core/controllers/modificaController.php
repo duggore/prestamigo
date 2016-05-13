@@ -41,7 +41,10 @@
 								  	"dir3"  =>  $row['DIR_CIU'],
 								  	"giro"  =>  $row['SUC_URS'],
 								  	"tel"  =>  $row['TEL_CLI'],
-								  	"age"  =>  $row['NUM_AGE']					  	
+								  	"age"  =>  $row['NUM_AGE'],				
+								  	"cre"  =>  $row['NUM_FAC'],		  	
+								  	"imp_pres"  =>  $row['IMP_PRE'],
+								  	"pag_d"  =>  $row['IMP_PAGD']
 						        );	
 						
 					}

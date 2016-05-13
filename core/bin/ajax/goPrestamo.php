@@ -35,27 +35,28 @@
 
 		else{
 				
-
-	           	$sql = $db->query("INSERT INTO totfac(NUM_CLI,TOT_FAC,POR_INT,FEC_FAC,NUM_AGE,STA_TUS,TIP_PAG,FEC_PAG,TOT_PAG,SAL_DOF)
-				VALUES ('$id','$imp', '$int', '$fecha', '$NUM_AGE','A','$tipo','$fecha','$prestamo','$prestamo')");
+				$sql2= $db->query("SELECT * FROM totfac WHERE NUM_CLI='$id'");
+	           	$row2 = $db->runs($sql2);
+	           	$NUM_FACS = $row2['TOT_PAG'] + $prestamo;
 					// $NUM_FAC=mysql_insert_id();
 
 	           	$sql7 = $db->query("SELECT MAX(NUM_FAC) AS NUM_FAC FROM totfac");
 				$row = $db->runs($sql7);
 				$NUM_FAC = $row['NUM_FAC'];
-				// $FEC_FAC = $row['FEC_FAC'];
 				
 				
-	           	$pag_dia = $prestamo/30;
-	           	$sql3= $db->query("UPDATE catacli SET SAL_CLI='$prestamo',NUM_FACS=NUM_FACS+1, IMP_FACS='$prestamo', DES_CLI='30',IMP_PAGD='$pag_dia',IMP_PRE= '$prestamo', BLO_QUEO='N', ULT_PAG='$fecha',ULT_COM ='$fecha',NUM_FAC='$NUM_FAC' WHERE NUM_CLI='$id'");
+	           	$pag_dia = $prestamo/30; 
+	           	$sql3= $db->query("UPDATE catacli SET SAL_CLI='$prestamo',NUM_FACS=NUM_FACS+1, IMP_FACS='$prestamo', DES_CLI='30',IMP_PAGD='$pag_dia',IMP_PRE= '$prestamo',IMP_FACS ='$NUM_FACS', BLO_QUEO='N', ULT_PAG='$fecha',ULT_COM ='$fecha',NUM_FAC='$NUM_FAC' WHERE NUM_CLI='$id'");
 
+	           	$sql = $db->query("INSERT INTO totfac(NUM_CLI,TOT_FAC,POR_INT,FEC_FAC,NUM_AGE,STA_TUS,TIP_PAG,FEC_PAG,TOT_PAG,SAL_DOF)
+				VALUES ('$id','$imp', '$int', '$fecha', '$NUM_AGE','A','$tipo','$fecha','$prestamo','$prestamo')");
 
 	           	// $sql6 = $db->query("UPDATE catacli SET SAL_CLI ='$sal_cli',ULT_PAG ='$FECHA',DES_CLI= DES_CLI-1 WHERE NUM_CLI='$NUM_CLI'");
 				// $sql3 = $db->query("INSERT INTO catacli(NUM_FAC,SAL_CLI,NUM_FACS,IMP_FACS,DES_CLI,IMP_PAGD,IMP_PRE,BLOQUEO)	VALUES ('$NUM_FAC','$prestamo','$NUM_FACS','$prestamo','30','$pag_dia','$prestamo','N') WHERE NUM_CLI='$id'");				
 
-					
+				// $if = () ? true : false;
 
-				if ($sql && $sql3)
+				if (($sql3) && ($sql))
 				{		
 		              $html= '
 						<div class="alert alert-dismissible alert-success">

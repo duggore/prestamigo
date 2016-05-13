@@ -165,8 +165,8 @@ function Id(id){
 	                        // __('user_agente').value = res.age;
                             __('sal_final').innerHTML = res.saldof; 
                             __('user_pagD').innerHTML = res.pagdiario; 
-	                        __('cancelar').style.display = "block";
-	                        __('imprimir').style.display = "block";
+	                        __('cancelar').style.display = "inline-block";
+	                        __('imprimir').style.display = "inline-block";
 	                        __('user').value = "";
                 		}
                 		if(res.id == '2')

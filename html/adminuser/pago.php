@@ -42,7 +42,7 @@
 				<div class="contenfoliocre">
 				  <div class="fp">
 					<label class="ema">Total a Aplicar:</label><br>
-				    <input type="text" id="tot_apli" class="emai">
+				    <div id="pag_dia" class="emai"></div>
 				  </div>
 
 				  <div class="cre">

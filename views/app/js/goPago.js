@@ -3,15 +3,18 @@ function goPago(){
 	// user = $('#user_cli').html();
 
 	fec_cha = __('fec_pag').value;
-	tot_apli = __('tot_apli').value;
+	tot_apli = $('#pag_dia').html();
+	// interes	= $('#user_int').html();
 	fol_cre = __('fol_cre').value;
+	
+	
 	
 	// interes	= $('#user_int').html();
 	// tipo = __('user_tip').value;
 	// prestamo = $('#user_pres').html();
 	// sesion = __('session_login').checked ? true : false;
 
-	if (fec_cha != ''  && tot_apli != ''){
+	if (fec_cha != ''  && tot_apli != '' && pag_dia != ''){
 		form = 'fec_cha=' + fec_cha + '&tot_apli=' + tot_apli + '&fol_cre=' + fol_cre;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
@@ -60,7 +63,7 @@ function LimpiarCampos()
 {
 	__('fol_cre').value = "";
 	// __('fec_pag').value= "";
-	__('tot_apli').value= "";
+	__('pag_dia').innerHTML= "";
 	__('tot_cre').innerHTML = "";
 	__('tot_pag').innerHTML= "";
 	__('sal_cre').innerHTML= "";
@@ -81,6 +84,7 @@ function Id(id){
                 success:  function (res) {	
                 		    __('tot_cre').innerHTML = res.tot_pag;
 	                        __('tot_pag').innerHTML = res.pag;
+	                        __('pag_dia').innerHTML = res.pag_dia;
 	                        __('sal_cre').innerHTML = res.sal_fin;
 	                        __('sta_tus').innerHTML = res.sta_tus;
                     }

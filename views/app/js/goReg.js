@@ -138,8 +138,14 @@ function Buscar(id){
 	                        __('user_giro').value = res.giro;
 	                        __('user_tel').value = res.tel;
                             __('user_agente').value = res.age; 
-	                        __('modifica').style.display = "block";
-	                        __('elimina').style.display = "block";
+                            __('imp_prestamo').innerHTML = res.imp_pres;
+                            // imp_prestamo
+                            __('num_prestamo').innerHTML = res.cre; 
+                            __('p_diario').innerHTML = res.pag_d; 
+	                        __('modifica').style.display = "inline-block";
+	                        __('elimina').style.display = "inline-block";
+
+	                        // pag_d
 	                        // __('imprimir').style.display = "block";
                 		}
                 		if(res.id =='3')

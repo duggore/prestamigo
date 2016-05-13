@@ -11,8 +11,8 @@
 		$fecha_alta = date('Y-m-d');
 
 		
-		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU,SUC_URS,NUM_FAC,IMP_PRE,IMP_PAGD,DES_CLI, TEL_CLI, NUM_AGE,FEC_ALT,SAL_CLI)
-			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '0','0','0','0','$tel', '$agente','$fecha_alta','0')");
+		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU,SUC_URS,NUM_FAC,IMP_PRE,IMP_PAGD,DES_CLI, TEL_CLI, NUM_AGE,FEC_ALT,SAL_CLI,NUM_FACS,IMP_FACS)
+			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '0','0','0','0','$tel', '$agente','$fecha_alta','0','0','0')");
 
 		if ($sql)
 		{

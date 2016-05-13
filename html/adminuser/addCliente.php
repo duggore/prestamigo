@@ -36,7 +36,12 @@
 				<label class="ema">Número Teléfono:</label><br>
 				<input id="user_tel" type="text" class="emai" placeholder="Número Teléfono"><br><br>
 
-				<div class="contenfoliocre">
+				
+			
+			</div>
+
+			<div id="button">
+			<div class="contenfoliocre">
 				  <div class="fp">
 					<label class="ema">Agente de Cobro:</label><br>
 					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
@@ -53,9 +58,9 @@
 				</select>	
 				  </div>
 
-				  <div class="cre">
-					<label class="ema"># de prestamos:</label><br>
-					<div id="tot_cre" class="emai"></div>
+				  <div class="cre cre2">
+					<label class="ema"># de prestamo:</label><br>
+					<div id="num_prestamo" class="emai"></div>
 				  </div>
 				</div><br>
 
@@ -76,32 +81,21 @@
 				</select>	
 				  </div>
 
-				  <div class="cre">
+				  <div class="cre cre2">
 					<label class="ema">Importe de prestamo:</label><br>
-					<div id="tot_cre" class="emai"></div>
+					<div id="imp_prestamo" class="emai"></div>
 				  </div>
 				</div><br>
 
 				<div class="contenfoliocre">
 				  <div class="fp">
 					<label class="ema">Saldo:</label><br>
-					<select placeholder="" name="Agentes" id="user_agente" class="emai" >
-					<option value="">Selecciona Agente</option>
-					<?php  
-						$bd = new Conexion();
-						$sql = $bd->query("SELECT * FROM cataage");
-						while($row = $bd->runs($sql))
-						{
-							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
-						}
-						
-					?>
-				</select>	
+					<div id="p_diario" class="emai"></div>
 				  </div>
 
-				  <div class="cre">
+				  <div class="cre cre2">
 					<label class="ema">Pago diario:</label><br>
-					<div id="tot_cre" class="emai"></div>
+					<div id="p_diario" class="emai"></div>
 				  </div>
 				</div><br>
 
@@ -122,7 +116,7 @@
 				</select>	
 				  </div>
 
-				  <div class="cre">
+				  <div class="cre cre2">
 					<label class="ema">Pagos restantes:</label><br>
 					<div id="tot_cre" class="emai"></div>
 				  </div>
@@ -145,7 +139,7 @@
 				</select>	
 				  </div>
 
-				  <div class="cre">
+				  <div class="cre cre2">
 					<label class="ema">Folio de prestamo:</label><br>
 					<div id="tot_cre" class="emai"></div>
 				  </div>
@@ -168,15 +162,11 @@
 				</select>	
 				  </div>
 
-				  <div class="cre">
+				  <div class="cre cre2">
 					<label class="ema">Bloqueo:</label><br>
 					<div id="tot_cre" class="emai"></div>
 				  </div>
 				</div><br>
-			
-			</div>
-
-			<div id="button">
 			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
 			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
 			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">Modificar</button>

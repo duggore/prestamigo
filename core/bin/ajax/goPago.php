@@ -1,5 +1,6 @@
 <?php  
 	if(!empty($_POST['fec_cha']) and !empty($_POST['tot_apli'])){
+		
 		$db = new Conexion();
 		$fol_cre = $_POST['fol_cre'];
 		$fec_cha = $_POST['fec_cha'];
