@@ -11,30 +11,18 @@
 			<p class="titulosec">> CONSULTA DE ZONAS</p>
 			<?php  
 				$db = new Conexion();
-				$sql = $db->query("SELECT * FROM catacli;");
+				$sql = $db->query("SELECT * FROM catazon;");
 				echo "<table>
 					    <tr>
 					      <th>Clave</th>
-					      <th>Nombre</th>
-					      <th>Agente</th>
-					      <th>Credito</th>
-					      <th>Importe</th>
-					      <th>Saldo</th>
-					      <th>Faltan</th>
-					      <th>Pago Diario</th>
+					      <th>Descripción</th>
 					    </tr>";
 				while($row = $db->runs($sql))
 				{
 
 				  echo "<tr>
-				  <td>" . $row['NUM_CLI'] . "</td>
-                  <td>" . $row['NOM_CLI'] . "</td>
-                  <td>" . $row['NUM_AGE'] . "</td>
-                  <td>" . $row['NUM_FAC'] . "</td>
-                  <td>" . $row['IMP_PRE'] . "</td>
-                  <td>" . $row['SAL_CLI'] . "</td>
-                  <td>" . $row['DES_CLI'] . "</td>
-                  <td>" . $row['IMP_PAGD'] . "</td>";
+				  <td>" . $row['NUM_ZON'] . "</td>
+                  <td>" . $row['DES_ZON'] . "</td>";
 
 				} 
 				echo "</table>";

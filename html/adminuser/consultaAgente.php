@@ -11,30 +11,24 @@
 			<p class="titulosec">> CONSULTA DE AGENTES</p>
 			<?php  
 				$db = new Conexion();
-				$sql = $db->query("SELECT * FROM catacli;");
+				$sql = $db->query("SELECT * FROM cataage;");
 				echo "<table>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Nombre</th>
-					      <th>Agente</th>
-					      <th>Credito</th>
-					      <th>Importe</th>
-					      <th>Saldo</th>
-					      <th>Faltan</th>
-					      <th>Pago Diario</th>
+					      <th>Ventas</th>
+					      <th>Zona</th>
+					      <th>% Comisión</th>
 					    </tr>";
 				while($row = $db->runs($sql))
 				{
 
 				  echo "<tr>
-				  <td>" . $row['NUM_CLI'] . "</td>
-                  <td>" . $row['NOM_CLI'] . "</td>
-                  <td>" . $row['NUM_AGE'] . "</td>
-                  <td>" . $row['NUM_FAC'] . "</td>
-                  <td>" . $row['IMP_PRE'] . "</td>
-                  <td>" . $row['SAL_CLI'] . "</td>
-                  <td>" . $row['DES_CLI'] . "</td>
-                  <td>" . $row['IMP_PAGD'] . "</td>";
+				  <td>" . $row['NUM_AGE'] . "</td>
+                  <td>" . $row['NOM_AGE'] . "</td>
+                  <td>" . $row['VTA_AGE'] . "</td>
+                  <td>" . $row['NUM_ZON'] . "</td>
+                  <td>" . $row['POR_COM'] . "</td>";
 
 				} 
 				echo "</table>";
