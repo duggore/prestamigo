@@ -3,7 +3,7 @@
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
  		<article class="izquierdasection">		
-		<?php include (HTML_DIR.'dise-secu/menu.php'); ?> 
+		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>  
 		</article>
 
 		
@@ -13,6 +13,7 @@
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM catacli;");
 				echo "<table>
+				      <thead>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Nombre</th>
@@ -22,7 +23,8 @@
 					      <th>Saldo</th>
 					      <th>Faltan</th>
 					      <th>Pago Diario</th>
-					    </tr>";
+					    </tr>
+					    </thead>";
 				while($row = $db->runs($sql))
 				{
 
