@@ -26,6 +26,7 @@ function goPrestamo(){
 			}
 			else if (connect.readyState != 4){
 				// window.location.reload();
+                window.location.reload();
 			}
 	}
 
@@ -47,7 +48,7 @@ function goPrestamo(){
 
 function runScriptpres(e){
 	if(e.keyCode == 13){
-		Id();
+		goPrestamo();
 	}
 }
 
@@ -114,8 +115,8 @@ function Buscar(val){
 	                        __('user_int').innerHTML = res.int;
 	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
-                            // __('user_pagD').html = res.pagdiario;
-                            // __('sal_final').html = res.saldo;
+                            __('user_pagD').innerHTML = res.pagdiario;
+                            __('sal_final').innerHTML = res.saldo;
 	                        // __('user_agente').value = res.age;
                             // __('sal_final').value = res.saldof;  pendiente
 	                        // __('cancelar').style.display = "block";

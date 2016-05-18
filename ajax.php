@@ -13,6 +13,16 @@
 					require('core/bin/ajax/goRegistro.php');
 				break;
 
+			case 'addAgente':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goRegistroAgente.php');
+				break;
+
+			case 'addZona':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goRegistroZona.php');
+				break;
+
 			case 'prestamo':
 					// header('location: ?view=sesion');
 					require('core/bin/ajax/goPrestamo.php');
@@ -26,6 +36,16 @@
 			case 'modifica':
 					// header('location: ?view=sesion');
 					require('core/bin/ajax/goModifica.php');
+				break;
+
+			case 'modificaAgente':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goModificaAgente.php');
+				break;
+			
+			case 'modificaZona':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goModificaZona.php');
 				break;
 
 			

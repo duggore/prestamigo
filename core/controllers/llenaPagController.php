@@ -10,8 +10,10 @@
 	$db = new Conexion();
 	$id = $_POST['val'];
 
-	
+			// Verificar la cuestion de los pagos porque no se esta haciendo bien
 			$consulta = $db->query("SELECT CLI.IMP_PRE,CLI.IMP_PAGD,CLI.SAL_CLI,FAC.STA_TUS FROM catacli AS CLI,totfac AS FAC WHERE CLI.NUM_FAC = '$id' AND FAC.NUM_FAC = '$id';");
+
+	// $consulta = $db->query("SELECT CLI.IMP_PRE,CLI.IMP_PAGD,CLI.SAL_CLI,FAC.STA_TUS atacli AS CLI INNER JOIN totfac AS FAC ON CLI.NUM_FAC = CLI.NUM_FAC WHERE NUM_FAC='$id'");
 			$row = $db->runs($consulta);
 
 			$consulta2 = $db->query("SELECT COUNT(NUM_PAG) AS NUM_PAG FROM movpag WHERE NUM_FAC = '$id';");

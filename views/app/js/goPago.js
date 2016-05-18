@@ -30,7 +30,7 @@ function goPago(){
 				}
 			}
 			else if (connect.readyState != 4){
-				LimpiarCampos();
+				// LimpiarCampos();
 				 window.location.reload();
 			}
 	}

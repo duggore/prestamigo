@@ -7,11 +7,14 @@ function goReg(){
 	giro_negoc = __('user_giro').value;
 	tel = __('user_tel').value;
 	agen_cobro = __('user_agente').value;
+	zona = __('user_zona').value;
+	bloqueo = __('user_bloq').value;
+	
 	// sesion = __('session_login').checked ? true : false;
 
-	if (user != '' && dir_domic != '' && dir_negoc !='' && dir_ciu !='' && giro_negoc !='' && tel !='' && agen_cobro !=''){
+	if (user != '' && dir_domic != '' && dir_negoc !='' && dir_ciu !='' && giro_negoc !='' && tel !='' && agen_cobro !='' && zona !=''){
 		form = 'user=' + user + '&dir_dom=' + dir_domic + '&dir_negoc=' + dir_negoc +'&dir_ciu=' +dir_ciu 
-		+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro;
+		+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro + '&zona=' +zona;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
 			if(connect.readyState == 4 && connect.status == 200){
@@ -23,7 +26,8 @@ function goReg(){
 				}
 			}
 			else if (connect.readyState != 4){
-				LimpiarCampos();
+				// LimpiarCampos();
+				window.location.reload();
 			}
 	}
 
@@ -45,7 +49,7 @@ function goReg(){
 function goModifica(){
 	var connect, form, result, user, pass, dir_domic, dir_negoc, dir_ciu, giro_negoc,tel, agen_cobro;
 	
-	id_user = __('user').value;
+	id_user = __('user_folio').value;
 	user_name = __('user_name').value;
 	dir_domic = __('user_dir').value;
 	dir_negoc = __('user_dirNeg').value;
@@ -53,11 +57,12 @@ function goModifica(){
 	giro_negoc = __('user_giro').value;
 	tel = __('user_tel').value;
 	agen_cobro = __('user_agente').value;
-	// sesion = __('session_login').checked ? true : false;
-
-	if (user != '' && dir_domic != '' && dir_negoc !='' && dir_ciu !='' && giro_negoc !='' && tel !='' && agen_cobro !=''){
+	zona = __('user_zona').value;
+	bloqueo = __('user_bloq').value;
+	
+	if (user != '' && dir_domic != '' && dir_negoc !='' && dir_ciu !='' && giro_negoc !='' && tel !='' && agen_cobro !='' && zona !='' && bloqueo !=''){
 		form = 'user_name=' + user_name + '&dir_dom=' + dir_domic + '&dir_negoc=' + dir_negoc +'&dir_ciu=' +dir_ciu 
-		+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro + '&id_user=' +id_user;
+		+ '&giro_negoc=' +giro_negoc + '&tel=' +tel + '&agen_cobro=' +agen_cobro + '&id_user=' +id_user + '&zona=' +zona + '&bloqueo=' +bloqueo;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
 			if(connect.readyState == 4 && connect.status == 200){
@@ -104,8 +109,16 @@ function LimpiarCampos()
 	__('user_giro').value = "";
 	__('user_tel').value = "";
 	__('user_agente').value = "";
+	__('user_zona').value = "";
+	__('user_folio').value = "";
 	__('modifica').style.display = "none";
 	__('elimina').style.display = "none";
+   __('muestra').style.display = "none";
+    __('muestra2').style.display = "none";
+    __('muestra3').style.display = "none";
+    __('muestra4').style.display = "none";
+    __('muestra5').style.display = "none";
+    __('muestra6').style.display = "none";
 }
 
 
@@ -131,6 +144,7 @@ function Buscar(id){
                 		   if(res.id =='2')
                 		{	
                 			// __('_AJAX_REG_').innerHTML = res.mensaje;
+                			__('user_folio').value = res.num;
                 		    __('user_name').value = res.nom;
                 		    __('user_dir').value = res.dir1;
                 		    __('user_dirNeg').value = res.dir2;
@@ -138,12 +152,25 @@ function Buscar(id){
 	                        __('user_giro').value = res.giro;
 	                        __('user_tel').value = res.tel;
                             __('user_agente').value = res.age; 
+                            __('user_zona').value = res.zona;
                             __('imp_prestamo').innerHTML = res.imp_pres;
-                            // imp_prestamo
-                            __('num_prestamo').innerHTML = res.cre; 
+                            __('fol_pres').innerHTML = res.cre; 
                             __('p_diario').innerHTML = res.pag_d; 
-	                        __('modifica').style.display = "inline-block";
-	                        __('elimina').style.display = "inline-block";
+                            __('num_prestamo').innerHTML = res.num_presta; 
+                            __('saldo').innerHTML = res.saldo; 
+                            __('ult_pres').innerHTML = res.ult_pres; 
+                            __('pag_res').innerHTML = res.pag_res; 
+                            __('ult_pag').innerHTML = res.ult_pag; 
+                            __('fec_alta').innerHTML = res.fec_alta; 
+                            __('user_bloq').value = res.user_bloq; //p
+	                        __('modifica').style.display = "inline";
+	                        __('elimina').style.display = "inline";
+	                        __('muestra').style.display = "inline";
+	                        __('muestra2').style.display = "inline";
+	                        __('muestra3').style.display = "inline";
+	                        __('muestra4').style.display = "inline";
+	                        __('muestra5').style.display = "inline";
+	                        __('muestra6').style.display = "inline";
 
 	                        // pag_d
 	                        // __('imprimir').style.display = "block";

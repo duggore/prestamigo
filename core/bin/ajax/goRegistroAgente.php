@@ -1,20 +1,19 @@
-<?php 
-	if(!empty($_POST['user']) and !empty($_POST['dir_dom']) and !empty($_POST['dir_negoc']) and !empty($_POST['dir_ciu']) and !empty($_POST['giro_negoc']) and !empty($_POST['tel']) and !empty($_POST['agen_cobro']) and !empty($_POST['zona'])){
+<?php  
+
+	if(!empty($_POST['user']) and (!empty($_POST['venta']) OR $_POST['venta']== '0') and !empty($_POST['zona']) and (!empty($_POST['comision'])  OR $_POST['comision']=='0')){
 		$db = new Conexion();
-		$user = $db->real_escape_string($_POST['user']);
-		$dir_dom = $_POST['dir_dom'];
-		$dir_negoc = $_POST['dir_negoc'];
-		$dir_ciu = $_POST['dir_ciu'];
-		$giro_negoc=$_POST['giro_negoc'];
-		$tel = $_POST['tel'];
-		$agente = $_POST['agen_cobro'];
+		$user = $_POST['user'];
+		$venta = $_POST['venta'];
 		$zona = $_POST['zona'];
-		// $bloqueo = $_POST['bloqueo'];
+		$comision = $_POST['comision'];
 		$fecha_alta = date('Y-m-d');
+		date_default_timezone_set("America/Lima");
+		$hora = date('H:i:s');
+		// $hora = 
 
 		
-		$sql = $db->query("INSERT INTO catacli(NOM_CLI, DIR_NUM, DIR_COL, DIR_CIU,SUC_URS,NUM_FAC,IMP_PRE,IMP_PAGD,NUM_ZON,DES_CLI, TEL_CLI, NUM_AGE,FEC_ALT,SAL_CLI,NUM_FACS,IMP_FACS,BLO_QUEO)
-			VALUES ('$user','$dir_dom','$dir_negoc', '$dir_ciu', '$giro_negoc', '0','0','0','$zona','0','$tel', '$agente','$fecha_alta','0','0','0','N')");
+		$sql = $db->query("INSERT INTO cataage(NOM_AGE,VTA_AGE,NUM_ZON,POR_COM,FEC_HA,HOR_A,CLA_USR)
+			VALUES ('$user','$venta','$zona','$comision','$fecha_alta','$hora','SUP')");
 
 		if ($sql)
 		{

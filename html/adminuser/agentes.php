@@ -1,4 +1,4 @@
-  <?php include(HTML_DIR.'/dise-secu/header.php'); ?> 
+<?php include(HTML_DIR.'/dise-secu/header.php'); ?> 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
@@ -9,59 +9,67 @@
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec">Mantenimiento&nbsp;>>&nbsp;Agentes&nbsp;>>&nbsp;Registro de Agentes</p>
-			<div class="for" role="form" onkeypress="return runScriptReg(event)">
+			<form class="for" role="form" onkeypress="return runScriptReg(event)" onsubmit="return false;">
 				<div id="_AJAX_REG_"></div><br><br>
+
+				<label class="ema">Ultimo Folio:</label><br>
+				<input id="agente_folio" type="text" class="emai" placeholder="<?=$agente['id'];?>" disabled><br><br>
 				
-				<label class="ema">Id Cliente</label><br>
+				<label class="ema">Agente</label><br>
 				<div class="buscaname">
-					<input type="text" id="user" class="emai busname" placeholder="Número Cliente">
+					<input type="text" id="user" list="agente_busca" class="emai busname" placeholder="Nombre Agente">
 					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
 				</div><br>
+				
+				<?php 
+					$db = new Conexion();
+					$sql = $db->query("SELECT * FROM cataage;");
+					echo "<datalist id='agente_busca'>";
+						while ($row = $db->runs($sql)){
+						echo '<option value="'.$row['NOM_AGE'].'">'.$row['NUM_AGE'].'</option>';
+					}
+					$db->liberar($sql);
+					$db->close();
+					echo '</datalist>';
+					
+					
+				?>
 
 				<label class="ema">Nombre (s):</label><br>
-				<input id="user_name" type="text" class="emai" placeholder="Nombre"><br><br>
+				<input id="agente_name" type="text" class="emai" placeholder="Nombre"><br><br>
 			
-				<label class="ema">Dirección Domicilio:</label><br>
-				<input id="user_dir" type="text" class="emai" placeholder="Dirección Domicilio"><br><br>
+				<label class="ema">Ventas:</label><br>
+				<input id="agente_venta" type="text" class="emai" placeholder="Ventas"><br><br>
 			
-				<label class="ema">Dirección Negocio:</label><br>
-				<input id="user_dirNeg" type="text" class="emai" placeholder="Dirección Negocio"><br><br>
-			
-				<label class="ema">Ciudad/Estado:</label><br>
-				<input id="user_dirCiu" type="text" class="emai" placeholder="Ciudad y Estado"><br><br>
-			
-				<label class="ema">Giro del Negocio:</label><br>
-				<input id="user_giro"type="text" class="emai" placeholder="Giro del Negocio"><br><br>
-			
-				<label class="ema">Número Teléfono:</label><br>
-				<input id="user_tel" type="text" class="emai" placeholder="Número Teléfono"><br><br>
-			
-				<label class="ema">Agente de Cobro:</label><br>
-				<select placeholder="Número Teléfono" name="Agentes" id="user_agente" class="emai" >
-					<option value="">Selecciona Agente</option>
+				<label class="ema">Zona:</label><br>
+					<select placeholder="" name="Agentes" id="user_zona" class="emai" >
+					<option value="">Selecciona Zona</option>
 					<?php  
 						$bd = new Conexion();
-						$sql = $bd->query("SELECT * FROM cataage");
+						$sql = $bd->query("SELECT * FROM catazon");
 						while($row = $bd->runs($sql))
 						{
-							echo '<option value='.$row['NUM_AGE'].'>'.$row['NOM_AGE'].'</option>';	
+							echo '<option value='.$row['NUM_ZON'].'>'.$row['DES_ZON'].'</option>';	
 						}
 						
 					?>
-				</select>			
-			</div>
+				</select><br><br>
+			
+				<label class="ema">% Comisión:</label><br>
+				<input id="agente_comision" type="text" class="emai" placeholder="Comisión"><br><br>
+			</form>
 
 			<div id="button">
-			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
+			<button class="button yellow medium radius" onclick="goRegAgente()">REGISTRAR</button>
 			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
-			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">Modificar</button>
+			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModificaAgente()">Modificar</button>
 			<button id="elimina" style='display:none;' class="button yellow medium radius" onclick="Elimina('¿Está seguro que desea Eliminar?','?view=cancela&mode=eliminar&id='+$('#user').val()+'')">Eliminar</button>
 			</div>
 			
 		</article>
 
 	</section>
-	<script src="views/app/js/goReg.js"></script>
+	<script src="views/app/js/goRegAgente.js"></script>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
 	<script src="views/bootstrap/js/bootstrap.min.js"></script>

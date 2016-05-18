@@ -25,4 +25,8 @@
 	$users = users();
 	$clientes = clientes();
 	$pagos = pagos();
+	$addcliente = addcliente();
+	$agente = addAgente();
+	$zona = addZona();
+	
 ?>

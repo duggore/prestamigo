@@ -103,10 +103,7 @@
 				    <div id="sal_final" class="emai"></div>
 				  </div>
 				</div><br>
-				<div id="dialog" title="Información General" style='display:none;' >
 					
-					<button>Adios</button>
-				</div>				
 
 				
 			<!-- 	<input type="button" class="button yellow medium radius"  value="PRESTAMO" onclick="form.submit()"> -->

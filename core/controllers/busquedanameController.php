@@ -6,6 +6,8 @@
 	{
 		$sql = $db->query("SELECT * FROM catacli WHERE NOM_CLI ='$val';");
 		$row = $db->runs($sql);
+		$pagdiario = $row['IMP_PAGD'];
+		$saldofinal = $row['SAL_CLI'];
 		// $pagdiario = $row['IMP_PAGD'];
 
 		$id = $row['NUM_CLI'];
@@ -67,6 +69,8 @@
 					  	"pres"  =>  $row2['TOT_FAC'],
 					  	"fec"  =>  $row2['FEC_FAC'],
 					  	"tipo"  =>  $row2['TIP_PAG'],
+					  	"pagdiario"  =>  $pagdiario,
+					  	"saldo"  =>  $saldofinal,
 					  	"int"  =>  $row2['POR_INT']					  	
 			        );	
           		}

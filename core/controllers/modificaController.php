@@ -10,7 +10,11 @@
 			$val = $_POST['val'];
 			if($val !='')
 			{
-				$sql = $db->query("SELECT * FROM catacli WHERE NUM_CLI ='$val';");
+				// $sql = $db->query("SELECT * FROM catacli WHERE NOM_CLI ='$val';");
+				// $row1 = $db->runs($sql1);
+				// $id = $row1['NUM_CLI'];
+
+				$sql = $db->query("SELECT * FROM catacli WHERE NOM_CLI ='$val';");
 
 					if($db->rows($sql) <=0) 
 					{ 
@@ -35,6 +39,7 @@
 							       $re = array(
 							     	"id" => '2',
 								  	// "mensaje"  =>  $html,
+								  	"num"  =>  $row['NUM_CLI'],
 								  	"nom"  =>  $row['NOM_CLI'],
 								  	"dir1"  =>  $row['DIR_NUM'],
 								  	"dir2"  =>  $row['DIR_COL'],
@@ -42,8 +47,16 @@
 								  	"giro"  =>  $row['SUC_URS'],
 								  	"tel"  =>  $row['TEL_CLI'],
 								  	"age"  =>  $row['NUM_AGE'],				
+								  	"zona"  =>  $row['NUM_ZON'],
 								  	"cre"  =>  $row['NUM_FAC'],		  	
 								  	"imp_pres"  =>  $row['IMP_PRE'],
+								  	"num_presta"  =>  $row['NUM_FACS'],
+								  	"saldo"  =>  $row['SAL_CLI'],
+								  	"ult_pres"  =>  $row['ULT_COM'],
+								  	"pag_res"  =>  $row['DES_CLI'],
+								  	"ult_pag"  =>  $row['ULT_PAG'],
+								  	"fec_alta"  =>  $row['FEC_ALT'],
+								  	"user_bloq"  =>  $row['BLO_QUEO'],
 								  	"pag_d"  =>  $row['IMP_PAGD']
 						        );	
 						
