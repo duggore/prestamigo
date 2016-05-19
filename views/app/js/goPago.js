@@ -1,20 +1,12 @@
 function goPago(){
-	var connect, form, result, user, importe, interes, tipo, prestamo, imp;
+	var connect, form, result, fec_cha, tot_apli, fol_cre;
 	// user = $('#user_cli').html();
 
 	fec_cha = __('fec_pag').value;
 	tot_apli = $('#pag_dia').html();
-	// interes	= $('#user_int').html();
 	fol_cre = __('fol_cre').value;
-	
-	
-	
-	// interes	= $('#user_int').html();
-	// tipo = __('user_tip').value;
-	// prestamo = $('#user_pres').html();
-	// sesion = __('session_login').checked ? true : false;
 
-	if (fec_cha != ''  && tot_apli != '' && pag_dia != ''){
+	if (fec_cha != ''  && tot_apli != ''){
 		form = 'fec_cha=' + fec_cha + '&tot_apli=' + tot_apli + '&fol_cre=' + fol_cre;
 		connect =  window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		connect.onreadystatechange = function(){
