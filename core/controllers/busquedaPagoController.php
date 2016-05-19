@@ -12,28 +12,27 @@
 // f_fin
 	$f_ini = $_POST['f_ini'];
 	$f_fin = $_POST['f_fin'];
-	$sql = $db->query("SELECT * FROM totfac WHERE FEC_FAC BETWEEN '$f_ini' AND '$f_fin'");
+	$sql = $db->query("SELECT * FROM movpag WHERE FEC_PAG BETWEEN '$f_ini' AND '$f_fin'");
 
 	if($db->rows($sql) > 0)
 	{
 		$html = "<table>
 					    <tr>
-					      <th>Factura</th>
+					      <th>Folio</th>
 					      <th>Fecha</th>
 					      <th>Importe</th>
+					      <th>Factura</th>
 					      <th>Cliente</th>
 					    </tr>";
 				while($row = $db->runs($sql))
 				{
-				  $id_cli = $row['NUM_CLI'];
-				  $sql2 = $db->query("SELECT * FROM catacli WHERE NUM_CLI='$id_cli'");
-				  $row2 = $db->runs($sql2);
 
 				  $html .= "<tr>
-				  <td>" . $row['NUM_FAC'] . "</td>
-                  <td>" . $row['FEC_FAC'] . "</td>
-                  <td>" . $row['TOT_PAG'] . "</td>
-                  <td>" . $row2['NOM_CLI'] . "</td>";
+				  <td>" . $row['NUM_PAG'] . "</td>
+                  <td>" . $row['FEC_PAG'] . "</td>
+                  <td>" . $row['IMP_PAG'] . "</td>
+                  <td>" . $row['NUM_FAC'] . "</td>
+                  <td>" . $row['NUM_CLI'] . "</td>";
 
 				} 
 				$html .= "</table>";

@@ -20,9 +20,9 @@
 		</article>
 
 	</section>
-	<script src="views/app/js/goVentas.js"></script>
+	<script src="views/app/js/goConsulta.js"></script>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
-	<!-- <script src="views/bootstrap/js/bootstrap.min.js"></script> -->
+	<script src="views/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

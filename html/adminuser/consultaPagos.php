@@ -8,43 +8,21 @@
 
 		
 		<article id="dere" class="derechasection">
-			<p class="titulosec">> CONSULTA DE PAGOS</p>
-			<?php  
-				$db = new Conexion();
-				$sql = $db->query("SELECT * FROM catacli;");
-				echo "<table>
-					    <tr>
-					      <th>Clave</th>
-					      <th>Nombre</th>
-					      <th>Agente</th>
-					      <th>Credito</th>
-					      <th>Importe</th>
-					      <th>Saldo</th>
-					      <th>Faltan</th>
-					      <th>Pago Diario</th>
-					    </tr>";
-				while($row = $db->runs($sql))
-				{
+			<label class="ema">Fecha Inicial: </label><br>
+			<input id="f_inicial" type="date" class="emai" value="<?=date("Y-m-d");?>"><br><br>
 
-				  echo "<tr>
-				  <td>" . $row['NUM_CLI'] . "</td>
-                  <td>" . $row['NOM_CLI'] . "</td>
-                  <td>" . $row['NUM_AGE'] . "</td>
-                  <td>" . $row['NUM_FAC'] . "</td>
-                  <td>" . $row['IMP_PRE'] . "</td>
-                  <td>" . $row['SAL_CLI'] . "</td>
-                  <td>" . $row['DES_CLI'] . "</td>
-                  <td>" . $row['IMP_PAGD'] . "</td>";
+			<label class="ema">Fecha Final: </label><br>
+			<input id="f_final" type="date" class="emai" value="<?=date("Y-m-d");?>"><br><br>
 
-				} 
-				echo "</table>";
-			?>
+			<button type="button" class="yellow medium radius btn-name" onclick="Buscar2($('#f_inicial').val(),$('#f_final').val())">BUSCAR</button>
+
+			<div id="muestratabla"></div>
 		</article>
 
 	</section>
-	<!-- <script src="views/app/js/goPrestamo.js"></script> -->
+	<script src="views/app/js/goConsulta.js"></script>
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
-	<!-- <script src="views/bootstrap/js/bootstrap.min.js"></script> -->
+	<script src="views/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
