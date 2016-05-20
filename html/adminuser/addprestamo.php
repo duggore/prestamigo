@@ -98,7 +98,7 @@
 				<!-- <div class="contenfoliocre">
 				  </div> -->
 
-				  <div class="cre">
+				  <div class="fp">
 					<label class="ema">Saldo Prestamo</label><br>
 				    <div id="sal_final" class="emai"></div>
 				  </div>
