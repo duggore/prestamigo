@@ -678,7 +678,7 @@ input:-ms-input-placeholder {
 }
 table{
 	margin-left: 5%;
-	margin-top: 5%;
+	margin-top: 2%;
 	width: 75%;
 	text-align: center;
 
@@ -740,3 +740,23 @@ th {
   font-weight: normal;
   font-variant: small-caps;
 }*/
+
+/*--------------consultaventas-------*/
+.contenfechaif{
+	/*border: 2px red solid;*/
+	margin-top: 2%;
+	text-align: center;
+}
+.fei{
+	/*border: 2px black solid;*/
+	display: inline-block;
+	width: 20%;
+	margin-left: 2%;
+}
+.btn{
+	margin-left: 0%;
+	text-align: left;
+}
+#muestratabla{
+	/*border: 2px red solid;*/
+}
