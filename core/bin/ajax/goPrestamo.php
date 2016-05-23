@@ -52,8 +52,8 @@
 				VALUES ('$id','$imp', '$int', '$fecha', '$NUM_AGE','A','$tipo','$fecha','$prestamo','$prestamo')");
 
 
-	           	$sql5 = $db->query("INSERT INTO fecope(FE_CHA,PERI_ODO,NUM_FAC,NUM_PAG,NUM_FACI,NUM_REP,ANI_O,POR_INT)
-	           		VALUES ('0','0','0','0','0','0','0','0')");
+	           	// $sql5 = $db->query("INSERT INTO fecope(FE_CHA,PERI_ODO,NUM_FAC,NUM_PAG,NUM_FACI,NUM_REP,ANI_O,POR_INT)
+	           	// 	VALUES ('0','0','0','0','0','0','0','0')");
 
 	           	// $sql6 = $db->query("UPDATE catacli SET SAL_CLI ='$sal_cli',ULT_PAG ='$FECHA',DES_CLI= DES_CLI-1 WHERE NUM_CLI='$NUM_CLI'");
 				// $sql3 = $db->query("INSERT INTO catacli(NUM_FAC,SAL_CLI,NUM_FACS,IMP_FACS,DES_CLI,IMP_PAGD,IMP_PRE,BLOQUEO)	VALUES ('$NUM_FAC','$prestamo','$NUM_FACS','$prestamo','30','$pag_dia','$prestamo','N') WHERE NUM_CLI='$id'");				
