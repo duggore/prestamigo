@@ -74,11 +74,19 @@ function Id(id){
                 type:  'POST',
                 dataType:  'json',
                 success:  function (res) {	
-                		    __('tot_cre').innerHTML = res.tot_pag;
-	                        __('tot_pag').innerHTML = res.pag;
-	                        __('pag_dia').innerHTML = res.pag_dia;
-	                        __('sal_cre').innerHTML = res.sal_fin;
-	                        __('sta_tus').innerHTML = res.sta_tus;
+                		    if(res.id == '1')
+                		    {
+                		    	__('tot_cre').innerHTML = res.tot_pag;
+		                        __('tot_pag').innerHTML = res.pag;
+		                        __('pag_dia').innerHTML = res.pag_dia;
+		                        __('sal_cre').innerHTML = res.sal_fin;
+		                        __('sta_tus').innerHTML = res.sta_tus;
+		                        __('for_pag').innerHTML = res.forma_pago;
+                		    }
+                		    if(res.id == '2' || res.id == '3')
+                		    {
+                		    	__('_AJAX_PRE_').innerHTML = res.mensaje;
+                		    }
                     }
 
         });

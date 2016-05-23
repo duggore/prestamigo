@@ -112,27 +112,28 @@
 	$pdf=new FPDF();
 
 	$pdf->AddPage();
+	$pdf->setY(4);
 	// $pdf->Image('artesanias4.jpg',1,1,60,50,'jpg');
 	$pdf->SetFont('Times','B',10);
 	$pdf->Cell(15,10,'Agente:'.'('.$id_agente.')',0,0);
-	$pdf->setX(58);
+	$pdf->setX(150);
 	$pdf->Cell(15,10,'Credito # : '.$id_credito,0,1);
-	$pdf->setXY(58,15);
+	$pdf->setXY(150,9);
 	$pdf->Cell(15,10,'Pago Diario $ : '.$pagodiario,0,1);
-	$pdf->setXY(58,20);
+	$pdf->setXY(150,14);
 	$pdf->Cell(15,10,'Fecha Prestamo: '.$fec_cli,0,0);
-	$pdf->setY(25);
-	$pdf->Cell(15,6,'Cliente: '.$clientes,0,1);
-	$pdf->Cell(93,6,'Cliente: '.$name_cliente,0,1);
-	$pdf->Cell(93,6,$dir_num.' '.$dir_col.' '. $dir_ciu,0,1);
+	$pdf->setY(16);
+	$pdf->Cell(15,2,'Cliente: '.$clientes,0,1);
+	$pdf->Cell(93,8,'Cliente: '.$name_cliente,0,1);
+	$pdf->Cell(93,2,$dir_num.' '.$dir_col.' '. $dir_ciu,0,1);
 	$pdf->Cell(93,6,$tel_cli,0,0);
-	$pdf->Ln(8);
+	$pdf->Ln(6);
 	$pdf->SetFont('Times','I',10);
 	$pdf->Cell(10,8,utf8_decode('N°'),1,0,'C');
 	$pdf->Cell(28,8,'Fecha',1,0,'C');
 	$pdf->Cell(30,8,'Pago',1,0,'C');
 	$pdf->Cell(25,8,'Firma',1,1,'C');
-	$pdf->Ln(3);
+	// $pdf->Ln(2);
 	
 	$date = date($fec_cli); 
 	
@@ -163,7 +164,7 @@
 	 	$day++;
 	}
 
-	$pdf->setXY(107,45.9);
+	$pdf->setXY(107,34);
 	// $pdf->SetFont('Times','B',16);
 	// $pdf->Cell(0,18,'Lista de Pago',0,1,'C');
 	// $pdf->Ln();
@@ -194,14 +195,30 @@
 	 	$day++;
 	}
 
+	$pdf->Ln(10);
+	$pdf->SetFont('Times','B',10);
+	$pdf->Cell(15,10,'Agente:'.'('.$id_agente.')',0,0);
+	$pdf->setX(150);
+	$pdf->Cell(15,5,'Credito # : '.$id_credito,0,1);
+	$pdf->setX(150);
+	$pdf->Cell(15,5,'Pago Diario $ : '.$pagodiario,0,1);
+	$pdf->setX(150);
+	$pdf->Cell(15,5,'Fecha Prestamo: '.$fec_cli,0,0);
+	$pdf->setX(10);
+	$pdf->ln(2);
+	$pdf->Cell(15,2,'Cliente: '.$clientes,0,1);
+	$pdf->Cell(93,8,'Cliente: '.$name_cliente,0,1);
+	$pdf->Cell(93,2,$dir_num.' '.$dir_col.' '. $dir_ciu,0,1);
+	$pdf->Cell(93,6,$tel_cli,0,0);
+
 	$pdf->Ln();
 	$pdf->SetFont('Times','I',10);
 	$pdf->Cell(10,8,utf8_decode('N°'),1,0,'C');
 	$pdf->Cell(28,8,'Fecha',1,0,'C');
 	$pdf->Cell(30,8,'Pago',1,0,'C');
 	$pdf->Cell(25,8,'Firma',1,1,'C');
-	$pdf->Ln(2);
-	
+	$pdf->Ln(2);	
+
 	$date = date($fec_cli); 
 	$i = 1;
 	$day = 1;
@@ -224,10 +241,7 @@
 	 	$day++;
 	}
 
-	$pdf->setXY(107,153);
-	// $pdf->SetFont('Times','B',16);
-	// $pdf->Cell(0,18,'Lista de Pago',0,1,'C');
-	// $pdf->Ln();
+	$pdf->setXY(107,175);
 	$pdf->SetFont('Times','I',10);
 	$pdf->Cell(10,8,utf8_decode('N°'),1,0,'C');
 	$pdf->Cell(28,8,'Fecha',1,0,'C');
