@@ -11,12 +11,7 @@
 			<p class="titulosec">Mantenimiento&nbsp;>>&nbsp;Clientes&nbsp;>>&nbsp;Registro de Cliente</p>
 			<form class="for" onsubmit="return false;">
 				<div id="_AJAX_REG_"></div><br><br>
-				
-				<!-- <label class="ema">Id Cliente</label><br>
-				<div class="buscaname">
-					<input type="text" id="user" class="emai busname" placeholder="Número Cliente">
-					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
-				</div><br> -->
+		
 
 				<label class="ema">Nombre Cliente</label><br>
 				<div class="buscaname">
@@ -157,7 +152,7 @@
 					<input id="user_bloq" type="text" class="emai">
 				  </div>
 				</div><br><br><br><br>
-			<button class="button yellow medium radius" onclick="goReg()">REGISTRAR</button>
+			<button class="button yellow medium radius" onclick="goReg()">GRABAR</button>
 			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
 			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">Modificar</button>
 			<button id="elimina" style='display:none;' class="button yellow medium radius" onclick="Elimina('¿Está seguro que desea Eliminar?','?view=cancela&mode=eliminar&id='+$('#user_folio').val()+'')">Eliminar</button>

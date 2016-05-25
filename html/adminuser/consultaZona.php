@@ -12,20 +12,20 @@
 			<?php  
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM catazon;");
-				echo "<table>
+				echo "<table><thead>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Descripción</th>
-					    </tr>";
+					    </tr></thead><tbody>";
 				while($row = $db->runs($sql))
 				{
 
 				  echo "<tr>
 				  <td>" . $row['NUM_ZON'] . "</td>
-                  <td>" . $row['DES_ZON'] . "</td>";
+                  <td>" . $row['DES_ZON'] . "</td></tr>";
 
 				} 
-				echo "</table>";
+				echo "</tbody></table>";
 			?>
 		</article>
 

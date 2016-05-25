@@ -8,22 +8,21 @@
 	
 
 	$db = new Conexion();
-// 	f_ini
-// f_fin
+
 	$f_ini = $_POST['f_ini'];
 	$f_fin = $_POST['f_fin'];
 	$sql = $db->query("SELECT * FROM movpag WHERE FEC_PAG BETWEEN '$f_ini' AND '$f_fin'");
 
 	if($db->rows($sql) > 0)
 	{
-		$html = "<table>
+		$html = "<table><thead>
 					    <tr>
 					      <th>Folio</th>
 					      <th>Fecha</th>
 					      <th>Importe</th>
 					      <th>Factura</th>
 					      <th>Cliente</th>
-					    </tr>";
+					    </tr></thead><tbody>";
 				while($row = $db->runs($sql))
 				{
 
@@ -32,10 +31,10 @@
                   <td>" . $row['FEC_PAG'] . "</td>
                   <td>" . $row['IMP_PAG'] . "</td>
                   <td>" . $row['NUM_FAC'] . "</td>
-                  <td>" . $row['NUM_CLI'] . "</td>";
+                  <td>" . $row['NUM_CLI'] . "</td></tr>";
 
 				} 
-				$html .= "</table>";
+				$html .= "</tbody></table>";
 
 		$re = array(
      	"id" => '1',

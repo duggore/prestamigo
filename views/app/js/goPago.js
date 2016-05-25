@@ -54,12 +54,15 @@ function runScriptPago(e){
 function LimpiarCampos()
 {
 	__('fol_cre').value = "";
-	// __('fec_pag').value= "";
+	__('user').value= "";
 	__('pag_dia').innerHTML= "";
 	__('tot_cre').innerHTML = "";
 	__('tot_pag').innerHTML= "";
 	__('sal_cre').innerHTML= "";
 	__('sta_tus').innerHTML = "";
+	__('opcancelar').innerHTML = "";
+	__('ref_pag').innerHTML = "";
+	
 }
 
 
@@ -76,13 +79,17 @@ function Id(id){
                 success:  function (res) {	
                 		    if(res.id == '1')
                 		    {
+                		    	
                 		    	__('tot_cre').innerHTML = res.tot_pag;
 		                        __('tot_pag').innerHTML = res.pag;
 		                        __('pag_dia').innerHTML = res.pag_dia;
 		                        __('sal_cre').innerHTML = res.sal_fin;
 		                        __('sta_tus').innerHTML = res.sta_tus;
 		                        __('for_pag').innerHTML = res.forma_pago;
+		                        __('ref_pag').innerHTML = res.referencia;
+		                        
                 		    }
+
                 		    if(res.id == '2' || res.id == '3')
                 		    {
                 		    	__('_AJAX_PRE_').innerHTML = res.mensaje;
@@ -92,3 +99,39 @@ function Id(id){
         });
       
 }
+
+function Buscar(nombre){
+        var par = {
+              "val" : nombre
+        };
+
+        $.ajax({
+                data:  par,
+                url:   '?view=busPagxNombre',
+                type:  'POST',
+                dataType:  'json',
+                success:  function (res) {	
+                		    if(res.id == '1')
+                		    {
+                		    	
+								__('fol_cre').value = res.id_fac;
+                		    	__('tot_cre').innerHTML = res.pag_tot;
+		                        __('tot_pag').innerHTML = res.num_pag;
+		                        __('pag_dia').innerHTML = res.pag_dia;
+		                        __('sal_cre').innerHTML = res.saldo;
+		                        __('sta_tus').innerHTML = res.estatus;
+		                        __('for_pag').innerHTML = res.tipo;
+		                        __('opcancelar').innerHTML = res.cancelar;
+                		    }
+                		    if(res.id == '2')
+                		    {
+                		    	__('_AJAX_PRE_').innerHTML = res.mensaje;
+                		    }
+                    }
+
+        });
+      
+}
+
+                		    
+

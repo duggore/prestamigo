@@ -24,7 +24,8 @@
 					      <th>Faltan</th>
 					      <th>Pago Diario</th>
 					    </tr>
-					    </thead>";
+					    </thead>
+					    <tbody>";
 				while($row = $db->runs($sql))
 				{
 
@@ -36,10 +37,10 @@
                   <td>" . $row['IMP_PRE'] . "</td>
                   <td>" . $row['SAL_CLI'] . "</td>
                   <td>" . $row['DES_CLI'] . "</td>
-                  <td>" . $row['IMP_PAGD'] . "</td>";
+                  <td>" . $row['IMP_PAGD'] . "</td></tr>";
 
 				} 
-				echo "</table>";
+				echo "</tbody></table>";
 			?>
 		</article>
 

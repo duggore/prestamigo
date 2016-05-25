@@ -11,11 +11,30 @@
 			<p class="titulosec">> APLICACIÒN DE PAGOS</p>
 			<div class="for" role="form" onkeypress="return runScriptPago(event)">
 				<div id="_AJAX_PRE_"></div><br><br>
+
+				<label class="ema">Nombre Cliente</label><br>
+				<div class="buscaname">
+					<input type="text" id="user" list="user_busca" class="emai busname" placeholder="Nombre Cliente">
+					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
+				</div><br>
+				
+				<?php 
+					$db = new Conexion();
+					$sql = $db->query("SELECT * FROM catacli;");
+					echo "<datalist id='user_busca'>";
+						while ($row = $db->runs($sql)){
+						echo '<option value="'.$row['NOM_CLI'].'">'.$row['NUM_CLI'].'</option>';
+					}
+					$db->liberar($sql);
+					$db->close();
+					echo '</datalist>';
+					
+					
+				?>
 				
 				<div class="contenfoliocre">
 					<div class="fp">
 						<label class="ema">Folio Pago:</label><br>
-						<!-- <input id="user_busca" type="text" class="emai" onkeyup="Buscar($('#user_busca').val())" placeholder="Número Cliente o Nombre"><br><br><br> -->
 						<input id="user_id" type="text" class="emai"  value="" placeholder="<?=$pagos['id'];?>">
 					</div>
 					<div class="contefoliofech cre">
@@ -83,8 +102,9 @@
 			</div>
 
 				<div id="button">
+				<div id="opcancelar"></div>
 				<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS</button>
-				<button class="button yellow medium radius" onclick="goPago()">PAGAR</button>
+				<button class="button yellow medium radius" onclick="goPago()">GRABAR</button>
 				</div>
 				
 		</article>

@@ -3,7 +3,10 @@
 	class Opciones{
 		private $db;
 		private $id;
-		private $mpdf;
+		private $pago;
+		private $row;
+		private $numfac;
+		
 		
 
 		public function __construct(){
@@ -50,6 +53,28 @@
 			
 		}
 
+
+
+		public function cancelapago(){
+			$this->id = intval($_GET['id']);
+			$num = 'C';
+			$q = "UPDATE movpag SET REF_ERE ='Cancelado' WHERE NUM_PAG = '$this->id';";
+			$this->db->query($q);
+
+			$q2 = "SELECT * FROM movpag WHERE NUM_PAG = '$this->id';";
+			$e = $this->db->query($q2);
+			
+			$this->row = $this->db->runs($e);
+			$this->numfac = $this->row['NUM_FAC'];
+			$this->pago = $this->row['IMP_PAG'];
+
+
+			$q3 = "UPDATE totfac SET  SAL_DOF= SAL_DOF + $this->pago WHERE NUM_FAC = '$this->numfac';";
+			$this->db->query($q3);
+
+			header('location: ?view=pago');
+		}
+		
 		
 		public function __destruct(){
 			$this->db->close();

@@ -12,14 +12,14 @@
 			<?php  
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM cataage;");
-				echo "<table>
+				echo "<table><thead>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Nombre</th>
 					      <th>Ventas</th>
 					      <th>Zona</th>
 					      <th>% Comisión</th>
-					    </tr>";
+					    </tr></thead><tbody>";
 				while($row = $db->runs($sql))
 				{
 
@@ -28,10 +28,10 @@
                   <td>" . $row['NOM_AGE'] . "</td>
                   <td>" . $row['VTA_AGE'] . "</td>
                   <td>" . $row['NUM_ZON'] . "</td>
-                  <td>" . $row['POR_COM'] . "</td>";
+                  <td>" . $row['POR_COM'] . "</td></tr>";
 
 				} 
-				echo "</table>";
+				echo "</tbody></table>";
 			?>
 		</article>
 

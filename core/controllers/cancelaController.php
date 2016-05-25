@@ -26,9 +26,13 @@
 		case 'cancelar':
 				$opciones->modificar();
 		break;
-
+		
 		case 'eliminar':
 				$opciones->eliminar();
+		break;
+
+		case 'cancelapag':
+				$opciones->cancelapago();
 		break;
 
 		case 'imprimir':

@@ -22,7 +22,7 @@
 					
 					$row = $db->runs($consulta);	
 					
-					$consulta2 = $db->query("SELECT COUNT(NUM_PAG) AS NUM_PAG FROM movpag WHERE NUM_FAC = '$id';");
+					$consulta2 = $db->query("SELECT COUNT(NUM_PAG) AS NUM_PAG FROM movpag WHERE NUM_FAC = '$id' AND REF_ERE !='Cancelado';");
 					$row2 = $db->runs($consulta2);
 
 					$consulta3 = $db->query("SELECT * FROM totfac WHERE NUM_FAC = '$id';");
