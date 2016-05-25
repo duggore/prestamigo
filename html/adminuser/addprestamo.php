@@ -111,7 +111,7 @@
 			</form>
 
 			<div id="button">
-			<button type="button" class="button yellow medium radius" onclick="goPrestamo()">PRESTAMO</button>
+			<button type="button" class="button yellow medium radius" onclick="goPrestamo()">GRABAR</button>
 
 				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
 

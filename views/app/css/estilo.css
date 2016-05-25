@@ -676,7 +676,7 @@ input:-ms-input-placeholder {
 	/*border: 2px red solid;*/
 	/*background-color: gray;*/
 }
-table{
+/*table{
 	margin-left: 5%;
 	margin-top: 2%;
 	width: 75%;
@@ -685,9 +685,7 @@ table{
 }
 table th {
 	background-color: #4f028C; 
-	/*font-size: 19px;*/
 	color: white;
-	/*border-right: 2px solid rgba(0,0,0,.2);*/
   padding: .7rem 0;
   font-size: 1.5rem;
   font-weight: normal;
@@ -703,7 +701,7 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
 	font-size: 18px;
 	background-color: #F9F1F1;
-}
+}*/
 
 /*table * {
 	height: auto; 
@@ -739,8 +737,108 @@ th {
   font-size: 1.5rem;
   font-weight: normal;
   font-variant: small-caps;
+}
+
+tbody {
+  display: inline-block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1px);
+  use calc for fixed ie9 & <
+  overflow-Y: scroll;
+  color: #000;
+}
+tbody tr {
+  /*display: inline-block;
+  overflow: hidden;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,.2);
+}
+
+td {
+  padding: .5rem 0 .5rem 1rem;
+  border-right: 2px solid rgba(0,0,0,.2);
+}
+
+tbody td:nth-child(2n) {color: #fff;}
+[data-campo='Mail'] {
+  width: 30%;
+}  
+
+tbody th:last-child, td:last-child {
+  width: 7%;
+  text-align: center;
+  border-right: 0 none;
+  padding-left: 0;
 }*/
 
+table * {height: auto; min-height: none;} /* fixed ie9 & <*/
+table {
+  background: #15BFCC;
+  table-layout: fixed;
+  margin: 1rem auto;
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  border-top: 0 none;
+}
+thead {
+  background: #FF7361;
+  text-align: center;
+  z-index: 2;
+}
+thead tr {
+  padding-right: 17px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.6);
+  z-index: 2;
+}
+
+th {
+  border-right: 2px solid rgba(0,0,0,.2);
+  padding: 20px 0;
+  font-size: 22px;
+  font-weight: normal;
+  font-variant: small-caps;
+  /*text-align: center;*/
+}
+tbody {
+  display: block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1 px);
+  /*use calc for fixed ie9 & <*/
+  overflow-Y: scroll;
+  color: #000;
+}
+tr {
+  display: block;
+  overflow: hidden;
+}
+tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,.2);
+}
+th, td {
+  width: 13%;
+  float:left;
+}
+td {
+  padding: .5rem 0 .5rem;
+  /*font-size: 15px;*/
+  border-right: 2px solid rgba(0,0,0,.2);
+  text-align: center;
+}
+td:nth-child(2n) {color: #000;}
+[data-campo='Mail'] {
+  width: 30%;
+
+}  
+th:last-child, td:last-child {
+  width: 7%;
+  text-align: center;
+  border-right: 0 none;
+  padding-left: 0;
+}
 /*--------------consultaventas-------*/
 .contenfechaif{
 	/*border: 2px red solid;*/

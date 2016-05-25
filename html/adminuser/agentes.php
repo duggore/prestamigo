@@ -60,7 +60,7 @@
 			</form>
 
 			<div id="button">
-			<button class="button yellow medium radius" onclick="goRegAgente()">REGISTRAR</button>
+			<button class="button yellow medium radius" onclick="goRegAgente()">GRABAR</button>
 			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
 			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModificaAgente()">Modificar</button>
 			<button id="elimina" style='display:none;' class="button yellow medium radius" onclick="Elimina('¿Está seguro que desea Eliminar?','?view=cancela&mode=eliminar&id='+$('#user').val()+'')">Eliminar</button>

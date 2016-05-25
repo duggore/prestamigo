@@ -16,13 +16,13 @@
 
 	if($db->rows($sql) > 0)
 	{
-		$html = "<table>
+		$html = "<table><thead>
 					    <tr>
 					      <th>Factura</th>
 					      <th>Fecha</th>
 					      <th>Importe</th>
 					      <th>Cliente</th>
-					    </tr>";
+					    </tr></thead><tbody>";
 				while($row = $db->runs($sql))
 				{
 				  $id_cli = $row['NUM_CLI'];
@@ -33,10 +33,10 @@
 				  <td>" . $row['NUM_FAC'] . "</td>
                   <td>" . $row['FEC_FAC'] . "</td>
                   <td>" . $row['TOT_PAG'] . "</td>
-                  <td>" . $row2['NOM_CLI'] . "</td>";
+                  <td>" . $row2['NOM_CLI'] . "</td></tr>";
 
 				} 
-				$html .= "</table>";
+				$html .= "</tbody></table>";
 
 		$re = array(
      	"id" => '1',
