@@ -95,6 +95,10 @@ function LimpiarCampos()
 	__('agente_comision').value= "";
 	__('agente_folio').value = "";
 	__('user').value = "";
+	__('registro').style.display = "inline";
+	__('modifica').style.display = "none";
+	__('elimina').style.display = "none";
+	
 	
 	// __('cancelar').style.display = 'none';
 	// __('imprimir').style.display = 'none';
@@ -131,6 +135,8 @@ function Buscar(val){
                 		    // modifica
                 		    __('modifica').style.display = "inline";
                 		    __('elimina').style.display = "inline";
+                		    __('registro').style.display = "none";
+                		    
 	                        // __('user').value = "";
                 		}
 

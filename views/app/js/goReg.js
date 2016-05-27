@@ -119,6 +119,7 @@ function LimpiarCampos()
     __('muestra4').style.display = "none";
     __('muestra5').style.display = "none";
     __('muestra6').style.display = "none";
+    __('registro').style.display = "inline";
 }
 
 
@@ -171,6 +172,8 @@ function Buscar(id){
 	                        __('muestra4').style.display = "inline";
 	                        __('muestra5').style.display = "inline";
 	                        __('muestra6').style.display = "inline";
+	                        __('registro').style.display = "none";
+	                        
 
 	                        // pag_d
 	                        // __('imprimir').style.display = "block";

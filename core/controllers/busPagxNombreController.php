@@ -33,9 +33,6 @@
 					    </tr></thead><tbody>";
 				while($row4 = $db->runs($consulta2))
 				{
-					// sesion = __('session_login').checked ? true : false;
-						// $s = $row4['REF_ERE'];
-					$e = $row4['REF_ERE'];
 				  $html .= "<tr>
 				  <td>" . $row4['NUM_PAG'] . "</td>
                   <td>" . $row4['FEC_PAG'] . "</td>

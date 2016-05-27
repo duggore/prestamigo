@@ -8,7 +8,7 @@
 	
 
 	$db = new Conexion();
-
+	$suma = 0;
 	$f_ini = $_POST['f_ini'];
 	$f_fin = $_POST['f_fin'];
 	$sql = $db->query("SELECT * FROM movpag WHERE FEC_PAG BETWEEN '$f_ini' AND '$f_fin'");
@@ -32,9 +32,14 @@
                   <td>" . $row['IMP_PAG'] . "</td>
                   <td>" . $row['NUM_FAC'] . "</td>
                   <td>" . $row['NUM_CLI'] . "</td></tr>";
-
+                  $suma = $suma + $row['IMP_PAG'];
 				} 
-				$html .= "</tbody></table>";
+				$html .= " <tr><td></td>
+							   <td>TOTAL</td>
+							   <td>".$suma."</td>
+							   <td></td>
+							   <td></td></tr>
+				</tbody></table>";
 
 		$re = array(
      	"id" => '1',
