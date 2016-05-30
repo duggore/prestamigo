@@ -10,8 +10,6 @@
 		// $agente=$_POST['agente'];
 		
 		$sql2= $db->query("SELECT * FROM totfac WHERE NUM_CLI='$id'  AND STA_TUS='A'  LIMIT 1");
-	
-			// $FEC_FAC= date('d-m-Y',$fec); //Pendiente la fecha
 
 		$sql7 = $db->query("SELECT NUM_AGE FROM catacli WHERE NUM_CLI='$id';");
 		$row6 = $db->runs($sql7);
@@ -45,20 +43,15 @@
 				$NUM_FAC = $row['NUM_FAC'] + 1;
 				
 				
-	           	$pag_dia = $prestamo/30; 
-	           	$sql3= $db->query("UPDATE catacli SET SAL_CLI='$prestamo',NUM_FACS=NUM_FACS+1, IMP_FACS='$prestamo', DES_CLI='30',IMP_PAGD='$pag_dia',IMP_PRE= '$prestamo',IMP_FACS ='$NUM_FACS', BLO_QUEO='N', ULT_PAG='$fecha',ULT_COM ='$fecha',NUM_FAC='$NUM_FAC' WHERE NUM_CLI='$id'");
+	           	$pag_dia = $imp/30; 
+	           	$sql3= $db->query("UPDATE catacli SET SAL_CLI='$prestamo',NUM_FACS=NUM_FACS+1, IMP_FACS='$prestamo', DES_CLI='30',IMP_PAGD='$pag_dia',IMP_PRE= '$imp',IMP_FACS ='$NUM_FACS', BLO_QUEO='N', ULT_PAG='$fecha',ULT_COM ='$fecha',NUM_FAC='$NUM_FAC' WHERE NUM_CLI='$id'");
 
 	           	$sql = $db->query("INSERT INTO totfac(NUM_CLI,TOT_FAC,POR_INT,FEC_FAC,NUM_AGE,STA_TUS,TIP_PAG,FEC_PAG,TOT_PAG,SAL_DOF)
-				VALUES ('$id','$imp', '$int', '$fecha', '$NUM_AGE','A','$tipo','$fecha','$prestamo','$prestamo')");
+				VALUES ('$id','$prestamo', '$int', '$fecha', '$NUM_AGE','A','$tipo','$fecha','$imp','$imp')");
 
 
-	           	// $sql5 = $db->query("INSERT INTO fecope(FE_CHA,PERI_ODO,NUM_FAC,NUM_PAG,NUM_FACI,NUM_REP,ANI_O,POR_INT)
-	           	// 	VALUES ('0','0','0','0','0','0','0','0')");
-
-	           	// $sql6 = $db->query("UPDATE catacli SET SAL_CLI ='$sal_cli',ULT_PAG ='$FECHA',DES_CLI= DES_CLI-1 WHERE NUM_CLI='$NUM_CLI'");
-				// $sql3 = $db->query("INSERT INTO catacli(NUM_FAC,SAL_CLI,NUM_FACS,IMP_FACS,DES_CLI,IMP_PAGD,IMP_PRE,BLOQUEO)	VALUES ('$NUM_FAC','$prestamo','$NUM_FACS','$prestamo','30','$pag_dia','$prestamo','N') WHERE NUM_CLI='$id'");				
-
-				// $if = () ? true : false;
+				$sql6 = $db->query("UPDATE fecope SET NUM_FAC='$NUM_FAC';");
+				
 
 				if (($sql3) && ($sql))
 				{		

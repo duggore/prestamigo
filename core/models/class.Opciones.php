@@ -72,6 +72,11 @@
 			$q3 = "UPDATE totfac SET  SAL_DOF= SAL_DOF + $this->pago WHERE NUM_FAC = '$this->numfac';";
 			$this->db->query($q3);
 
+			$q3 = "UPDATE catacli SET  SAL_CLI= SAL_CLI + $this->pago, DES_CLI= DES_CLI + 1 WHERE NUM_FAC = '$this->numfac';";
+			$this->db->query($q3);
+
+
+
 			header('location: ?view=pago');
 		}
 		

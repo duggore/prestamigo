@@ -240,6 +240,17 @@
 	}
 
 
+	function por_int(){
+		$db = new Conexion();
+		$sql = $db->query("SELECT POR_INT FROM fecope");
+		$d= $db->runs($sql);
+		
+		$por= array('id' => $d['POR_INT']);
 
+		return $por;
+
+		$db->liberar($sql);
+		$db->close();
+		}
 	
 ?>
