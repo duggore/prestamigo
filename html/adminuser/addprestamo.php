@@ -66,16 +66,16 @@
 
 				<div class="contefoliofech">
 				<div class="tres">
-				<label class="ema" id="lbl_imp">Importe ($)</label><br>
-				<input id="user_imp" type="text" class="emai" onkeyup="Calcula($('#user_imp').val())"><br><br></div>
+				<label class="ema" id="lbl_imp">Prestamo</label><br>
+				<input id="user_pres" type="text" class="emai" onkeyup="Calcula($('#user_pres').val())"><br><br></div>
 
 				<div class="tres">			
 				<label class="ema">Interes (%)</label><br>
 				<div id="user_int" class="emai"></div><br>
 				</div>
 				<div class="tres">
-				<label class="ema">Prestamo</label><br>
-				<div id="user_pres" class="emai"></div><br><br>
+				<label class="ema">Importe ($)</label><br>
+				<div id="user_imp" class="emai"></div><br><br>
 				</div>
 				</div>
 

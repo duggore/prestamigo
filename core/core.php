@@ -28,5 +28,6 @@
 	$addcliente = addcliente();
 	$agente = addAgente();
 	$zona = addZona();
+	$interes = por_int();
 	
 ?>

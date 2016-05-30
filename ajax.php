@@ -48,6 +48,10 @@
 					require('core/bin/ajax/goModificaZona.php');
 				break;
 
+			case 'porcentaje':
+					// header('location: ?view=sesion');
+					require('core/bin/ajax/goModificaPorcentaje.php');
+				break;
 			
 			default:
 					header('location: ?view=admin');
