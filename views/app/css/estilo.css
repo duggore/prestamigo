@@ -676,105 +676,14 @@ input:-ms-input-placeholder {
 	/*border: 2px red solid;*/
 	/*background-color: gray;*/
 }
-/*table{
-	margin-left: 5%;
-	margin-top: 2%;
-	width: 75%;
-	text-align: center;
 
-}
-table th {
-	background-color: #4f028C; 
-	color: white;
-  padding: .7rem 0;
-  font-size: 1.5rem;
-  font-weight: normal;
-  font-variant: small-caps;
-}
+table * {
+	height: auto;
+	 min-height: none;
+	 } /* fixed ie9 & <*/
 
-table tr:nth-child(odd) {
-	background-color: #CBCBCB;
-	font-size: 18px;
-	
-}
-
-table tr:nth-child(even) {
-	font-size: 18px;
-	background-color: #F9F1F1;
-}*/
-
-/*table * {
-	height: auto; 
-	min-height: none;
-} 
 table {
-  background: #15BFCC;
-  margin-left: 5%;
-	margin-top: 5%;
-	width: 75%;
-	text-align: center;
-  table-layout: fixed;
-  margin: 1rem auto;
-  width: 75%;
-  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
-  border-collapse: collapse;
-  border: 1px solid rgba(0,0,0,.5);
-  border-top: 0 none;
-}
-thead {
-  background: #FF7361;
-  text-align: center;
-  z-index: 2;
-}
-thead tr {
-  padding-right: 17px;
-  box-shadow: 0 4px 6px rgba(0,0,0,.6);
-  z-index: 2;
-}
-th {
-  border-right: 2px solid rgba(0,0,0,.2);
-  padding: .7rem 0;
-  font-size: 1.5rem;
-  font-weight: normal;
-  font-variant: small-caps;
-}
-
-tbody {
-  display: inline-block;
-  height: calc(50vh - 1px);
-  min-height: calc(200px + 1px);
-  use calc for fixed ie9 & <
-  overflow-Y: scroll;
-  color: #000;
-}
-tbody tr {
-  /*display: inline-block;
-  overflow: hidden;
-}
-
-tbody tr:nth-child(odd) {
-  background: rgba(0,0,0,.2);
-}
-
-td {
-  padding: .5rem 0 .5rem 1rem;
-  border-right: 2px solid rgba(0,0,0,.2);
-}
-
-tbody td:nth-child(2n) {color: #fff;}
-[data-campo='Mail'] {
-  width: 30%;
-}  
-
-tbody th:last-child, td:last-child {
-  width: 7%;
-  text-align: center;
-  border-right: 0 none;
-  padding-left: 0;
-}*/
-
-table * {height: auto; min-height: none;} /* fixed ie9 & <*/
-table {
+	/*border: 2px */
   background: #15BFCC;
   table-layout: fixed;
   margin: 1rem auto;
@@ -782,11 +691,12 @@ table {
   box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
   border-collapse: collapse;
   border: 1px solid rgba(0,0,0,.5);
+  /*border: 2px black solid;*/
   border-top: 0 none;
 }
 thead {
   background: #FF7361;
-  text-align: center;
+  /*text-align: center;*/
   z-index: 2;
 }
 thead tr {
@@ -797,7 +707,7 @@ thead tr {
 
 th {
   border-right: 2px solid rgba(0,0,0,.2);
-  padding: 20px 0;
+  padding: 15px 0;
   font-size: 22px;
   font-weight: normal;
   font-variant: small-caps;
@@ -817,6 +727,7 @@ tr {
 }
 tbody tr:nth-child(odd) {
   background: rgba(0,0,0,.2);
+  /*background-color: pink;*/
 }
 th, td {
   width: 13%;
@@ -826,19 +737,69 @@ td {
   padding: .5rem 0 .5rem;
   /*font-size: 15px;*/
   border-right: 2px solid rgba(0,0,0,.2);
-  text-align: center;
+  /*text-align: center;*/
+  /*background-color: red;*/
 }
-td:nth-child(2n) {color: #000;}
-[data-campo='Mail'] {
-  width: 30%;
+td:nth-child(2n) {color: #000; /*background-color: green*/;
+width: 30%; text-align: left;}
 
-}  
-th:last-child, td:last-child {
-  width: 7%;
+
+[data-campo='Mail'] {
+  width: 36%;
+  /*background-color: red;*/
+
+} 
+td:nth-child(3n) {color: #000; /*background-color: gray*/
+width: 10%; text-align: center;}
+td:nth-child(4n) {color: #000; /*background-color: pink*/
+width: 10%; text-align: center;} 
+td:nth-child(5n) {color: #000; /*background-color: pink*/
+width: 10%; text-align: center;}
+td:nth-child(6n) {color: #000; /*background-color: pink*/
+width: 10%; text-align: center;} 
+td:nth-child(7n) {color: #000; /*background-color: pink*/
+width: 10%; text-align: center;} 
+th:nth-child(2n) {color: #000; /*background-color: gray*/
+width: 30%;}
+th:nth-child(3n) {color: #000;/* background-color: gray*/
+width: 10%;}
+th:nth-child(4n) {color: #000; /*background-color: pink*/
+width: 10%;} 
+th:nth-child(5n) {color: #000; /*background-color: pink*/
+width: 10%;}
+th:nth-child(6n) {color: #000;/* background-color: pink*/
+width: 10%;} 
+th:nth-child(7n) {color: #000; /*background-color: pink*/
+width: 10%;} 
+th:nth-child(8n) {color: #000; /*background-color: pink;*/
+width: 11%; border-right: none;} 
+
+
+td:last-child {
+  width: 11%;
   text-align: center;
   border-right: 0 none;
   padding-left: 0;
+  /*border-right: 2px solid rgba(0,0,0,.2);*/
+  /*background-color: red;*/
 }
+
+th:first-child {
+/*	color: white;
+	background-color: yellow;*/
+	width: 7%;
+
+
+}
+td:first-child {
+/*	color: white;
+	background-color: yellow;*/
+	width: 7%;
+	text-align: center;
+
+}
+
+
 /*--------------consultaventas-------*/
 .contenfechaif{
 	/*border: 2px red solid;*/
