@@ -71,8 +71,7 @@
 					  	"tipo"  =>  $row2['TIP_PAG'],
 					  	"pagdiario"  =>  $pagdiario,
 					  	"saldo"  =>  $saldofinal,
-					  	"int"  =>  $row2['POR_INT'],
-					  	"fol_prestamo"  =>  $row2['NUM_FAC'],					  	
+					  	"int"  =>  $row2['POR_INT']					  	
 			        );	
           		}
 		}

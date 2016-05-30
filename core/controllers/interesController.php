@@ -6,15 +6,12 @@
 	else
 	{
 		
-		$db = new Conexion();
-		$sql = $db->query("SELECT POR_INT FROM fecope");
-		$row = $db->runs($sql);
-		$porcentaje = $row['POR_INT'];
-		$r2 = $_POST['valor'] + ($_POST['valor'] * ($porcentaje/100));
-		$pag_diario = ($r2) / 30;
+		// $r1 = $_POST['valor'] * (.200);	
+		$r2 = $_POST['valor'] * (1.20);
+		$pag_diario = ($_POST['valor'] * 1.20) / 30;
 		
 		 $r=array( 
-			  	"m1"  =>  $porcentaje,  
+			  	"m1"  =>  '20',  
 		        "m2"  =>  $r2,
 		        "m3"  =>  $pag_diario,
 		        "m4"  =>  $r2

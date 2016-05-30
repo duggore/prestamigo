@@ -93,7 +93,6 @@ function LimpiarCampos()
 	__('zona_name').value = "";
  	__('modifica').style.display = "none";
     __('elimina').style.display = "none";
-	__('registro').style.display = "inline";
 }
 
 
@@ -124,7 +123,6 @@ function Buscar(val){
                 		    // modifica
                 		    __('modifica').style.display = "inline";
                 		    __('elimina').style.display = "inline";
-                		    __('registro').style.display = "none";
 	                        // __('user').value = "";
                 		}
 

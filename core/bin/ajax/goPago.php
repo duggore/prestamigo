@@ -33,11 +33,7 @@
 				// Sentencia para insertar datos en la tabla movpag
 				$sql2 = $db->query("INSERT INTO movpag(NUM_CLI,REF_ERE,TIP_PAG,FEC_PAG,IMP_PAG,NUM_FAC,NUM_AGE,HOR_A)
 				VALUES ('$NUM_CLI','0','E','$fec_cha','$tot_apli','$NUM_FAC','$NUM_AGE','$hora');");
-				
-				$sql5= $db->query("SELECT MAX(NUM_PAG) AS NUM_PAG FROM movpag;");
-				$row2 = $db->runs($sql5);
-				$numpag = $row2['NUM_PAG'];
-				$sql6 = $db->query("UPDATE fecope SET NUM_PAG='$numpag';");
+
 				
 
 					if($TOT_FAC == $tot_apli)
@@ -49,8 +45,6 @@
 						// Consulta que te actualiza los datos de la tabla catacli
 						// a partir de la condicion del if
 						$sql3 = $db->query("UPDATE catacli SET SAL_CLI ='$sal_cli',ULT_PAG ='$fec_cha',DES_CLI= DES_CLI-1, IMP_PAGD='0', NUM_FAC='0', IMP_PRE='0' WHERE NUM_FAC='$NUM_FAC'");
-
-						
 					}
 					else
 					{
@@ -68,7 +62,7 @@
 				              $html = '
 								<div class="alert alert-dismissible alert-success">
 				  			  <button type="button" class="close" data-dismiss="alert">&times;</button>
-				              <strong>Pago</strong> guardados Correctamente.'.$numpag;        
+				              <strong>Pago</strong> guardados Correctamente.';        
 						}
 						else
 						{

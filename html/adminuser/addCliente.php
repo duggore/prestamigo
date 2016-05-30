@@ -152,9 +152,9 @@
 					<input id="user_bloq" type="text" class="emai">
 				  </div>
 				</div><br><br><br><br>
-			<button id="registro" class="button yellow medium radius" onclick="goReg()">GRABAR</button>
-			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">GRABAR</button>
+			<button class="button yellow medium radius" onclick="goReg()">GRABAR</button>
 			<button class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR</button>
+			<button id="modifica" style='display:none;' class="button yellow medium radius" onclick="goModifica()">Modificar</button>
 			<button id="elimina" style='display:none;' class="button yellow medium radius" onclick="Elimina('¿Está seguro que desea Eliminar?','?view=cancela&mode=eliminar&id='+$('#user_folio').val()+'')">Eliminar</button>
 			</div>
 			

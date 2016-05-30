@@ -22,10 +22,8 @@ function goPago(){
 				}
 			}
 			else if (connect.readyState != 4){
-				LimpiarCampos();
-				
-				__('user_id').window.location.reload();
-				 // window.location.reload();
+				// LimpiarCampos();
+				 window.location.reload();
 			}
 	}
 
@@ -64,8 +62,6 @@ function LimpiarCampos()
 	__('sta_tus').innerHTML = "";
 	__('opcancelar').innerHTML = "";
 	__('ref_pag').innerHTML = "";
-	__('for_pag').innerHTML = "";
-	
 	
 }
 
@@ -84,7 +80,6 @@ function Id(id){
                 		    if(res.id == '1')
                 		    {
                 		    	
-                		    	__('user').value = res.name;
                 		    	__('tot_cre').innerHTML = res.tot_pag;
 		                        __('tot_pag').innerHTML = res.pag;
 		                        __('pag_dia').innerHTML = res.pag_dia;
@@ -92,7 +87,6 @@ function Id(id){
 		                        __('sta_tus').innerHTML = res.sta_tus;
 		                        __('for_pag').innerHTML = res.forma_pago;
 		                        __('ref_pag').innerHTML = res.referencia;
-		                        __('opcancelar').innerHTML = res.cancelar;
 		                        
                 		    }
 

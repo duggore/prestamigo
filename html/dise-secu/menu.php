@@ -24,7 +24,6 @@
 			<li><a href="?view=age">Agentes</a></li>
 			<li><a href="?view=zon">Zonas</a></li>
 			<li><a href="?view=usua">Usuarios</a></li>
-			<li><a href="?view=porcen">Porcentaje</a></li>
 		</ul>
 	</li>
 	<li>

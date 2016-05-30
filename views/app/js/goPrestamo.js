@@ -1,10 +1,10 @@
 function goPrestamo(){
 	var connect, form, result, user, importe, interes, tipo, prestamo, imp;
 	user = $('#user_cli').html();
-	importe = $('#user_imp').html();
+	importe = __('user_imp').value;
 	interes	= $('#user_int').html();
 	tipo = __('user_tip').value;
-	prestamo = __('user_pres').value;
+	prestamo = $('#user_pres').html();
 	fecha = __('user_fec').value;
 	// usr_id = __('user_id').value;
 	// agente = __('user_agente').value;
@@ -26,8 +26,7 @@ function goPrestamo(){
 			}
 			else if (connect.readyState != 4){
 				// window.location.reload();
-                // location.reload();
-                // LimpiarCampos();
+                window.location.reload();
 			}
 	}
 
@@ -60,12 +59,11 @@ function LimpiarCampos()
 	
 	__('user_name').innerHTML= "";
 	__('user_cli').innerHTML= "";
+	__('user_imp').value = "";
 	__('user_int').innerHTML= "";
+	__('user_pres').innerHTML= "";
 	__('user_tip').value = "";
     __('user_pagD').innerHTML = "";
-    __('user_imp').innerHTML = "";
-    __('user_pres').value = "";
-    // __('user').value = "";
 	// __('user_fec').value = "";
     __("sal_final").innerHTML = "";
 	// __('user_agente').value = "";
@@ -86,7 +84,7 @@ function Calcula(valor){
                 dataType:  'json' ,
                 success:  function (response) {
                         $("#user_int").html(response.m1);
-                        $("#user_imp").html(response.m2);
+                        $("#user_pres").html(response.m2);
                         $("#user_pagD").html(response.m3);
                         $("#sal_final").html(response.m4);
                     }
@@ -113,14 +111,12 @@ function Buscar(val){
                 			__('user_fec').value = res.fec;
                 		    __('user_name').innerHTML = res.nom;
                 		    __('user_cli').innerHTML = res.num;
-                		    __('user_imp').innerHTML = res.pag;
+                		    __('user_imp').value = res.pag;
 	                        __('user_int').innerHTML = res.int;
-	                        __('user_pres').value = res.pres;
+	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
                             __('user_pagD').innerHTML = res.pagdiario;
                             __('sal_final').innerHTML = res.saldo;
-                            __('user_id').value = res.fol_prestamo;
-                            
 	                        // __('user_agente').value = res.age;
                             // __('sal_final').value = res.saldof;  pendiente
 	                        // __('cancelar').style.display = "block";
@@ -163,11 +159,9 @@ function Id(id){
                 			__('user_fec').value = res.fec;
                 		    __('user_name').innerHTML = res.nom;
                 		    __('user_cli').innerHTML = res.num;
-                		    // __('user_imp').value = res.pag;
+                		    __('user_imp').value = res.pag;
 	                        __('user_int').innerHTML = res.int;
-	                        // __('user_pres').innerHTML = res.pres;
-                            __('user_imp').innerHTML = res.pag;
-                            __('user_pres').value = res.pres;
+	                        __('user_pres').innerHTML = res.pres;
 	                        __('user_tip').value = res.tipo;
 	                        // __('user_agente').value = res.age;
                             __('sal_final').innerHTML = res.saldof; 
