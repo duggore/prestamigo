@@ -18,7 +18,7 @@
 					<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#user').val())">BUSCAR</button>
 				</div><br>
 				
-				<?php 
+				<?php  
 					$db = new Conexion();
 					$sql = $db->query("SELECT * FROM catacli;");
 					echo "<datalist id='user_busca'>";
