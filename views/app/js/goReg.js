@@ -75,6 +75,7 @@ function goModifica(){
 			}
 			else if (connect.readyState != 4){
 				LimpiarCampos();
+				window.location.reload();
 			}
 	}
 
