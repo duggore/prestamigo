@@ -851,6 +851,63 @@ width: 15%; text-align: center;}
 
 }
 
+/*-----------tabla agentes----------*/
+.contienetabla{
+	/*border: 2px red solid;*/
+	width: 50%;
+	margin: 0 auto;
+}
+.
+.tablaA{
+	/*border: 2px red solid;*/
+  background: #15BFCC;
+  /*background-color: black;*/
+  table-layout: fixed;
+  margin: 1rem auto;
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  /*border: 2px black solid;*/
+  border-top: 0 none;
+}
+
+.tablaA td:nth-child(2n) {color: #000; /*background-color: green;*/
+/*width: 15%;*/ text-align: center;}
+
+.tablaA th:nth-child(3n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablaA th:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center; }
+
+.tablaA th:nth-child(5n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;border: none;}
+
+.tablaA td:nth-child(3n) {color: #000; /*background-color: yellow;*/
+width: 15%; text-align: center;}
+
+.tablaA td:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablaA td:nth-child(5n) {color: #000; /*background-color: black;*/
+width: 15%; text-align: center;}
+
+.tablaA th:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+
+
+}
+.tablaA td:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+	text-align: center;
+
+}
+
 /*--------------consultaventas-------*/
 .contenfechaif{
 	/*border: 2px red solid;*/

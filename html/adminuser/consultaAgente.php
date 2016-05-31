@@ -9,10 +9,11 @@
 		
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> CONSULTA DE AGENTES</p>
+			<article class="contienetabla">
 			<?php  
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM cataage;");
-				echo "<table><thead>
+				echo "<table class='tablaA'><thead>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Nombre</th>
@@ -33,6 +34,7 @@
 				} 
 				echo "</tbody></table>";
 			?>
+			</article>
 		</article>
 
 	</section>
