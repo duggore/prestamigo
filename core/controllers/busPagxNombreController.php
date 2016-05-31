@@ -23,7 +23,7 @@
 			$consulta2 = $db->query("SELECT * FROM movpag WHERE NUM_FAC='$id_fac';");
 
 
-			$html = "<table><thead>
+			$html = "<table class='tablap'><thead>
 					    <tr>
 					      <th>Folio</th>
 					      <th>Fecha</th>
