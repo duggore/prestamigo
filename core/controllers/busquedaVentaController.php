@@ -15,7 +15,7 @@
 
 	if($db->rows($sql) > 0)
 	{
-		$html = "<table><thead>
+		$html = "<table class='tablav'><thead>
 					    <tr>
 					      <th>Factura</th>
 					      <th>Fecha</th>

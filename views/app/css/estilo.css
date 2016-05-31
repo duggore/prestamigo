@@ -854,7 +854,7 @@ width: 15%; text-align: center;}
 /*-----------tabla agentes----------*/
 .contienetabla{
 	/*border: 2px red solid;*/
-	width: 50%;
+	width: 86%;
 	margin: 0 auto;
 }
 .
@@ -871,42 +871,166 @@ width: 15%; text-align: center;}
   /*border: 2px black solid;*/
   border-top: 0 none;
 }
+.tablaA th:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 50%; text-align: center;}
 
 .tablaA td:nth-child(2n) {color: #000; /*background-color: green;*/
-/*width: 15%;*/ text-align: center;}
+width: 50%; text-align: left;}
 
 .tablaA th:nth-child(3n) {color: #000; /*background-color: green;*/
-width: 15%; text-align: center;}
+width: 10%; text-align: center;}
 
 .tablaA th:nth-child(4n) {color: #000; /*background-color: green;*/
-width: 15%; text-align: center; }
+width: 10%; text-align: center; }
 
 .tablaA th:nth-child(5n) {color: #000; /*background-color: green;*/
-width: 15%; text-align: center;border: none;}
+width: 18%; text-align: center;border: none;}
 
 .tablaA td:nth-child(3n) {color: #000; /*background-color: yellow;*/
-width: 15%; text-align: center;}
+width: 10%; text-align: center;}
 
 .tablaA td:nth-child(4n) {color: #000; /*background-color: green;*/
-width: 15%; text-align: center;}
+width: 10%; text-align: center;}
 
 .tablaA td:nth-child(5n) {color: #000; /*background-color: black;*/
-width: 15%; text-align: center;}
+width: 18%; text-align: center;}
 
 .tablaA th:first-child {
 	/*color: white;*/
 	/*background-color: yellow;*/
-	width: 15%;
+	width: 10%;
 
 
 }
 .tablaA td:first-child {
 	/*color: white;*/
 	/*background-color: yellow;*/
+	width: 10%;
+	text-align: center;
+
+}
+
+/*-----------tabla zonas----------*/
+.contienetablaz{
+	/*border: 2px red solid;*/
+	width: 86%;
+	margin: 0 auto;
+}
+.tablaz{
+	/*border: 2px red solid;*/
+  background: #15BFCC;
+  /*background-color: black;*/
+  table-layout: fixed;
+  margin: 1rem auto;
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  /*border: 2px black solid;*/
+  border-top: 0 none;
+}
+.tablaz th:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+
+
+}
+.tablaz td:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
 	width: 15%;
 	text-align: center;
 
 }
+.tablaz td:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 85%; text-align: left;}
+
+.tablaz th:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 85%; text-align: center; border: none;}
+
+
+/*--------------tabla ventas---------------*/
+
+.tablav td:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablav th:nth-child(3n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablav th:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center; border: none; }
+
+.tablav th:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablav td:nth-child(3n) {color: #000; /*background-color: yellow;*/
+width: 15%; text-align: center;}
+
+.tablav td:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 49%; text-align: left;}
+
+
+
+.tablav th:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+
+
+}
+.tablav td:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+	text-align: center;
+
+}
+
+
+/*---------tabla consulta pagos--------------*/
+
+.tablacp td:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablacp th:nth-child(3n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablacp th:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center; }
+
+.tablacp th:nth-child(2n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablacp th:nth-child(5n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center; border: none;}
+
+.tablacp td:nth-child(3n) {color: #000; /*background-color: yellow;*/
+width: 15%; text-align: center;}
+
+.tablacp td:nth-child(4n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+.tablacp td:nth-child(5n) {color: #000; /*background-color: green;*/
+width: 15%; text-align: center;}
+
+
+
+.tablacp th:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+
+
+}
+.tablacp td:first-child {
+	/*color: white;*/
+	/*background-color: yellow;*/
+	width: 15%;
+	text-align: center;
+
+}
+
 
 /*--------------consultaventas-------*/
 .contenfechaif{

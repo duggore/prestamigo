@@ -15,7 +15,7 @@
 
 	if($db->rows($sql) > 0)
 	{
-		$html = "<table><thead>
+		$html = "<table class='tablacp'><thead>
 					    <tr>
 					      <th>Folio</th>
 					      <th>Fecha</th>

@@ -9,10 +9,12 @@
 		
 		<article id="dere" class="derechasection">
 			<p class="titulosec">> CONSULTA DE ZONAS</p>
+						<article class="contienetablaz">
+
 			<?php  
 				$db = new Conexion();
 				$sql = $db->query("SELECT * FROM catazon;");
-				echo "<table><thead>
+				echo "<table class='tablaz'><thead>
 					    <tr>
 					      <th>Clave</th>
 					      <th>Descripción</th>
@@ -27,6 +29,8 @@
 				} 
 				echo "</tbody></table>";
 			?>
+						</article>
+
 		</article>
 
 	</section>

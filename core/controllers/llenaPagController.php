@@ -4,7 +4,7 @@
 	}
 
 	else
-	{
+	{ 
 	
 
 	$db = new Conexion();
@@ -31,7 +31,7 @@
 
 					$consulta4 = $db->query("SELECT * FROM movpag WHERE NUM_FAC='$id_fac';");
 
-					$html = "<table><thead>
+					$html = "<table class='tablap'><thead>
 					    <tr>
 					      <th>Folio</th>
 					      <th>Fecha</th>
@@ -46,7 +46,7 @@
 		                  <td>" . $row4['FEC_PAG'] . "</td>
 		                  <td>" . $row4['IMP_PAG'] . "</td>
 		                  <td>" . $row4['REF_ERE'] . "</td>
-		                  <td>" . (($row4['REF_ERE']=='0') ? '<a href="?view=cancela&mode=cancelapag&id='.$row4['NUM_PAG'].'"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>Cancelar</button></a>' : ""). "</td>
+		                  <td>" . (($row4['REF_ERE']=='0') ? '<a href="?view=cancela&mode=cancelapag&id='.$row4['NUM_PAG'].'"><button class="btn cancel btn-danger btn-xs">Cancelar</button></a>' : ""). "</td>
 		                  </tr>";
 
 						} 
