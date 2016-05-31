@@ -19,6 +19,7 @@
 		<article class="fei btn">
 			<button type="button" class="yellow medium radius btn-name" onclick="Buscar2($('#f_inicial').val(),$('#f_final').val())">BUSCAR</button>
 			</article>
+			<a href="">Generar Reporte</a>
 			</article>
 
 			<div id="muestratabla"></div>
