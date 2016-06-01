@@ -48,6 +48,11 @@
 			width: 24%;
 		} 
 
+		.uno {
+			width: 35%;
+			/*border: 2px red solid;*/
+		}
+
 		.unoo{
 			width: 64%;
 			/*border: 2px red solid;*/
