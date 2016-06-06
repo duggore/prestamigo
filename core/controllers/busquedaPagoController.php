@@ -35,7 +35,7 @@
                   $suma = $suma + $row['IMP_PAG'];
 				} 
 				$html .= " <tr><td></td>
-							   <td>TOTAL</td>
+							   <td><b>TOTAL</b></td>
 							   <td>".$suma."</td>
 							   <td></td>
 							   <td></td></tr>

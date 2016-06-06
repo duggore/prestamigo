@@ -10,8 +10,7 @@
 		
 
 		public function __construct(){
-			$this->db = new Conexion();
-			
+			$this->db = new Conexion();	
 		}
 
 		public function cancela(){
@@ -32,27 +31,49 @@
 
 		public function eliminar(){
 			$this->id = intval($_GET['id']);
-			// $num = 'C';
-			$q = "DELETE FROM catacli WHERE NUM_CLI = '$this->id' AND SAL_CLI='0';";
-			if($this->db->query($q))
+			$q = "SELECT * FROM catacli WHERE NUM_CLI = '$this->id' AND SAL_CLI='0';";
+			$consulta = $this->db->query($q);
+
+			if($this->db->rows($consulta)>0)
 			{
-				header('location: ?view=insert');	
+				
+				$q2= "DELETE FROM catacli WHERE NUM_CLI = '$this->id';";
+				$this->db->query($q2);
+
+				echo "<script type=\"text/javascript\">alert(\"Eliminado Correctamente\");</script>";
 			}
 			else
 			{
-				$html = 
-		          			'<div class="alert alert-dismissible alert-warning">
-			  			  		<button type="button" class="close" data-dismiss="alert">&times;</button>
-			              		<strong>Atencion</strong>, 
-			              </div>';
-				$re = array( 
-						"mensaje"  =>  $html
-			        );	
-				echo json_encode($re);
+
+				echo "<script type=\"text/javascript\">alert(\"No se puede ELIMINAR, persona cuenta con prestamo\");</script>";
 			}
-			
+
+			header('refresh: 0; url= ?view=insert');
 		}
 
+
+		public function eliminarZon(){
+			$this->id = intval($_GET['id']);
+			
+				
+			$q2= "DELETE FROM catazon WHERE NUM_ZON = '$this->id';";
+			$this->db->query($q2);
+
+			$q3 = "SELECT * FROM movpag WHERE NUM_PAG = '$this->id';";
+			$e = $this->db->query($q3);
+
+			if($this->db->query($q2))
+			{
+				echo "<script type=\"text/javascript\">alert(\"Zona Eliminada Correctamente\");</script>";
+			}
+			else
+			{
+
+				echo "<script type=\"text/javascript\">alert(\"No se puede ELIMINAR\");</script>";
+			}
+
+			header('refresh: 0; url= ?view=zon');
+		}
 
 
 		public function cancelapago(){
@@ -76,8 +97,30 @@
 			$this->db->query($q3);
 
 
-
 			header('location: ?view=pago');
+		}
+
+		public function cancelCRE(){
+
+			$this->id = intval($_GET['id']);
+	
+			$q = "SELECT * FROM totfac WHERE NUM_FAC = '$this->id' AND TOT_PAG=SAL_DOF;";
+			$consulta = $this->db->query($q);
+			
+			if($this->db->rows($consulta)>0)
+			{
+				$q2 = "UPDATE totfac SET  REF_ERE='cancelado' WHERE NUM_FAC = '$this->id';";
+				$this->db->query($q2);
+
+				echo "<script type=\"text/javascript\">alert(\"CREDITO cancelado\");</script>";
+			}
+			else
+			{
+				echo "<script type=\"text/javascript\">alert(\"No se puede CANCELAR prestamo ya cuenta con pago\");</script>";
+			}
+
+			header('refresh: 0; url= ?view=adprestamo');
+			 
 		}
 		
 		

@@ -46,7 +46,7 @@
 		                  <td>" . $row4['FEC_PAG'] . "</td>
 		                  <td>" . $row4['IMP_PAG'] . "</td>
 		                  <td>" . $row4['REF_ERE'] . "</td>
-		                  <td>" . (($row4['REF_ERE']=='0') ? '<a href="?view=cancela&mode=cancelapag&id='.$row4['NUM_PAG'].'"><button class="btn cancel btn-danger btn-xs">Cancelar</button></a>' : ""). "</td>
+		                  <td>" . (($row4['REF_ERE']=='0') ? '<a onclick="return confirmCan();" href="?view=cancela&mode=cancelapag&id='.$row4['NUM_PAG'].'"><button class="btn cancel btn-danger btn-xs">Cancelar</button></a>' : ""). "</td>
 		                  </tr>";
 
 						} 

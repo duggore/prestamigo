@@ -94,6 +94,7 @@ function Id(id){
 		                        __('ref_pag').innerHTML = res.referencia;
 		                        __('opcancelar').innerHTML = res.cancelar;
 		                        
+		                        
                 		    }
 
                 		    if(res.id == '2' || res.id == '3')

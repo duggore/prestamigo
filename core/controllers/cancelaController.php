@@ -20,7 +20,11 @@
 			// else{
 				// header('location: ?view=admin');			
 			// }
+		break;
 
+		case 'cancelCre':
+				$opciones->cancelCRE();
+				// require('core/controllers/adprestamoController.php');
 		break;
 
 		case 'cancelar':
@@ -30,6 +34,11 @@
 		case 'eliminar':
 				$opciones->eliminar();
 		break;
+
+		case 'eliminarZona':
+				$opciones->eliminarZon();
+		break;
+
 
 		case 'cancelapag':
 				$opciones->cancelapago();

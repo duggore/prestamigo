@@ -117,7 +117,7 @@
 
 				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Imprimir('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
 
-				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelar&id='+$('#user_id').val()+'')">CANCELAR</button>
+				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelCre&id='+$('#user_id').val()+'')">CANCELAR</button>
 
 		</article>
 

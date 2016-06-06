@@ -19,3 +19,11 @@ function Elimina(contenido,url){
 function Imprimir(url){
 			window.location = url;
 	}
+
+
+function confirmCan(){
+			var msj = confirm("¿Realmente desea CANCELAR?");
+			if (msj) return true;
+			else
+				return false;
+	}

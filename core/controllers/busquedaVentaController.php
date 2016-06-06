@@ -40,7 +40,7 @@
 				
 
 				$html .= " <tr><td></td>
-							   <td>TOTAL</td>
+							   <td><b>TOTAL</b></td>
 							   <td>".$suma."</td>
 							   <td></td></tr>
 				</tbody></table>";

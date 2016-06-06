@@ -11,6 +11,7 @@
 			<p class="titulosec">> CONSULTA DE CLIENTE</p>
 			<?php  
 				$db = new Conexion();
+				$total = 0;
 				$sql = $db->query("SELECT * FROM catacli;");
 				echo "<table>
 				      <thead>
@@ -38,9 +39,17 @@
                   <td>" . $row['SAL_CLI'] . "</td>
                   <td>" . $row['DES_CLI'] . "</td>
                   <td>" . $row['IMP_PAGD'] . "</td></tr>";
+                  $total = $total + $row['SAL_CLI'];
 
 				} 
-				echo "</tbody></table>";
+				echo "	<tr><td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><b>TOTAL:</b> ".$total."</td>
+						</tr>
+						</tbody></table>";
 			?>
 		</article>
 
