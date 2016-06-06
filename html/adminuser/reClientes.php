@@ -8,17 +8,17 @@
 
 
 		<article id="dere" class="derechasection">
-			<p class="titulosec"> Mantenimiento&nbsp;>>&nbsp;Clientes</p>
-			<p class="aqui">Aquí puede realizar las siguientes acciones:</p>
+			<p class="titulosec"> Reportes&nbsp;>>&nbsp;Clientes</p>
+			<p class="aqui">Aquí puede realizar los siguientes reportes:</p>
 			<article class="conteopciones">
 				<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
-							<i class="users fa fa-users fa-5x"></i>
-							<p class="rcliente">Registrar Cliente</p>
+							<i class="users fa fa-pencil-square-o fa-5x"></i>
+							<p class="rcliente">Edo. de cuenta</p>
 						</article>
 					</article>
-					<a href="?view=insert"><article class="accionesdentro2">
+					<a href="?view=insert"><article class="accionesdentro2"> 
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
@@ -27,13 +27,39 @@
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
 							<i class="users fa fa-pencil-square-o fa-5x"></i>
-							<p class="rcliente">Modificar Cliente</p>
+							<p class="rcliente">Cartera</p>
 						</article>
 					</article>
 					<a href=""><article class="accionesdentro2">
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
+				</article>
+				<article class="acciones">
+					<article class="accionesdentro1">
+						<article class="accionesdentro11">
+							<i class="users fa fa-users fa-5x"></i>
+							<p class="rcliente">Resumen/Cliente</p>
+						</article>
+					</article>
+					<a href=""><article class="accionesdentro2">
+						<p class="iniciaraccion">Iniciar Acción</p>
+						<i class="right fa fa-arrow-circle-right"></i>
+					</article></a>
+				</article>
+				<article class="conteopciones">
+				<article class="acciones">
+					<article class="accionesdentro1">
+						<article class="accionesdentro11">
+							<i class="users fa fa-globe fa-5x" aria-hidden="true"></i>
+							<p class="rcliente">Cartera/Zona</p>
+						</article>
+					</article>
+					<a href=""><article class="accionesdentro2">
+						<p class="iniciaraccion">Iniciar Acción</p>
+						<i class="right fa fa-arrow-circle-right"></i>
+					</article></a>
+				</article>
 				</article>
 
 

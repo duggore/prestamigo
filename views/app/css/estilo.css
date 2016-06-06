@@ -512,11 +512,11 @@ input:-ms-input-placeholder {
 }
 
 
-/*-------------opCliente------*/
+/*-------------repoetes catalogos------*/
 .conteopciones
 {
 	/*border: 2px red solid;*/
-	width: 80%;
+	width: 100%;
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 5%;
@@ -531,9 +531,9 @@ input:-ms-input-placeholder {
 	margin-left: 2%;
 }
 .acciones{
-	/*border: 2px black solid;*/
+	border: 2px black solid;
 	display: inline-block;
-	width: 34%;
+	width: 25%;
 	margin-left: 5%;
 	vertical-align: top;
 	border-radius:10px 10px 10px 10px;
