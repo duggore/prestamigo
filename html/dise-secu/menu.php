@@ -31,7 +31,7 @@
 		<div class="link"><i class="icono izquierda fa fa-file-text"></i>Reportes<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
 			<li><a href="#">Catálogos</a></li>
-			<li><a href="#">Documentos</a></li>
+			<li><a href="?view=repDocumentos">Documentos</a></li>
 			<li><a href="#">Ventas</a></li>
 			<li><a href="#">Pagos</a></li>
 			<li><a href="#">Clientes</a></li>
