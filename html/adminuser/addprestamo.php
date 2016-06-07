@@ -113,11 +113,11 @@
 			<div id="button">
 			<button type="button" class="button yellow medium radius" onclick="goPrestamo()">GRABAR</button>
 
-				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
-
-				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="Imprimir('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'')">Imprimir</button>
+				<button id="imprimir" style='display:none;' class="button yellow medium radius" onclick="javascript:window.open('?view=cancela&mode=imprimir&id='+$('#user_id').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')">Imprimir</button>
 
 				<button id="cancelar" style='display:none;' class="button yellow medium radius" onclick="Cancela('¿Está seguro que desea cancelar?','?view=cancela&mode=cancelCre&id='+$('#user_id').val()+'')">CANCELAR</button>
+
+				<button id="limpiar" class="button yellow medium radius" onclick="LimpiarCampos()">LIMPIAR CAMPOS </button>	
 
 		</article>
 
