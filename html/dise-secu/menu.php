@@ -30,19 +30,11 @@
 	<li>
 		<div class="link"><i class="icono izquierda fa fa-file-text"></i>Reportes<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
-<<<<<<< HEAD
 			<li><a href="?view=repCatalogos">Catálogos</a></li>
-			<li><a href="#">Documentos</a></li>
+			<li><a href="?view=repDocumentos">Documentos</a></li>
 			<li><a href="?view=repVentas">Ventas</a></li>
 			<li><a href="?view=repPagos">Pagos</a></li>
 			<li><a href="?view=repClientes">Clientes</a></li>
-=======
-			<li><a href="#">Catálogos</a></li>
-			<li><a href="?view=repDocumentos">Documentos</a></li>
-			<li><a href="#">Ventas</a></li>
-			<li><a href="#">Pagos</a></li>
-			<li><a href="#">Clientes</a></li>
->>>>>>> santiago
 		</ul>
 	</li>
 	<li>
