@@ -6,6 +6,13 @@
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
 		</article>
 
+<script>
+$(document).ready(function(){ 
+   $('#caja').on('click',function(){
+      $('#accboton').toggle('slow');
+   });
+});</script>
+
 
 		<article id="dere" class="derechasection">
 			<p class="titulosec"> Reportes&nbsp;>>&nbsp;Catalogos</p>
@@ -18,11 +25,12 @@
 							<p class="rcliente">Clientes</p>
 						</article>
 					</article>
-					<a href="?view=insert"><article class="accionesdentro2"> 
+					<a href="#" id="caja"><article class="accionesdentro2"> 
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
-                    <article>
+
+                    <article id="accboton" style="display: none;">
                         <select placeholder="" name="Agentes" id="user_agente" class="emai" >
 					       <option value="">Selecciona Zona</option>
 					       <?php  

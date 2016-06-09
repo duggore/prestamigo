@@ -7,8 +7,13 @@
 		</article>
 
 		
-		<article id="dere" class="derechasection">
+		<article id="dere" class="derechasection"> 
+		<p class="titulosec"> Reportes&nbsp;>>&nbsp;Documentos</p>
+			<p class="aqui">Aquí puede realizar los siguientes reportes:</p>
+			<article class="conteopciones docbus">
+
 			<article class="contenfechaif">
+			<p class="aqui bus">Buscar por el número de crédito</p>
 				<input type="text" class="emai" name="" id="id_cre" placeholder="Número Crédito">
 
 				<button id="imprimir" class="button yellow medium radius" onclick="javascript:window.open('?view=cancela&mode=imprimir&id='+$('#id_cre').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')">Buscar</button>
