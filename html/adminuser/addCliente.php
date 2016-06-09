@@ -1,14 +1,12 @@
- <?php include(HTML_DIR.'/dise-secu/header.php'); ?> 
+<?php include(HTML_DIR.'/dise-secu/header.php'); ?> 
 <body>
 	<?php include (HTML_DIR.'dise-secu/encabezado.php'); ?> 
 	<section>
  		<article class="izquierdasection">		
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?> 
 		</article>
- 
-
 		<article id="dere" class="derechasection">
-			<p class="titulosec">Mantenimiento&nbsp;>>&nbsp;Clientes&nbsp;>>&nbsp;Registro de Cliente</p>
+			<p class="titulosec">Mantenimiento&nbsp;>>&nbsp;Clientes&nbsp;>>&nbsp;Registro de Clientes</p>
 			<form class="for" onsubmit="return false;">
 				<div id="_AJAX_REG_"></div><br><br>
 		
@@ -32,10 +30,8 @@
 					
 					
 				?>
-
 				<label class="ema">Ultimo Folio:</label><br>
 				<input id="user_folio" type="text" class="emai" placeholder="<?=$addcliente['id'];?>" disabled><br><br>
-
 				<label class="ema">Nombre (s):</label><br>
 				<input id="user_name" type="text" class="emai" placeholder="Nombre"><br><br>
 			

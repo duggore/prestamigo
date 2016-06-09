@@ -22,6 +22,21 @@
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
+                    <article>
+                        <select placeholder="" name="Agentes" id="user_agente" class="emai" >
+					       <option value="">Selecciona Zona</option>
+					       <?php  
+        						$bd = new Conexion();
+        						$sql = $bd->query("SELECT * FROM catazon");
+        						while($row = $bd->runs($sql))
+        						{
+        							echo '<option value='.$row['NUM_ZON'].'>'.$row['DES_ZON'].'</option>';	
+        						}
+						  ?>
+				        </select>
+                        <button id="imprimir" class="button yellow medium radius" onclick="javascript:window.open('?view=reportes&mode=repClientes&id='+$('#user_agente').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')">Buscar</button>	
+                    </article>
+                    
 				</article>
 				<article class="acciones">
 					<article class="accionesdentro1">

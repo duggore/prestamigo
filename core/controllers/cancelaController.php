@@ -45,8 +45,18 @@
 		break;
 
 		case 'imprimir':
-				require('core/models/class.fpdf.php');
-				// require('core/models/class.dompdf.php');
+				
+				$db = new Conexion();
+				$id = intval($_GET['id']);
+				$sql = $db->query("SELECT * FROM totfac WHERE NUM_FAC='$id'");
+				$row = $db->runs($sql);
+				if ($db->rows($sql)>0)
+				{require('core/models/class.fpdf.php');}
+				else
+				{
+					echo "<script type=\"text/javascript\">alert(\"No existe este Credito\");</script>";
+				}
+	
 		break;
 
 		default:
