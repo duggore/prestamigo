@@ -11,7 +11,9 @@ $(document).ready(function(){
    $('#caja').on('click',function(){
       $('#accboton').toggle('slow');
    });
-});</script>
+});
+
+</script>
 
 
 		<article id="dere" class="derechasection">
@@ -31,8 +33,8 @@ $(document).ready(function(){
 					</article></a>
 
                     <article id="accboton" style="display: none;">
-                        <select placeholder="" name="Agentes" id="user_agente" class="emai" >
-					       <option value="">Selecciona Zona</option>
+                        <select placeholder="" name="Agentes" id="user_agente" class="emai">
+					       <!-- <option value="">Selecciona Zona</option> -->
 					       <?php  
         						$bd = new Conexion();
         						$sql = $bd->query("SELECT * FROM catazon");
@@ -77,8 +79,8 @@ $(document).ready(function(){
 		</article>
 
 	</section>
-	<script src="view/app/boostrap/js/jquery.js"></script>
-	<script src="view/app/boostrap/js/boostrap.min.js"></script>
+	<!-- <script src="view/app/boostrap/js/jquery.js"></script> -->
+	<!-- <script src="view/app/boostrap/js/boostrap.min.js"></script> -->
 	<script src="views/app/js/reloj.js"></script>
 	<script src="views/app/js/main.js"></script>
 </body>

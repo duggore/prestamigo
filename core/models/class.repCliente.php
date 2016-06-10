@@ -3,9 +3,28 @@
     class PDF extends FPDF
     {
 
+    function Header()
+ 
+    {
+   
+ 
+       // seteamos el tipo de letra Arial Negrita 16
+    $this->SetFont('Arial','B',16);
+ 
+    // ponemos una celda sin contenido para centrar el titulo o la celda del titulo a la derecha
+    $this->Cell(50);
+ 
+    // definimos la celda el titulo
+    $this->Cell(100,10,'Encabezado Reporte de Ventas',1,0,'C');
+ 
+    // Salto de línea salta 20 lineas
+    $this->Ln(20);
+ 
+    }
+
     function cabeceraHorizontal($cabecera)
     {
-        $this->SetXY(5, 10);
+        $this->SetXY(5, 40);
         $this->SetFont('Arial','B',10);
         $this->SetFillColor(2,157,116);//Fondo verde de celda
         $this->SetTextColor(240, 255, 240); //Letra color blanco
@@ -15,22 +34,24 @@
         foreach($array as $fila)
         {
             //$this->RoundedRect(5, 10, 18, 7, 2, 'FD');
-            $this->RoundedRect($ejeX, 10, 200, 7, 2,'FD');
+            $this->RoundedRect($ejeX, 40, 200, 7, 2,'FD');
             $this->CellFitSpace(15,7, utf8_decode($fila[0]),0, 0 , 'C');
             $this->CellFitSpace(70,7, utf8_decode($fila[1]),'LR', 0 , 'C');
-            $this->CellFitSpace(70,7, utf8_decode($fila[2]),'LR', 0 , 'C');
+            $this->CellFitSpace(90,7, utf8_decode($fila[2]),'LR', 
+                0 , 'C');
+            $this->CellFitSpace(25,7, utf8_decode($fila[3]),0, 0 , 'C');
             $ejeX = $ejeX + 40;
         }
     }
  
     function datosHorizontal()
     {
-        $this->SetXY(7,17);
+        $this->SetXY(7,47);
         $this->SetFont('Arial','',10);
         $this->SetFillColor(229, 229, 229); //Gris tenue de cada fila
         $this->SetTextColor(3, 3, 3); //Color del texto: Negro
         $bandera = false; //Para alternar el relleno
-        $ejeY = 17; //Aquí se encuentra la primer CellFitSpace e irá incrementando
+        $ejeY = 47; //Aquí se encuentra la primer CellFitSpace e irá incrementando
         $letra = 'D'; //'D' Dibuja borde de cada CellFitSpace -- 'FD' Dibuja borde y rellena
         $db = new conexion();
         $id = $_GET['id'];
@@ -44,19 +65,21 @@
             //Solo la celda de enmedio llevará bordes, izquierda y derecha
             //Las celdas laterales colocarlas sin borde
             $this->SetX(7);
-            $this->RoundedRect(5, $ejeY, 200, 7, 2);
+            $this->RoundedRect(5, $ejeY, 200, 15, 2);
             $this->SetFont('Arial','',7);
             //$this->CellFitSpace(40,7, utf8_decode($fila['id_user']),0, 0 , 'L' );
-            $this->CellFitSpace(13,7, utf8_decode($fila['NUM_CLI']),0, 0 , 'C' );
-            $this->CellFitSpace(70,7, utf8_decode($fila['NOM_CLI']),'LR', 0 , 'L' );
-            $this->CellFitSpace(90,7, utf8_decode($fila['DIR_COL']),'LR', 0 , 'L' );
+            $this->CellFitSpace(13,15, utf8_decode($fila['NUM_CLI']),0, 0 , 'C' );
+
+            $this->CellFitSpace(70,15, utf8_decode($fila['NOM_CLI']),'LR', 0 , 'L' );
+            $this->CellFitSpace(90,7, utf8_decode($fila['DIR_COL']));
+            $this->CellFitSpace(90,15, utf8_decode($fila['TEL_CLI']),'LR', 0 , 'L' );
  
             $this->Ln();
             //Condición ternaria que cambia el valor de $letra
             ($letra == 'D') ? $letra = 'FD' : $letra = 'D';
             //Aumenta la siguiente posición de Y (recordar que X es fijo)
             //Se suma 7 porque cada celda tiene esa altura
-            $ejeY = $ejeY + 7;
+            $ejeY = $ejeY + 15;
         }
     }
  
@@ -191,13 +214,38 @@
         $this->_out(sprintf('%.2f %.2f %.2f %.2f %.2f %.2f c ', $x1*$this->k, ($h-$y1)*$this->k,
             $x2*$this->k, ($h-$y2)*$this->k, $x3*$this->k, ($h-$y3)*$this->k));
     }
+
+    function Footer()
+ 
+    {
+    // Seteamos la posicion de la proxima celda en forma fija a 1,5 cm del final de la pagina
+ 
+    $this->SetY(-15);
+    // Seteamos el tipo de letra Arial italica 10
+ 
+    $this->SetFont('Arial','I',10);
+    // Número de página
+ 
+    $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'C');
+    }
 } // FIN Class PDF
 
  
 $pdf = new PDF();
-$pdf->AddPage();
-$miCabecera = array('Código', 'Nombre', 'Dirección');
-$pdf->tablaHorizontal($miCabecera);
+$pdf->AliasNbPages();
+
+
+// $db = new conexion();
+// $id = $_GET['id'];
+// $consulta = $db->query("SELECT * FROM catacli WHERE NUM_ZON = '$id';");
+
+
+    $pdf->AddPage();
+    $miCabecera = array('Código', 'Nombre', 'Dirección', 'Telefono');
+    $pdf->tablaHorizontal($miCabecera);
+
+
+//$pdf->Header();
 $pdf->Output(); //Salida al navegador
 
 ?>
