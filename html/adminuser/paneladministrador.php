@@ -8,7 +8,14 @@
 		<?php include (HTML_DIR.'dise-secu/menu.php'); ?>
 		</article>
 		<article id="dere" class="derechasection">
-			algo 
+			<article class="encabezadopdf">
+				<article class="titulocon"><p class="titulos">Sistema de crédito</p>
+					<img class="contienelogo reporteimg" src="views/app/images/logo.png" alt="">
+				</article>
+				<p class="titulop">Prestamiguito</p>
+				<p class="tituloc">Catalogo de cliente por zona</p>
+				<p class="titulof">Fecha</p><br>
+			</article>
 		</article>
 	</section>
 	<script src="views/app/js/reloj.js"></script>
