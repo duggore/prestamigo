@@ -1,251 +1,67 @@
-<?php
+<?php  
+        
 
-    class PDF extends FPDF
-    {
+        $mensaje = '
+        <div class="estilo">
+            <div class="img"><img class="imglogo" src="views/app/images/logo.png" alt=""></div>
+            <div class="contiene">
+                <div class="titulo">SISTEMA DE CREDITO</div>
+                <div class="titulo centro">PRESTAMIGUITO</div>
+                <div class="titulo pequeno">Réporte de Cliente por Zona</div>
+                <div class="num_pag">PAG {PAGENO}</div>
+            </div>
+        </div>';
 
-    function Header()
- 
-    {
-   
- 
-       // seteamos el tipo de letra Arial Negrita 16
-    $this->SetFont('Arial','B',16);
- 
-    // ponemos una celda sin contenido para centrar el titulo o la celda del titulo a la derecha
-    $this->Cell(50);
- 
-    // definimos la celda el titulo
-    $this->Cell(100,10,'Encabezado Reporte de Ventas',1,0,'C');
- 
-    // Salto de línea salta 20 lineas
-    $this->Ln(20);
- 
-    }
-
-    function cabeceraHorizontal($cabecera)
-    {
-        $this->SetXY(5, 40);
-        $this->SetFont('Arial','B',10);
-        $this->SetFillColor(2,157,116);//Fondo verde de celda
-        $this->SetTextColor(240, 255, 240); //Letra color blanco
-        $ejeX = 5;
-        $letra = 'D';
-        $array = array($cabecera);
-        foreach($array as $fila)
-        {
-            //$this->RoundedRect(5, 10, 18, 7, 2, 'FD');
-            $this->RoundedRect($ejeX, 40, 200, 7, 2,'FD');
-            $this->CellFitSpace(15,7, utf8_decode($fila[0]),0, 0 , 'C');
-            $this->CellFitSpace(70,7, utf8_decode($fila[1]),'LR', 0 , 'C');
-            $this->CellFitSpace(90,7, utf8_decode($fila[2]),'LR', 
-                0 , 'C');
-            $this->CellFitSpace(25,7, utf8_decode($fila[3]),0, 0 , 'C');
-            $ejeX = $ejeX + 40;
-        }
-    }
- 
-    function datosHorizontal()
-    {
-        $this->SetXY(7,47);
-        $this->SetFont('Arial','',10);
-        $this->SetFillColor(229, 229, 229); //Gris tenue de cada fila
-        $this->SetTextColor(3, 3, 3); //Color del texto: Negro
-        $bandera = false; //Para alternar el relleno
-        $ejeY = 47; //Aquí se encuentra la primer CellFitSpace e irá incrementando
-        $letra = 'D'; //'D' Dibuja borde de cada CellFitSpace -- 'FD' Dibuja borde y rellena
         $db = new conexion();
         $id = $_GET['id'];
+        
+
         $consulta = $db->query("SELECT * FROM catacli WHERE NUM_ZON = '$id';");
+        
 
-        foreach($consulta as $fila)
+        $HTML ='<br/><br/><br/><br/><br/><br/><div class="adios"><table class="tablav" border="1">
+                    <tr>
+                      <th>Codigo/Factura</th>
+                      <th>Descripción/Cliente</th>
+                      <th>Fecha</th>
+                    </tr>';
+        while($fila = $db->runs($consulta))
         {
-            //Por cada 3 CellFitSpace se crea un RoundedRect encimado
-            //El parámetro $letra de RoundedRect cambiará en cada iteración
-            //para colocar FD y D, la primera iteración es D
-            //Solo la celda de enmedio llevará bordes, izquierda y derecha
-            //Las celdas laterales colocarlas sin borde
-            $this->SetX(7);
-            $this->RoundedRect(5, $ejeY, 200, 15, 2);
-            $this->SetFont('Arial','',7);
-            //$this->CellFitSpace(40,7, utf8_decode($fila['id_user']),0, 0 , 'L' );
-            $this->CellFitSpace(13,15, utf8_decode($fila['NUM_CLI']),0, 0 , 'C' );
-
-            $this->CellFitSpace(70,15, utf8_decode($fila['NOM_CLI']),'LR', 0 , 'L' );
-            $this->CellFitSpace(90,7, utf8_decode($fila['DIR_COL']));
-            $this->CellFitSpace(90,15, utf8_decode($fila['TEL_CLI']),'LR', 0 , 'L' );
- 
-            $this->Ln();
-            //Condición ternaria que cambia el valor de $letra
-            ($letra == 'D') ? $letra = 'FD' : $letra = 'D';
-            //Aumenta la siguiente posición de Y (recordar que X es fijo)
-            //Se suma 7 porque cada celda tiene esa altura
-            $ejeY = $ejeY + 15;
+             
+            $HTML .= "
+                    <tr>
+                      <td>".$fila['NUM_CLI']."</td>
+                      <td>".$fila['NOM_CLI']."</td>
+                      <td>".$fila['NUM_ZON']."</td>
+                    </tr>";
+                
         }
-    }
- 
-    function tablaHorizontal($cabeceraHorizontal)
-    {
-        $this->cabeceraHorizontal($cabeceraHorizontal);
-        $this->datosHorizontal();
-    }
- 
-    //**************************************************************************************************************
-    function CellFit($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='', $scale=false, $force=true)
-    {
-        //Get string width
-        $str_width=$this->GetStringWidth($txt);
- 
-        //Calculate ratio to fit cell
-        if($w==0)
-            $w = $this->w-$this->rMargin-$this->x;
-        $ratio = ($w-$this->cMargin*2)/$str_width;
- 
-        $fit = ($ratio < 1 || ($ratio > 1 && $force));
-        if ($fit)
+            $HTML .= "</table></div>";
+
+    $mpdf = new mPDF();
+    
+        $stylesheet = file_get_contents('views/app/css/estiloreporte.css');
+
+        $mpdf->WriteHTML($stylesheet,1);
+
+    // $mpdf->SetHeader($cabecera.'|Center Text|{PAGENO}');
+        $mpdf->SetHeader(utf8_decode($mensaje));
+        $mpdf->SetFooter('Document Title');
+        $mpdf->WriteHTML(utf8_decode($HTML));
+         if($db->rows($consulta) <= '23')
         {
-            if ($scale)
-            {
-                //Calculate horizontal scaling
-                $horiz_scale=$ratio*100.0;
-                //Set horizontal scaling
-                $this->_out(sprintf('BT %.2F Tz ET',$horiz_scale));
-            }
-            else
-            {
-                //Calculate character spacing in points
-                $char_space=($w-$this->cMargin*2-$str_width)/max($this->MBGetStringLength($txt)-1,1)*$this->k;
-                //Set character spacing
-                $this->_out(sprintf('BT %.2F Tc ET',$char_space));
-            }
-            //Override user alignment (since text will fill up cell)
-            $align='';
+            
+            $mpdf->SetHeader(utf8_decode($mensaje));   
+            $mpdf->WriteHTML(utf8_decode($HTML)); 
         }
- 
-        //Pass on to Cell method
-        $this->Cell($w,$h,$txt,$border,$ln,$align,$fill,$link);
- 
-        //Reset character spacing/horizontal scaling
-        if ($fit)
-            $this->_out('BT '.($scale ? '100 Tz' : '0 Tc').' ET');
-    }
- 
-    function CellFitSpace($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='')
-    {
-        $this->CellFit($w,$h,$txt,$border,$ln,$align,$fill,$link,false,false);
-    }
- 
-    //Patch to also work with CJK double-byte text
-    function MBGetStringLength($s)
-    {
-        if($this->CurrentFont['type']=='Type0')
-        {
-            $len = 0;
-            $nbbytes = strlen($s);
-            for ($i = 0; $i < $nbbytes; $i++)
-            {
-                if (ord($s[$i])<128)
-                    $len++;
-                else
-                {
-                    $len++;
-                    $i++;
-                }
-            }
-            return $len;
-        }
-        else
-            return strlen($s);
-    }
-//**********************************************************************************************
- 
- function RoundedRect($x, $y, $w, $h, $r, $style = '', $angle = '1234')
-    {
-        $k = $this->k;
-        $hp = $this->h;
-        if($style=='F')
-            $op='f';
-        elseif($style=='FD' or $style=='DF')
-            $op='B';
-        else
-            $op='S';
-        $MyArc = 4/3 * (sqrt(2) - 1);
-        $this->_out(sprintf('%.2f %.2f m', ($x+$r)*$k, ($hp-$y)*$k ));
- 
-        $xc = $x+$w-$r;
-        $yc = $y+$r;
-        $this->_out(sprintf('%.2f %.2f l', $xc*$k, ($hp-$y)*$k ));
-        if (strpos($angle, '2')===false)
-            $this->_out(sprintf('%.2f %.2f l', ($x+$w)*$k, ($hp-$y)*$k ));
-        else
-            $this->_Arc($xc + $r*$MyArc, $yc - $r, $xc + $r, $yc - $r*$MyArc, $xc + $r, $yc);
- 
-        $xc = $x+$w-$r;
-        $yc = $y+$h-$r;
-        $this->_out(sprintf('%.2f %.2f l', ($x+$w)*$k, ($hp-$yc)*$k));
-        if (strpos($angle, '3')===false)
-            $this->_out(sprintf('%.2f %.2f l', ($x+$w)*$k, ($hp-($y+$h))*$k));
-        else
-            $this->_Arc($xc + $r, $yc + $r*$MyArc, $xc + $r*$MyArc, $yc + $r, $xc, $yc + $r);
- 
-        $xc = $x+$r;
-        $yc = $y+$h-$r;
-        $this->_out(sprintf('%.2f %.2f l', $xc*$k, ($hp-($y+$h))*$k));
-        if (strpos($angle, '4')===false)
-            $this->_out(sprintf('%.2f %.2f l', ($x)*$k, ($hp-($y+$h))*$k));
-        else
-            $this->_Arc($xc - $r*$MyArc, $yc + $r, $xc - $r, $yc + $r*$MyArc, $xc - $r, $yc);
- 
-        $xc = $x+$r ;
-        $yc = $y+$r;
-        $this->_out(sprintf('%.2f %.2f l', ($x)*$k, ($hp-$yc)*$k ));
-        if (strpos($angle, '1')===false)
-        {
-            $this->_out(sprintf('%.2f %.2f l', ($x)*$k, ($hp-$y)*$k ));
-            $this->_out(sprintf('%.2f %.2f l', ($x+$r)*$k, ($hp-$y)*$k ));
-        }
-        else
-            $this->_Arc($xc - $r, $yc - $r*$MyArc, $xc - $r*$MyArc, $yc - $r, $xc, $yc - $r);
-        $this->_out($op);
-    }
- 
-    function _Arc($x1, $y1, $x2, $y2, $x3, $y3)
-    {
-        $h = $this->h;
-        $this->_out(sprintf('%.2f %.2f %.2f %.2f %.2f %.2f c ', $x1*$this->k, ($h-$y1)*$this->k,
-            $x2*$this->k, ($h-$y2)*$this->k, $x3*$this->k, ($h-$y3)*$this->k));
-    }
-
-    function Footer()
- 
-    {
-    // Seteamos la posicion de la proxima celda en forma fija a 1,5 cm del final de la pagina
- 
-    $this->SetY(-15);
-    // Seteamos el tipo de letra Arial italica 10
- 
-    $this->SetFont('Arial','I',10);
-    // Número de página
- 
-    $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'C');
-    }
-} // FIN Class PDF
-
- 
-$pdf = new PDF();
-$pdf->AliasNbPages();
+        $mpdf->Output();
 
 
-// $db = new conexion();
-// $id = $_GET['id'];
-// $consulta = $db->query("SELECT * FROM catacli WHERE NUM_ZON = '$id';");
 
+// $mpdf->WriteHTML('Document text');
 
-    $pdf->AddPage();
-    $miCabecera = array('Código', 'Nombre', 'Dirección', 'Telefono');
-    $pdf->tablaHorizontal($miCabecera);
+   
+    
 
-
-//$pdf->Header();
-$pdf->Output(); //Salida al navegador
 
 ?>
