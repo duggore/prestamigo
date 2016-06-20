@@ -18,7 +18,7 @@
 	/*border: 2px solid red;*/
 	width: 180px;
 	float: left;
-}
+} 
 
 .contiene
 {
@@ -89,7 +89,7 @@
 th {
   border-right: 2px solid rgba(0,0,0,.2);
   padding: 15px 0;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   font-variant: small-caps;
   /*text-align: center;*/
@@ -118,10 +118,10 @@ th:nth-child(4n) {color: #000; /*background-color: gray*/
 td {
   border-right: 2px solid rgba(0,0,0,.2);
   /*padding: 15px 0;*/
-  font-size: 11px;
+  font-size: 15px;
   font-weight: normal;
   font-variant: small-caps;
-  /*text-align: center;*/
+  text-align: center;
 }
 
 /*td:first-child {
@@ -132,11 +132,62 @@ td:nth-child(1n) {
 	text-align: center;}
 
 td:nth-child(2n) {
-	text-align: left;}
+	text-align: center;}
 
 td:nth-child(3n) {
+	text-align: center;}
+
+/*-------tablac------*/
+.tablac * {
+	height: auto;
+	 min-height: none;
+	 } /* fixed ie9 & <*/
+
+.tablac {
+  /*background: #15BFCC;*/
+  table-layout: fixed;
+  /*margin: 1rem auto;*/
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  /*border: 2px black solid;*/
+  border-top: 0 none;
+}
+
+.tablac tbody {
+  display: block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1 px);
+  /*use calc for fixed ie9 & <*/
+  overflow-Y: scroll;
+  color: #000;
+}
+
+.tablac thead tr {
+  background: #FF7361;
+}
+
+.tablac td:nth-child(1n) {
 	text-align: left;}
 
+td:nth-child(2n) {
+	text-align: center;
+/*font-size: 12px;}*/
+
+td:nth-child(3n) {
+	text-align: center;}
+
+.tablac td:nth-child(4n) {
+	text-align: center;}
+
+.tablac td:nth-child(5n) {
+	text-align: center;}
+
+.tablac td:nth-child(6n) {
+	text-align: center;}
+	.tablac td:nth-child(7n) {
+	text-align: center;}
 
 
 .fecha

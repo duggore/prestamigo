@@ -24,7 +24,7 @@
     {
         $consulta = $db->query("SELECT * FROM catacli WHERE ULT_COM BETWEEN '$f_inicial' AND '$f_final';");
 
-    $HTML ='<table class="tablav" border="1"><thead>
+    $HTML ='<table class="tablac" border="1"><thead>
                     <tr>
                       <th>Codigo/N° Factura</th>
                       <th>Descripcion/Cliente</th>
