@@ -223,14 +223,17 @@ td:nth-child(3n) {
 }
 
 .tablados th {
-	/*color: white;*/
+	color: white;
 	/*background-color: green;*/
+	font-weight: bold;
+	background-color: #4f028C;
 	width:15%;
 }
 
 .tablados td:nth-child(2n) {
 	text-align: center;
-/*background-color: yellow;*/
+background-color: #fff;
+/*background-color: #4f028C;*/
 width: 15%;}
 
 
