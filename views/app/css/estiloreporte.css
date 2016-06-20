@@ -172,7 +172,7 @@ td:nth-child(3n) {
 	text-align: left;}
 
 td:nth-child(2n) {
-	text-align: center;
+	text-align: center;}
 /*font-size: 12px;}*/
 
 td:nth-child(3n) {
@@ -188,6 +188,51 @@ td:nth-child(3n) {
 	text-align: center;}
 	.tablac td:nth-child(7n) {
 	text-align: center;}
+
+
+/*-------tablados-----*/
+.tablados * {
+	height: auto;
+	 min-height: none;
+	 } /* fixed ie9 & <*/
+
+.tablados {
+  /*background: #15BFCC;*/
+  table-layout: fixed;
+  /*margin: 1rem auto;*/
+  width: 96%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  /*border: 2px black solid;*/
+  border-top: 0 none;
+  /*float: right;*/
+  margin-left: 50%;
+}
+.tablados tbody {
+  display: block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1 px);
+  /*use calc for fixed ie9 & <*/
+  overflow-Y: scroll;
+  color: #000;
+}
+
+.tablados thead tr {
+  background: #FF7361;
+}
+
+.tablados th {
+	/*color: white;*/
+	/*background-color: green;*/
+	width:15%;
+}
+
+.tablados td:nth-child(2n) {
+	text-align: center;
+/*background-color: yellow;*/
+width: 15%;}
+
 
 
 .fecha

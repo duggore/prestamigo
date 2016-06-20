@@ -102,7 +102,7 @@
                       </tr>
                       </tbody></table>";
 
-            $tabla2 = '<br/><table class="tablav" border="1"><thead>
+            $tabla2 = '<br/><table class="tablados" border="1"><thead>
                     <tr><th>TOTAL CONTADO</th><td>0</td></tr>
                     <tr><th>TOTAL CREDITO</th><td>'.$suma.'</td></tr>
                     </thead></table>';
