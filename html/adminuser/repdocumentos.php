@@ -16,7 +16,10 @@
 			<p class="aqui bus">Buscar por el número de crédito</p>
 				<input type="text" class="emai" name="" id="id_cre" placeholder="Número Crédito">
 
-				<button id="imprimir" class="button yellow medium radius" onclick="javascript:window.open('?view=cancela&mode=imprimir&id='+$('#id_cre').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')">Buscar</button>
+				<button id="imprimir" class="button yellow medium radius" onclick="if($('#id_cre').val()==''){alert('CAMPO VACIO, INTRODUZCA UN NUMERO DE CREDITO')}
+				else{
+					javascript:window.open('?view=cancela&mode=imprimir&id='+$('#id_cre').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+					}">Buscar</button>
 
 				<!-- <a href="?view=cancela&mode=imprimir&id=<?php echo $_GET['id_credito'];?>" class="yellow medium radius btn-name">Buscar</a> -->
 				
