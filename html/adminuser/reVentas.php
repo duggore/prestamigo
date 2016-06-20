@@ -45,7 +45,7 @@
                         <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_final">
                         <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
                         	else{
-                        	javascript:window.open('?view=reportes&mode=repVP&RP=p&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=1&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
                         	}">Buscar</button>	
                     </article>
 				</article>
@@ -64,12 +64,12 @@
 
 					<article id="accboton2" style="display: none;">
 						<label for="F_inicial">Fecha Inicial:</label>
-                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_inicial"><br><br>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_in"><br><br>
                         <label for="F_final">Fecha Final</label>
-                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_final">
-                        <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_fi">
+                        <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_in').val() > $('#f_fi').val() ){alert('Fecha inicial no puede mayor a fecha final');}
                         	else{
-                        	javascript:window.open('?view=reportes&mode=repVP&RP=dt&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=2&fi='+$('#f_in').val()+'&ff='+$('#f_fi').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
                         	}">Buscar</button>	
                     </article>
 				</article>

@@ -20,7 +20,7 @@
     $RP = $_GET['RP'];
     $suma = 0;
 
-    if($RP == 'p')
+    if($RP == '1')
     {
         $consulta = $db->query("SELECT * FROM catacli WHERE ULT_COM BETWEEN '$f_inicial' AND '$f_final';");
 
@@ -63,7 +63,7 @@
                       </tbody></table>";
     }
 
-    if($RP == 'dt')
+    if($RP == '2')
     {
          $consulta = $db->query("SELECT *,MIN(NUM_CLI) AS min,MAX(NUM_CLI) AS max,SUM(IMP_PRE) AS IMP_PRE FROM catacli WHERE ULT_COM BETWEEN '$f_inicial' AND '$f_final' GROUP BY ULT_COM;");
 
