@@ -45,23 +45,37 @@
                         <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_final">
                         <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
                         	else{
-                        	javascript:window.open('?view=reportes&mode=repVP&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=p&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
                         	}">Buscar</button>	
                     </article>
 				</article>
 
-				<article class="acciones">
+					<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
 							<i class="users fa fa-pencil-square-o fa-5x"></i>
 							<p class="rcliente">Por dia (Totales)</p>
 						</article>
 					</article>
-					<a href=""><article class="accionesdentro2">
+					<a href="#" id="caja2"><article class="accionesdentro2"> 
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
+
+					<article id="accboton2" style="display: none;">
+						<label for="F_inicial">Fecha Inicial:</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_inicial"><br><br>
+                        <label for="F_final">Fecha Final</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_final">
+                        <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+                        	else{
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=dt&fi='+$('#f_inicial').val()+'&ff='+$('#f_final').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	}">Buscar</button>	
+                    </article>
 				</article>
+
+			
+
 				<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">

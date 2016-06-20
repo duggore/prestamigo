@@ -35,8 +35,7 @@
 				
 				$sql2= $db->query("SELECT SUM(TOT_PAG) AS TOT_PAG FROM totfac WHERE NUM_CLI='$id'");
 	           	$row2 = $db->runs($sql2);
-	           	$NUM_FACS = $row2['TOT_PAG'] + $prestamo;
-					// $NUM_FAC=mysql_insert_id();
+	           	$NUM_FACS = $row2['TOT_PAG'] + $imp;
 
 	           	$sql7 = $db->query("SELECT * FROM totfac ORDER BY NUM_FAC DESC LIMIT 1");
 				$row = $db->runs($sql7);
