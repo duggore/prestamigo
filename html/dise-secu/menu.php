@@ -51,10 +51,7 @@
 		<div class="link"><i class="icono izquierda fa fa-wrench"></i>Utilerias<i class="fa fa-chevron-down"></i></div>
 		<ul class="submenu">
 			<li><a href="#">Respaldos</a></li>
-			<li><a href="#">Reindexar</a></li>
 			<li><a href="#">Cambio de fecha</a></li>
-			<li><a href="#">Cierre mensual</a></li>
-			<li><a href="#">Cierre anual</a></li>
 		</ul>
 	</li>
 	<li>

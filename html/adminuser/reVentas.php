@@ -18,6 +18,14 @@
 			    $('#caja3').on('click',function(){
 			      $('#accboton3').toggle('slow');
 			   });
+
+			    $('#caja4').on('click',function(){
+			      $('#accboton4').toggle('slow');
+			   });
+
+			    $('#caja5').on('click',function(){
+			      $('#accboton5').toggle('slow');
+			   });
 			});
 		</script>
 		
@@ -50,7 +58,7 @@
                     </article>
 				</article>
 
-					<article class="acciones">
+				<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
 							<i class="users fa fa-pencil-square-o fa-5x"></i>
@@ -79,43 +87,78 @@
 				<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
-							<i class="users fa fa-users fa-5x"></i>
-							<p class="rcliente">Por cliente</p>
+							<i class="users fa fa-pencil-square-o fa-5x"></i>
+							<p class="rcliente">Por Cliente</p>
 						</article>
 					</article>
-					<a href=""><article class="accionesdentro2">
+					<a href="#" id="caja3"><article class="accionesdentro2"> 
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
+
+					<article id="accboton3" style="display: none;">
+						<label for="F_inicial">Fecha Inicial:</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_ini"><br><br>
+                        <label for="F_final">Fecha Final</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_fin"><br><br>
+
+                        <select name="nombres" class="emai" id="nombre">
+                        		<?php 
+                        			$db = new Conexion();
+                        			$sql = $db->query("SELECT * FROM catacli;");
+                        			while ($row = $db->runs($sql)){
+                        				echo '<option value="'.$row['NUM_CLI'].'">'.$row['NOM_CLI'].'</option>';
+                        			}
+                        		?>
+                        </select>
+
+                        <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_ini').val() > $('#f_fin').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+                        	else{
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=3&id='+$('#nombre').val()+'&fi='+$('#f_ini').val()+'&ff='+$('#f_fin').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	}">Buscar</button>	
+                        	
+                    </article>
 				</article>
+
 				<article class="conteopciones">
-				<article class="acciones">
+					<article class="acciones">
 					<article class="accionesdentro1">
 						<article class="accionesdentro11">
 							<i class="users fa fa-pencil-square-o fa-5x"></i>
-							<p class="rcliente">Por agente</p>
+							<p class="rcliente">Por Agente</p>
 						</article>
 					</article>
-					<a href=""><article class="accionesdentro2">
+					<a href="#" id="caja4"><article class="accionesdentro2"> 
 						<p class="iniciaraccion">Iniciar Acción</p>
 						<i class="right fa fa-arrow-circle-right"></i>
 					</article></a>
-				</article>
-				<article class="acciones">
-					<article class="accionesdentro1">
-						<article class="accionesdentro11">
-							<i class="users fa fa-pencil-square-o fa-5x"></i>
-							<p class="rcliente">Por años (Totales)</p>
-						</article>
-					</article>
-					<a href=""><article class="accionesdentro2">
-						<p class="iniciaraccion">Iniciar Acción</p>
-						<i class="right fa fa-arrow-circle-right"></i>
-					</article></a>
-				</article>
+
+					<article id="accboton4" style="display: none;">
+						<label for="F_inicial">Fecha Inicial:</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_inic"><br><br>
+                        <label for="F_final">Fecha Final</label>
+                        <input type="date" class="emai" value="<?=date("Y-m-d");?>" id="f_fina"><br><br>
+
+                        <select name="agentes" class="emai" id="agente">
+                        		<?php 
+                        			$db = new Conexion();
+                        			$sql = $db->query("SELECT * FROM cataage;");
+                        			while ($row = $db->runs($sql)){
+                        				echo '<option value="'.$row['NUM_AGE'].'">'.$row['NOM_AGE'].'</option>';
+                        			}
+                        		?>
+                        </select>
+
+                        <button id="imprimir" class="button yellow medium radius" onclick="if($('#f_inic').val() > $('#f_fina').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+                        	else{
+                        	javascript:window.open('?view=reportes&mode=repVP&RP=4&id='+$('#agente').val()+'&fi='+$('#f_inic').val()+'&ff='+$('#f_fina').val()+'','','width=800,height=600,left=50,top=50,toolbar=yes')
+                        	}">Buscar</button>	
+                        	
+                    </article>
 				</article>
 
-
+				</article>
+				
 			</article>
 		</article>
 

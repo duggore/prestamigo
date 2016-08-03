@@ -18,6 +18,19 @@
 				require('core/models/class.repVP.php');
 		break;
 
+		case 'etdCtaCliente':
+				require('core/models/class.repCliente.php');
+		break;
+
+		
+		case 'etdCtaZON':
+				require('core/models/class.repCliente.php');
+		break;
+
+		case 'repP':
+				require('core/models/class.repP.php');
+		break;
+		
 		default:
 			header('location: ?view=admin');
 		break;

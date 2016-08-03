@@ -18,7 +18,11 @@
 			<label class="ema">Fecha Final: </label><br>
 			<input id="f_final" type="date" class="emai" value="<?=date("Y-m-d");?>"></article>
 			<article class="fei btn">
-			<button type="button" class="yellow medium radius btn-name" onclick="Buscar($('#f_inicial').val(),$('#f_final').val())">BUSCAR</button></article>
+			<button type="button" class="yellow medium radius btn-name" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+			  else{
+			  		Buscar($('#f_inicial').val(),$('#f_final').val())
+			  	}
+			 ">BUSCAR</button></article>
 
 			</article>
 

@@ -6,6 +6,7 @@
     $RP = $_GET['RP'];
     $ID = $_GET['id'];
     $suma = 0;
+    $agente = 0;
 
     if($RP == '1')
     {
@@ -23,28 +24,38 @@
             </div>
         </div>';
 
-        $consulta = $db->query("SELECT * FROM catacli WHERE ULT_COM BETWEEN '$f_inicial' AND '$f_final';");
+        $consulta = $db->query("SELECT * FROM movpag WHERE FEC_PAG BETWEEN '$f_inicial' AND '$f_final';");
 
     $HTML ='<table class="tablac" border="1"><thead>
                     <tr>
-                      <th>Codigo/N° Factura</th>
-                      <th>Descripcion/Cliente</th>
+                      <th>Folio</th>
+                      <th>Cliente</th>
+                      <th>Tipo Pago</th>
+                      <th>Fact. No</th>
                       <th>Fecha</th>
-                      <th>Total</th>
+                      <th>Importe Pago</th>
                     </tr></thead><tbody>';
         while($fila = $db->runs($consulta))
         {
-             
+            $num_cli = $fila['NUM_CLI'];
+             $cns = $db->query("SELECT * FROM catacli WHERE NUM_CLI='$num_cli';");
+             $Cliente = $db->runs($cns);
+             $num = $Cliente['NUM_CLI'];
+             $nombre = $Cliente['NOM_CLI'];
             $HTML .= "
                     <tr>
-                      <td>".$fila['NUM_CLI']."</td>
-                      <td>".$fila['NOM_CLI']."</td>
-                      <td>".$fila['ULT_COM']."</td>
-                      <td>".$fila['IMP_PRE']."</td>
+                      <td>".$fila['NUM_PAG']."</td>
+                      <td>". '<'.$num.'>' .' '.$nombre."</td>
+                      <td>".$fila['TIP_PAG']."</td>
+                      <td>".$fila['NUM_FAC']."</td>
+                      <td>".$fila['FEC_PAG']."</td>
+                      <td>".$fila['IMP_PAG']."</td>
                     </tr>";
-            $suma = $suma + $fila['IMP_PRE'];
+            $suma = $suma + $fila['IMP_PAG'];
         }
             $HTML .= "<tr><td></td>
+                          <td></td>
+                          <td></td>
                           <td></td>
                           <td><strong>TOTAL</strong></td>
                           <td><strong>".$suma."</strong></td>
@@ -69,37 +80,43 @@
             </div>
         </div>';
 
-         $consulta = $db->query("SELECT *,MIN(NUM_CLI) AS min,MAX(NUM_CLI) AS max,SUM(IMP_PRE) AS IMP_PRE 
-           FROM catacli 
-           WHERE ULT_COM BETWEEN '$f_inicial' AND '$f_final' GROUP BY ULT_COM;");
+         $consulta = $db->query("SELECT * FROM movpag WHERE NUM_CLI= '$ID';");
 
-    $HTML ='<table class="tablav" border="1"><thead>
+    $HTML ='<table class="tablac" border="1"><thead>
                     <tr>
+                      <th>Folio</th>
+                      <th>Cliente</th>
+                      <th>Tipo Pago</th>
+                      <th>Fact. No</th>
                       <th>Fecha</th>
-                      <th>Ref. Inicial - Ref. Final</th>
-                      <th>Total</th>
+                      <th>Importe Pago</th>
                     </tr></thead><tbody>';
         while($fila = $db->runs($consulta))
         {
-             
+            $num_cli = $fila['NUM_CLI'];
+             $cns = $db->query("SELECT * FROM catacli WHERE NUM_CLI='$num_cli';");
+             $Cliente = $db->runs($cns);
+             $num = $Cliente['NUM_CLI'];
+             $nombre = $Cliente['NOM_CLI'];
             $HTML .= "
                     <tr>
-                      <td>".$fila['ULT_COM']."</td>
-                      <td>".$fila['min'].'-'.$fila['max']."</td>
-                      <td>".$fila['IMP_PRE']."</td>
+                      <td>".$fila['NUM_PAG']."</td>
+                      <td>". '<'.$num.'>' .' '.$nombre."</td>
+                      <td>".$fila['TIP_PAG']."</td>
+                      <td>".$fila['NUM_FAC']."</td>
+                      <td>".$fila['FEC_PAG']."</td>
+                      <td>".$fila['IMP_PAG']."</td>
                     </tr>";
-            $suma = $suma + $fila['IMP_PRE'];
+            $suma = $suma + $fila['IMP_PAG'];
         }
             $HTML .= "<tr><td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                           <td><strong>TOTAL</strong></td>
                           <td><strong>".$suma."</strong></td>
                       </tr>
                       </tbody></table>";
-
-            $tabla2 = '<br/><table class="tablados" border="1"><thead>
-                    <tr><th>TOTAL CONTADO</th><td>0</td></tr>
-                    <tr><th>TOTAL CREDITO</th><td>'.$suma.'</td></tr>
-                    </thead></table>';
     }
 
     if($RP == '3')
@@ -113,39 +130,49 @@
             <div class="contiene">
                 <div class="titulo">SISTEMA DE CREDITO</div>
                 <div class="titulo centro">PRESTAMIGUITO</div>
-                <div class="titulo pequeno">VENTAS NETAS POR CLIENTE</div><br/>
+                <div class="titulo pequeno">VENTAS POR DIAS</div><br/>
                 <div class="titulo fecha">Del '.$f_inicial.' Al '.$f_final.'</div>
                 <div class="num_pag">PAG {PAGENO}</div>
             </div>
         </div>';
 
-         $consulta = $db->query("SELECT FAC.NUM_FAC,FAC.FEC_FAC,FAC.TOT_FAC,CLI.NOM_CLI FROM totfac AS FAC,catacli AS CLI WHERE FAC.FEC_FAC BETWEEN '$f_inicial' AND '$f_final' AND FAC.NUM_CLI='$ID' AND CLI.NUM_CLI='$ID';");
+         $consulta = $db->query("SELECT * FROM movpag WHERE NUM_CLI= '$ID';");
 
-       $HTML ='<table class="tablac" border="1"><thead>
+    $HTML ='<table class="tablac" border="1"><thead>
                     <tr>
-                      <th>Codigo/N° Factura</th>
-                      <th>Descripcion/Cliente</th>
+                      <th>Folio</th>
+                      <th>Cliente</th>
+                      <th>Tipo Pago</th>
+                      <th>Fact. No</th>
                       <th>Fecha</th>
-                      <th>Total</th>
+                      <th>Importe Pago</th>
                     </tr></thead><tbody>';
         while($fila = $db->runs($consulta))
         {
-             
+            $num_cli = $fila['NUM_CLI'];
+             $cns = $db->query("SELECT * FROM catacli WHERE NUM_CLI='$num_cli';");
+             $Cliente = $db->runs($cns);
+             $num = $Cliente['NUM_CLI'];
+             $nombre = $Cliente['NOM_CLI'];
             $HTML .= "
                     <tr>
+                      <td>".$fila['NUM_PAG']."</td>
+                      <td>". '<'.$num.'>' .' '.$nombre."</td>
+                      <td>".$fila['TIP_PAG']."</td>
                       <td>".$fila['NUM_FAC']."</td>
-                      <td>".$fila['NOM_CLI']."</td>
-                      <td>".$fila['FEC_FAC']."</td>
-                      <td>".$fila['TOT_FAC']."</td>
+                      <td>".$fila['FEC_PAG']."</td>
+                      <td>".$fila['IMP_PAG']."</td>
                     </tr>";
-            $suma = $suma + $fila['TOT_FAC'];
+            $suma = $suma + $fila['IMP_PAG'];
         }
-            $HTML .= "</tbody></table>";
-
-             $tabla2 = '<br/><table class="tablados" border="1"><thead>
-                    <tr><th>TOTAL CREDITO</th><td>'.$suma.'</td></tr>
-                    </thead></table>';
-    }
+            $HTML .= "<tr><td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td><strong>TOTAL</strong></td>
+                          <td><strong>".$suma."</strong></td>
+                      </tr>
+                      </tbody></table>";    }
 
     if($RP == '4')
     {
@@ -164,37 +191,66 @@
             </div>
         </div>';
 
-        // seleccionar de la tabla totfac numero de factura,
-        // fecha de factura, total de factura en donde el numero de 
-        // agente sea igual al proporcionado por el usuario y de la 
-        // tabla catacli seleccionar su n
-         $consulta = $db->query("SELECT FAC.NUM_FAC,FAC.FEC_FAC,FAC.TOT_FAC,FAC.NUM_CLI 
-           FROM totfac AS FAC
-           WHERE FAC.FEC_FAC BETWEEN '$f_inicial' AND '$f_final' AND FAC.NUM_AGE='$ID';");
+        
+       $consulta = $db->query("SELECT * FROM catacli;");
 
        $HTML ='<table class="tablac" border="1"><thead>
                     <tr>
-                      <th>Codigo/N° Factura</th>
-                      <th>Descripcion/Cliente</th>
-                      <th>Fecha</th>
-                      <th>Total</th>
+                      <th># Cliente</th>
+                      <th>Cliente</th>
+                      <th>Credito</th>
+                      <th>Pago Diario</th>
+                      <th>Telefono</th>
                     </tr></thead><tbody>';
+
+        $HTML2 ='<table class="tablac" border="1"><thead>
+                    <tr>
+                      <th># Cliente</th>
+                      <th>Cliente</th>
+                      <th>Credito</th>
+                      <th>Pago Diario</th>
+                      <th>Telefono</th>
+                    </tr></thead><tbody>';
+
+
         while($fila = $db->runs($consulta))
         {
-            $nameid = $fila['NUM_CLI'];
-            $sql = $db->query("SELECT NOM_CLI FROM catacli WHERE NUM_CLI = '$nameid';");
-            $resultado = $db->runs($sql);
+          $agente = $fila['NUM_AGE'];
 
-            $HTML .= "
+
+            if($agente == 1)
+            {
+                $HTML .= "
                     <tr>
+                      <td>".$fila['NUM_CLI']."</td>
+                      <td>".$fila['NOM_CLI']."</td>
                       <td>".$fila['NUM_FAC']."</td>
-                      <td>".$resultado['NOM_CLI']."</td>
-                      <td>".$fila['FEC_FAC']."</td>
-                      <td>".$fila['TOT_FAC']."</td>
+                      <td>".$fila['IMP_PAGD']."</td>
+                      <td>".$fila['TEL_CLI']."</td>
                     </tr>";
-            $suma = $suma + $fila['TOT_FAC'];
+                $suma = $suma + $fila['TOT_FAC'];
+                $uno = "<b>AGENTE <01></b>";
+            }
+
+            if($agente == 2)
+            {
+                $HTML2 .= "
+                    <tr>
+                      <td>".$fila['NUM_CLI']."</td>
+                      <td>".$fila['NOM_CLI']."</td>
+                      <td>".$fila['NUM_FAC']."</td>
+                      <td>".$fila['IMP_PAGD']."</td>
+                      <td>".$fila['TEL_CLI']."</td>
+                    </tr>";
+                $suma = $suma + $fila['TOT_FAC'];
+                $dos = "<b>AGENTE <02></b>";
+            }
+
+
         }
-            $HTML .= "</tbody></table>";
+
+                $HTML .= "</tbody></table><br/>";
+                $HTML2 .= "</tbody></table><br/>";
 
              $tabla2 = '<br/><table class="tablados" border="1"><thead>
                     <tr><th>TOTAL CREDITO</th><td>'.$suma.'</td></tr>
@@ -260,6 +316,11 @@
 
     $mpdf->SetHeader(utf8_decode($encabezado));
     $mpdf->WriteHTML($HTML);
+    $mpdf->WriteHTML($uno);
+
+    $mpdf->WriteHTML($HTML2);
+    $mpdf->WriteHTML($dos);
+
     $mpdf->WriteHTML($tabla2);
     $mpdf->Output();
 

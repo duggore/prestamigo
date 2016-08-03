@@ -10,17 +10,20 @@
 		<article id="dere" class="derechasection">
 		<p class="titulosec">> CONSULTA DE PAGOS</p>
 		<article class="contenfechaif">
-		<article class="fei">
-			<label class="ema">Fecha Inicial: </label><br>
-			<input id="f_inicial" type="date" class="emai" value="<?=date("Y-m-d");?>"></article>
-		<article class="fei">
-			<label class="ema">Fecha Final: </label><br>
-			<input id="f_final" type="date" class="emai" value="<?=date("Y-m-d");?>"></article>
-		<article class="fei btn">
-			<button type="button" class="yellow medium radius btn-name" onclick="Buscar2($('#f_inicial').val(),$('#f_final').val())">BUSCAR</button>
-			</article>
-			<a href="">Generar Reporte</a>
-			</article>
+			<article class="fei">
+				<label class="ema">Fecha Inicial: </label><br>
+				<input id="f_inicial" type="date" class="emai" value="<?=date("Y-m-d");?>"></article>
+			<article class="fei">
+				<label class="ema">Fecha Final: </label><br>
+				<input id="f_final" type="date" class="emai" value="<?=date("Y-m-d");?>"></article>
+			<article class="fei btn">
+				<button type="button" class="yellow medium radius btn-name" onclick="if($('#f_inicial').val() > $('#f_final').val() ){alert('Fecha inicial no puede mayor a fecha final');}
+			  else{
+			  		Buscar2($('#f_inicial').val(),$('#f_final').val())
+			  	}
+			 ">BUSCAR</button>
+				</article>
+		</article>
 
 			<div id="muestratabla"></div>
 		</article>

@@ -44,7 +44,13 @@
 
 .pequeno
 {
+  text-align: center;
+}
+
+.fecha
+{
 	text-align: center;
+  font-size: 15px;
 }
 .num_pag
 {
@@ -227,14 +233,15 @@ td:nth-child(3n) {
 	/*background-color: green;*/
 	font-weight: bold;
 	background-color: #4f028C;
-	width:15%;
+	/*width:10%;*/
 }
 
 .tablados td:nth-child(2n) {
 	text-align: center;
 background-color: #fff;
 /*background-color: #4f028C;*/
-width: 15%;}
+width: 45%;
+}
 
 
 
