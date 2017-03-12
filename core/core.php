@@ -1,13 +1,13 @@
-<?php  
+<?php
 	// Nucleo de la Aplicacion
-	
+
 	session_start();
 
 	#CONTANSTES DE CONEXION
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'root');
 	define('DB_PASS', '');
-	define('DB_NAME', 'sistemprestamo');
+	define('DB_NAME', 'sistemaprestamo');
 
 
 
@@ -30,5 +30,5 @@
 	$agente = addAgente();
 	$zona = addZona();
 	$interes = por_int();
-	
+
 ?>

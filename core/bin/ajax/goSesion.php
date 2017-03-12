@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	if(!empty($_POST['user']) and !empty($_POST['pass'])){
 		$db = new Conexion();
 		$data = $db->real_escape_string($_POST['user']);
@@ -16,7 +16,7 @@
 
 			else{
 				echo '<div class="alert alert-dismissible alert-danger">
-	  			  	<button type="button" class="close" data-dismiss="alert">&times;</button> 
+	  			  	<button type="button" class="close" data-dismiss="alert">&times;</button>
 	               	<strong>Error</strong> Las credenciales son incorrectas.
 	             	</div>';
 			}
